@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" role="img" aria-label="Livro de Reclamações">
+  <rect width="640" height="220" fill="#000000"/>
+  <circle cx="145" cy="110" r="92" fill="#E30613"/>
+  <g font-family="Arial Black, Arial, Helvetica, sans-serif" font-weight="900" letter-spacing="0.5">
+    <text x="70" y="102" font-size="36" fill="#000000">LIVRO</text>
+    <text x="95" y="142" font-size="36" fill="#000000">DE</text>
+    <text x="248" y="128" font-size="44" fill="#8B0000">RECLAMAÇÕES</text>
+  </g>
+</svg>
