@@ -1,15 +1,4 @@
-export type TreatmentCategory =
-  | 'sensorial'
-  | 'tecnologias'
-  | 'cuidados-fio'
-  | 'cuidados-couro'
-
-export type Treatment = {
-  id: string
-  name: string
-  category: TreatmentCategory
-  description: string
-}
+import type { Treatment, TreatmentCategory } from '@/types/domain'
 
 export const treatmentCategories: {
   id: TreatmentCategory
@@ -92,7 +81,8 @@ export const treatments: Treatment[] = [
     id: 'reconstrucao-t',
     name: 'Reconstrução',
     category: 'cuidados-fio',
-    description: 'Quando o fio pede massa e força — com acompanhamento, não com milagre de uma sessão.',
+    description:
+      'Quando o fio pede massa e força — com acompanhamento, não com milagre de uma sessão.',
   },
   {
     id: 'hidrica-t',
@@ -125,3 +115,11 @@ export const treatments: Treatment[] = [
     description: 'Para o couro se sentir mais leve, limpo e confortável — à sua medida.',
   },
 ]
+
+export function getTreatments() {
+  return treatments
+}
+
+export function getTreatmentsByCategory(category: TreatmentCategory) {
+  return treatments.filter((t) => t.category === category)
+}

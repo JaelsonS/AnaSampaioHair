@@ -1,0 +1,366 @@
+import type { UrlLocale } from '@/i18n/config'
+
+export const therapyStepsByLocale: Record<
+  UrlLocale,
+  { number: string; title: string; description: string }[]
+> = {
+  pt: [
+    {
+      number: '01',
+      title: 'Escutamos',
+      description: 'Conta-nos o que sente no cabelo e no couro cabeludo. Sem pressa.',
+    },
+    {
+      number: '02',
+      title: 'Olhamos de perto',
+      description: 'Observamos os fios e o que pode estar a influenciar o conforto e a saúde.',
+    },
+    {
+      number: '03',
+      title: 'Desenhamos o seu plano',
+      description: 'Montamos um caminho feito para si — não uma lista genérica de tratamentos.',
+    },
+    {
+      number: '04',
+      title: 'Acompanhamos',
+      description: 'Voltamos a ver a evolução e ajustamos. Cuidado de verdade pede continuidade.',
+    },
+  ],
+  es: [
+    {
+      number: '01',
+      title: 'Escuchamos',
+      description: 'Cuéntenos qué siente en el cabello y en el cuero cabelludo. Sin prisa.',
+    },
+    {
+      number: '02',
+      title: 'Miramos de cerca',
+      description: 'Observamos los hilos y lo que puede influir en el confort y la salud.',
+    },
+    {
+      number: '03',
+      title: 'Diseñamos su plan',
+      description: 'Montamos un camino hecho para usted — no una lista genérica de tratamientos.',
+    },
+    {
+      number: '04',
+      title: 'Acompañamos',
+      description: 'Volvemos a ver la evolución y ajustamos. El cuidado de verdad pide continuidad.',
+    },
+  ],
+  en: [
+    {
+      number: '01',
+      title: 'We listen',
+      description: 'Tell us what you feel in your hair and scalp. No rush.',
+    },
+    {
+      number: '02',
+      title: 'We look closely',
+      description: 'We observe the strands and what may affect comfort and health.',
+    },
+    {
+      number: '03',
+      title: 'We design your plan',
+      description: 'We build a path made for you — not a generic treatment list.',
+    },
+    {
+      number: '04',
+      title: 'We follow up',
+      description: 'We review progress and adjust. Real care needs continuity.',
+    },
+  ],
+}
+
+export const aboutHighlightsByLocale: Record<UrlLocale, string[]> = {
+  pt: [
+    '14 anos como cabeleireira',
+    '4 anos como terapeuta capilar integrativa',
+    'Especialização em aromaterapia',
+    'Visagismo aplicado ao cabelo',
+    'Estudos pela ABT — Academia Brasileira de Tricologia',
+    'Seminário internacional de tricologia na Europa',
+  ],
+  es: [
+    '14 años como peluquera',
+    '4 años como terapeuta capilar integrativa',
+    'Especialización en aromaterapia',
+    'Visagismo aplicado al cabello',
+    'Estudios por la ABT — Academia Brasileña de Tricología',
+    'Seminario internacional de tricología en Europa',
+  ],
+  en: [
+    '14 years as a hairdresser',
+    '4 years as an integrative scalp therapist',
+    'Specialisation in aromatherapy',
+    'Hair visagism',
+    'Studies with ABT — Brazilian Academy of Trichology',
+    'International trichology seminar in Europe',
+  ],
+}
+
+export const experiencePointsByLocale: Record<
+  UrlLocale,
+  { title: string; description: string }[]
+> = {
+  pt: [
+    {
+      title: 'Um espaço para respirar',
+      description: 'Ambiente pensado para se sentir acolhida, em calma, do primeiro ao último minuto.',
+    },
+    {
+      title: 'Atenção só para si',
+      description: 'Não é “próxima da fila”. É tempo, escuta e um plano alinhado consigo.',
+    },
+    {
+      title: 'Honestidade no cuidado',
+      description: 'Se algo não for o melhor para o seu cabelo agora, a Ana diz-lhe — com clareza.',
+    },
+    {
+      title: 'Detalhe em cada gesto',
+      description: 'Da avaliação à finalização, o cuidado está no que se vê e no que se sente.',
+    },
+  ],
+  es: [
+    {
+      title: 'Un espacio para respirar',
+      description: 'Ambiente pensado para sentirse acogida, en calma, del primero al último minuto.',
+    },
+    {
+      title: 'Atención solo para usted',
+      description: 'No es “la siguiente de la fila”. Es tiempo, escucha y un plan alineado con usted.',
+    },
+    {
+      title: 'Honestidad en el cuidado',
+      description: 'Si algo no es lo mejor para su cabello ahora, Ana se lo dice — con claridad.',
+    },
+    {
+      title: 'Detalle en cada gesto',
+      description: 'De la valoración al acabado, el cuidado está en lo que se ve y en lo que se siente.',
+    },
+  ],
+  en: [
+    {
+      title: 'A space to breathe',
+      description: 'A room designed so you feel welcomed and calm from the first to the last minute.',
+    },
+    {
+      title: 'Attention just for you',
+      description: 'Not “next in line”. Time, listening and a plan aligned with you.',
+    },
+    {
+      title: 'Honesty in care',
+      description: 'If something isn’t best for your hair right now, Ana will tell you — clearly.',
+    },
+    {
+      title: 'Detail in every gesture',
+      description: 'From assessment to finish, care is in what you see and what you feel.',
+    },
+  ],
+}
+
+export const treatmentsHubCopy: Record<
+  UrlLocale,
+  {
+    heroLead: string
+    metaDescription: string
+    chooseEyebrow: string
+    chooseTitle: string
+    chooseLead: string
+    intentBeautyTitle: string
+    intentBeautyBody: string
+    intentTherapyTitle: string
+    intentTherapyBody: string
+    intentFibreTitle: string
+    intentFibreBody: string
+    quote: string
+    methodEyebrow: string
+    methodTitle: string
+    methodLead: string
+    beautyTitle: string
+    beautyLead: string
+    therapyEyebrow: string
+    therapyTitle: string
+    therapyLead: string
+    fibreTitle: string
+    fibreLead: string
+  }
+> = {
+  pt: {
+    heroLead:
+      'Beleza, terapia e cuidados do fio ao couro — um só lugar para perceber o que existe, o que faz sentido para si e como marcar.',
+    metaDescription:
+      'Beleza, terapia capilar e cuidados do fio ao couro — catálogo unificado do Instituto Ana Sampaio em Marinha Grande.',
+    chooseEyebrow: 'Como escolher',
+    chooseTitle: 'O que procura hoje?',
+    chooseLead: 'Comece pela intenção. Depois aprofundamos na avaliação — sem promessas genéricas.',
+    intentBeautyTitle: 'Quero transformar o visual',
+    intentBeautyBody: 'Mechas, corte, cor, brushing, alisamento.',
+    intentTherapyTitle: 'Quero cuidar da saúde capilar',
+    intentTherapyBody: 'Queda, couro, detox, tecnologias e protocolos personalizados.',
+    intentFibreTitle: 'Quero recuperar o fio',
+    intentFibreBody: 'Reconstrução, hidratação, nutrição e corte bordado.',
+    quote:
+      'Para mim, cada atendimento começa por ouvir o cabelo — e a pessoa. Só depois escolhemos o caminho.',
+    methodEyebrow: 'Metodologia',
+    methodTitle: 'Como funciona o acompanhamento',
+    methodLead: 'Passos reais do instituto — sem inventar durações ou resultados.',
+    beautyTitle: 'Beleza & transformação',
+    beautyLead: 'Serviços de salão com o mesmo cuidado de avaliação quando o fio precisa.',
+    therapyEyebrow: 'Terapia capilar',
+    therapyTitle: 'Terapia & cuidados do couro',
+    therapyLead: 'Onde a intenção de pesquisa encontra a avaliação personalizada.',
+    fibreTitle: 'Cuidados do fio',
+    fibreLead: 'Quando a fibra pede água, nutrição ou estrutura.',
+  },
+  es: {
+    heroLead:
+      'Belleza, terapia y cuidados del hilo al cuero — un solo lugar para ver qué existe, qué tiene sentido para usted y cómo reservar.',
+    metaDescription:
+      'Belleza, terapia capilar y cuidados del hilo al cuero — catálogo unificado del Instituto Ana Sampaio en Marinha Grande.',
+    chooseEyebrow: 'Cómo elegir',
+    chooseTitle: '¿Qué busca hoy?',
+    chooseLead: 'Empiece por la intención. Luego profundizamos en la valoración — sin promesas genéricas.',
+    intentBeautyTitle: 'Quiero transformar el visual',
+    intentBeautyBody: 'Mechas, corte, color, brushing, alisado.',
+    intentTherapyTitle: 'Quiero cuidar la salud capilar',
+    intentTherapyBody: 'Caída, cuero, detox, tecnologías y protocolos personalizados.',
+    intentFibreTitle: 'Quiero recuperar el hilo',
+    intentFibreBody: 'Reconstrucción, hidratación, nutrición y corte bordado.',
+    quote:
+      'Para mí, cada cita empieza por escuchar el cabello — y a la persona. Solo después elegimos el camino.',
+    methodEyebrow: 'Metodología',
+    methodTitle: 'Cómo funciona el acompañamiento',
+    methodLead: 'Pasos reales del instituto — sin inventar duraciones o resultados.',
+    beautyTitle: 'Belleza y transformación',
+    beautyLead: 'Servicios de salón con el mismo cuidado de valoración cuando el hilo lo necesita.',
+    therapyEyebrow: 'Terapia capilar',
+    therapyTitle: 'Terapia y cuidados del cuero',
+    therapyLead: 'Donde la intención de investigación encuentra la valoración personalizada.',
+    fibreTitle: 'Cuidados del hilo',
+    fibreLead: 'Cuando la fibra pide agua, nutrición o estructura.',
+  },
+  en: {
+    heroLead:
+      'Beauty, therapy and care from strand to scalp — one place to see what exists, what fits you and how to book.',
+    metaDescription:
+      'Beauty, scalp therapy and strand-to-scalp care — the Ana Sampaio institute catalogue in Marinha Grande.',
+    chooseEyebrow: 'How to choose',
+    chooseTitle: 'What are you looking for today?',
+    chooseLead: 'Start with intention. Then we go deeper in the assessment — no generic promises.',
+    intentBeautyTitle: 'I want to transform my look',
+    intentBeautyBody: 'Highlights, cut, colour, blow-dry, straightening.',
+    intentTherapyTitle: 'I want to care for hair health',
+    intentTherapyBody: 'Shedding, scalp, detox, technologies and personalised protocols.',
+    intentFibreTitle: 'I want to restore the fibre',
+    intentFibreBody: 'Reconstruction, hydration, nourishment and point-cutting.',
+    quote:
+      'For me, every appointment starts by listening to the hair — and the person. Only then do we choose the path.',
+    methodEyebrow: 'Method',
+    methodTitle: 'How follow-up works',
+    methodLead: 'Real institute steps — without inventing durations or results.',
+    beautyTitle: 'Beauty & transformation',
+    beautyLead: 'Salon services with the same assessment care when the fibre needs it.',
+    therapyEyebrow: 'Scalp therapy',
+    therapyTitle: 'Therapy & scalp care',
+    therapyLead: 'Where research intent meets personalised assessment.',
+    fibreTitle: 'Strand care',
+    fibreLead: 'When the fibre needs water, nourishment or structure.',
+  },
+}
+
+export const aboutPageCopy: Record<
+  UrlLocale,
+  {
+    quote: string
+    lookTitle: string
+    lookP1: string
+    lookP2Prefix: string
+    lookP2Suffix: string
+    philosophyTitle: string
+    approachTitle: string
+    approachLead: string
+    trainingTitle: string
+    spaceTitle: string
+    spaceLead: string
+    ebookBridgeTitle: string
+    ebookBridgeLead: string
+    trainingBody1: string
+    trainingBody2: string
+    spaceAlt: string
+    anaAlt: string
+  }
+> = {
+  pt: {
+    quote:
+      'Na minha forma de trabalhar, o cabelo nunca é só estética — é saúde, história e a pessoa que está à frente.',
+    lookTitle: 'Um olhar que une beleza e saúde capilar',
+    lookP1:
+      'Ana Sampaio é cabeleireira e terapeuta capilar integrativa. No Instituto de Beleza e Saúde Capilar, em Marinha Grande, cada atendimento parte da escuta — do que sente nos fios, no couro cabeludo e no visual que quer viver no espelho.',
+    lookP2Prefix: 'Com',
+    lookP2Suffix:
+      ', o trabalho combina técnica, presença e honestidade: se algo não for o melhor caminho agora, diz-se com clareza — e propõe-se o que faz sentido.',
+    philosophyTitle: 'Filosofia de atendimento',
+    approachTitle: 'Abordagem integrativa',
+    approachLead: 'Passos reais do cuidado — escuta, observação, plano e acompanhamento.',
+    trainingTitle: 'Formação e especialização',
+    trainingBody1:
+      'Além da experiência em salão, Ana aprofunda o cuidado com aromaterapia, visagismo aplicado ao cabelo e estudos em tricologia — incluindo formação pela ABT e seminário internacional na Europa.',
+    trainingBody2:
+      'O objectivo não é prometer milagres: é investigar a causa, respeitar o fio e construir um acompanhamento sustentável consigo.',
+    spaceTitle: 'O espaço',
+    spaceLead: 'Um ambiente pensado para calma, natureza e atenção individual.',
+    spaceAlt: 'Ambiente e trabalho no instituto Ana Sampaio',
+    ebookBridgeTitle: 'O guia da Ana',
+    ebookBridgeLead: 'Para cuidar em casa com critério — o e-book Guia Meu Cabelo dos Sonhos.',
+    anaAlt: 'Ana Sampaio no instituto',
+  },
+  es: {
+    quote:
+      'En mi forma de trabajar, el cabello nunca es solo estética — es salud, historia y la persona que está delante.',
+    lookTitle: 'Una mirada que une belleza y salud capilar',
+    lookP1:
+      'Ana Sampaio es peluquera y terapeuta capilar integrativa. En el Instituto de Belleza y Salud Capilar, en Marinha Grande, cada cita parte de la escucha — de lo que siente en los hilos, en el cuero y en el visual que quiere vivir frente al espejo.',
+    lookP2Prefix: 'Con',
+    lookP2Suffix:
+      ', el trabajo combina técnica, presencia y honestidad: si algo no es el mejor camino ahora, se dice con claridad — y se propone lo que tiene sentido.',
+    philosophyTitle: 'Filosofía de atención',
+    approachTitle: 'Enfoque integrativo',
+    approachLead: 'Pasos reales del cuidado — escucha, observación, plan y acompañamiento.',
+    trainingTitle: 'Formación y especialización',
+    trainingBody1:
+      'Además de la experiencia en salón, Ana profundiza el cuidado con aromaterapia, visagismo aplicado al cabello y estudios en tricología — incluida formación por la ABT y un seminario internacional en Europa.',
+    trainingBody2:
+      'El objetivo no es prometer milagros: es investigar la causa, respetar el hilo y construir un acompañamiento sostenible con usted.',
+    spaceTitle: 'El espacio',
+    spaceLead: 'Un ambiente pensado para la calma, la naturaleza y la atención individual.',
+    spaceAlt: 'Ambiente y trabajo en el instituto Ana Sampaio',
+    ebookBridgeTitle: 'La guía de Ana',
+    ebookBridgeLead: 'Para cuidar en casa con criterio — el e-book Guía Mi Cabello de Ensueño.',
+    anaAlt: 'Ana Sampaio en el instituto',
+  },
+  en: {
+    quote:
+      'In how I work, hair is never only aesthetics — it is health, history and the person in front of me.',
+    lookTitle: 'A view that joins beauty and hair health',
+    lookP1:
+      'Ana Sampaio is a hairdresser and integrative scalp therapist. At the Beauty & Hair Health Institute in Marinha Grande, every appointment starts with listening — to what you feel in your hair, scalp and the look you want in the mirror.',
+    lookP2Prefix: 'With',
+    lookP2Suffix:
+      ', the work combines technique, presence and honesty: if something isn’t the best path right now, we say so clearly — and propose what makes sense.',
+    philosophyTitle: 'Care philosophy',
+    approachTitle: 'Integrative approach',
+    approachLead: 'Real care steps — listening, observation, plan and follow-up.',
+    trainingTitle: 'Training and specialisation',
+    trainingBody1:
+      'Beyond salon experience, Ana deepens care with aromatherapy, hair visagism and trichology studies — including ABT training and an international seminar in Europe.',
+    trainingBody2:
+      'The goal is not to promise miracles: it is to investigate the cause, respect the fibre and build sustainable follow-up with you.',
+    spaceTitle: 'The space',
+    spaceLead: 'An environment designed for calm, nature and individual attention.',
+    spaceAlt: 'Atmosphere and work at the Ana Sampaio institute',
+    ebookBridgeTitle: 'Ana’s guide',
+    ebookBridgeLead: 'For at-home care with criteria — the My Dream Hair Guide e-book.',
+    anaAlt: 'Ana Sampaio at the institute',
+  },
+}

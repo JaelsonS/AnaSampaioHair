@@ -1,53 +1,93 @@
-import { BookingButton, Button } from '@/components/ui/Button'
-import { Reveal } from '@/components/ui/Reveal'
+'use client'
 
-export function Hero() {
+import Image from 'next/image'
+import type { Dictionary } from '@/i18n/get-dictionary'
+import type { UrlLocale } from '@/i18n/config'
+import { localizedPath } from '@/i18n/routes'
+import { siteConfig } from '@/config/site'
+import { getHomeContent, servicesPrefix } from '@/data/home-i18n'
+import { getServiceOptionsForLocale } from '@/data/service-i18n'
+import { Button } from '@/components/ui/Button'
+import { IconArrowRight } from '@/components/icons'
+import { openAssistantIntent } from '@/lib/assistant-bridge'
+import { HeroTypewriter } from '@/components/home/HeroTypewriter'
+
+export function Hero({ locale, dict }: { locale: UrlLocale; dict: Dictionary }) {
+  const content = getHomeContent(locale)
+  const h = content.hero
+  const serviceNames = getServiceOptionsForLocale(locale).map((s) => s.name)
+
   return (
-    <section className="hero" id="page-hero" aria-label="Apresentação">
-      <div className="hero-media parallax-scope" aria-hidden="true">
-        <img
-          src="/images/mechas.jpg"
+    <section className="hero-stage" id="page-hero" data-site-hero data-header-tone="on-light" aria-label={h.brand}>
+      <div className="hero-stage-atmosphere" aria-hidden>
+        <Image
+          src={siteConfig.brand.heroSalon}
           alt=""
-          width={1600}
-          height={900}
-          fetchPriority="high"
-          decoding="async"
-          className="parallax-img"
-          data-parallax="0.18"
+          fill
+          priority
+          quality={80}
+          className="hero-stage-atmosphere-img"
+          sizes="100vw"
         />
-        <div className="hero-overlay" />
+        <div className="hero-stage-veil" />
       </div>
 
-      <div className="container hero-content">
-        <Reveal>
-          <p className="eyebrow">Ana Sampaio Hair · Marinha Grande</p>
-          <h1 className="display-xl">O seu cabelo merece ser escutado.</h1>
-          <p className="lead">
-            Se chegou até aqui, provavelmente já cansou de soluções genéricas. Aqui a Ana olha para
-            si — para a saúde dos fios, para o couro cabeludo e para o visual que quer sentir no
-            espelho.
+      <div className="container hero-stage-grid">
+        <div className="hero-stage-copy">
+          <p className="hero-brand reveal-stagger" style={{ ['--i' as string]: 0 }}>
+            {h.brand}
           </p>
-          <div className="btn-group">
-            <BookingButton label="Quero agendar com a Ana" />
-            <Button as="link" to="/terapia-capilar" variant="ghost">
-              Quero perceber a terapia
+          <h1 className="hero-headline reveal-stagger" style={{ ['--i' as string]: 1 }}>
+            {h.title}
+          </h1>
+
+          <div className="reveal-stagger" style={{ ['--i' as string]: 2 }}>
+            <HeroTypewriter phrases={serviceNames} prefix={servicesPrefix[locale]} />
+          </div>
+
+          <p className="hero-lede reveal-stagger" style={{ ['--i' as string]: 3 }}>
+            {h.lede}
+          </p>
+
+          <div className="btn-group reveal-stagger" style={{ ['--i' as string]: 4 }}>
+            <Button
+              type="button"
+              onClick={() =>
+                openAssistantIntent({ mode: 'gate', topic: content.topics.assessment })
+              }
+            >
+              {h.ctaPrimary}
+              <IconArrowRight />
+            </Button>
+            <Button href={localizedPath(locale, 'treatments')} variant="secondary">
+              {dict.nav.treatments}
             </Button>
           </div>
-          <div className="hero-meta">
-            <div className="hero-meta-item">
-              <strong>Beleza</strong>
-              <span>Mechas, corte, cor e brushing</span>
-            </div>
-            <div className="hero-meta-item">
-              <strong>Saúde</strong>
-              <span>Terapia capilar integrativa</span>
-            </div>
-            <div className="hero-meta-item">
-              <strong>Cuidado</strong>
-              <span>Avaliação antes de transformar</span>
-            </div>
-          </div>
-        </Reveal>
+
+          <p className="hero-location reveal-stagger" style={{ ['--i' as string]: 5 }}>
+            <span className="hero-location-pin" aria-hidden>
+              ●
+            </span>
+            <span>{h.subtitle}</span>
+          </p>
+        </div>
+
+        <div className="hero-stage-portrait reveal-stagger" style={{ ['--i' as string]: 2 }}>
+          <div className="hero-portrait-glow" aria-hidden />
+          <div className="hero-portrait-ground" aria-hidden />
+          <figure className="hero-portrait-cutout">
+            <Image
+              src={siteConfig.brand.anaHero}
+              alt={content.alts.ana}
+              width={520}
+              height={1140}
+              priority
+              quality={90}
+              className="hero-portrait-img"
+              sizes="(max-width:768px) 70vw, 44vw"
+            />
+          </figure>
+        </div>
       </div>
     </section>
   )

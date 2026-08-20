@@ -1,13 +1,13 @@
-# Ana Sampaio Hair
+# Ana Sampaio Hair 2.0
 
-Website profissional / demo comercial para o **Instituto de Beleza e Saúde Capilar Ana Sampaio**, em Marinha Grande — Leiria — Portugal.
+Site público premium do Instituto de Beleza e Saúde Capilar Ana Sampaio (Marinha Grande).
 
 ## Stack
 
-- React 19 + TypeScript
-- Vite
-- React Router
-- CSS próprio (design system premium)
+- Next.js 15 App Router
+- TypeScript
+- CSS Design System (tokens da marca)
+- i18n: `pt-PT` (default), `es`, `en`
 
 ## Desenvolvimento
 
@@ -16,34 +16,22 @@ npm install
 npm run dev
 ```
 
-## Build
+Abrir [http://localhost:3000](http://localhost:3000) (redireciona para `/pt`).
 
-```bash
-npm run build
-npm run preview
-```
+## Arquitectura
 
-## Estrutura
+- `src/app/[locale]/…` — páginas
+- `src/i18n/` — locales, rotas localizadas, dicionários UI
+- `src/content/` — preparado para copy por idioma
+- `src/data/` — repositórios (serviços, blog WP migrado, etc.)
+- `src/types/domain.ts` — domínio CRM-ready (`preferredLocale`, `BookingRequest`, …)
+- `src/lib/messaging/` — adapter WhatsApp (pedido, não reserva confirmada)
+- `docs/migration-content.md` — mapa de redirects WordPress → 2.0
 
-- `src/config/site.ts` — configuração central (contacto, booking, WhatsApp, SEO, redes)
-- `src/data/` — conteúdo separado da UI (serviços, FAQ, blog, galeria, etc.)
-- `src/components/` — layout, UI e secções
-- `src/pages/` — páginas do website
+## Branding
 
-## Booking futuro
+Verde do logo (`#306038`, `#C8E0C0`) + neutros madeira/champagne do salão.
 
-Defina `bookingUrl` em `src/config/site.ts` para os CTAs “Agendar avaliação” apontarem para o sistema de booking. Enquanto estiver `null`, usam a rota `/contacto#agendar`.
+## Blog
 
-## WhatsApp
-
-Configure `contact.whatsapp` em `src/config/site.ts` (número internacional sem `+`).
-
-## Legal
-
-- Política de Privacidade
-- Política de Cookies
-- Livro de Reclamações (ligação à plataforma oficial)
-
-## Créditos
-
-Desenvolvido pela [AfDigital - Soluções Tecnológicas](https://www.afdigitalweb.com).
+Fonte de verdade: WordPress. 28 posts migrados com preservação de conteúdo.

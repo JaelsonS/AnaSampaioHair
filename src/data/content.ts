@@ -1,25 +1,9 @@
 export const trustItems = [
-  {
-    value: '14',
-    suffix: 'anos',
-    label: 'a cuidar de cabelos como cabeleireira',
-  },
-  {
-    value: '4',
-    suffix: 'anos',
-    label: 'em terapia capilar integrativa',
-  },
-  {
-    value: 'Olhar',
-    suffix: 'único',
-    label: 'aromaterapia e visagismo no cabelo',
-  },
-  {
-    value: 'Estudo',
-    suffix: 'contínuo',
-    label: 'tricologia e formação internacional',
-  },
-] as const
+  { value: '14', labelKey: 'yearsBeauty' as const },
+  { value: '4', labelKey: 'yearsTherapy' as const },
+  { value: 'Olhar', labelKey: 'uniqueLook' as const },
+  { value: 'Estudo', labelKey: 'continuousStudy' as const },
+]
 
 export const therapySteps = [
   {
@@ -42,15 +26,7 @@ export const therapySteps = [
     title: 'Acompanhamos',
     description: 'Voltamos a ver a evolução e ajustamos. Cuidado de verdade pede continuidade.',
   },
-] as const
-
-export const evaluationPoints = [
-  'Compreender a sua história com o cabelo',
-  'Olhar para o estado real dos fios',
-  'Perceber o que o couro cabeludo pede',
-  'Fazer testes quando faz sentido',
-  'Só então decidir o melhor caminho',
-] as const
+]
 
 export const aboutHighlights = [
   '14 anos como cabeleireira',
@@ -59,7 +35,7 @@ export const aboutHighlights = [
   'Visagismo aplicado ao cabelo',
   'Estudos pela ABT — Academia Brasileira de Tricologia',
   'Seminário internacional de tricologia na Europa',
-] as const
+]
 
 export const experiencePoints = [
   {
@@ -78,4 +54,39 @@ export const experiencePoints = [
     title: 'Detalhe em cada gesto',
     description: 'Da avaliação à finalização, o cuidado está no que se vê e no que se sente.',
   },
-] as const
+]
+
+export const hairNeeds = [
+  {
+    id: 'descobrir',
+    title: 'Quero perceber o que se passa',
+    description: 'Avaliação para compreender fios, couro cabeludo e o melhor caminho.',
+    image: '/images/needs/descobrir.jpg',
+    hrefKey: 'booking' as const,
+    icon: 'search' as const,
+  },
+  {
+    id: 'recuperar',
+    title: 'Quero recuperar a saúde dos fios',
+    description: 'Reconstrução, hidratação e nutrição com acompanhamento.',
+    image: '/images/needs/recuperar.jpg',
+    hrefKey: 'treatments' as const,
+    icon: 'droplet' as const,
+  },
+  {
+    id: 'couro',
+    title: 'O meu couro cabeludo pede atenção',
+    description: 'Conforto, equilíbrio e cuidados personalizados do couro.',
+    image: '/images/needs/couro.jpg',
+    hrefKey: 'therapy' as const,
+    icon: 'leaf' as const,
+  },
+  {
+    id: 'transformar',
+    title: 'Quero transformar o visual',
+    description: 'Mechas, cor, corte e brushing com respeito pela fibra.',
+    image: '/images/needs/transformar.jpg',
+    hrefKey: 'services' as const,
+    icon: 'spark' as const,
+  },
+]

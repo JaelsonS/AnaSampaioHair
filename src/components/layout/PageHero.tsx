@@ -1,47 +1,53 @@
-import type { ReactNode } from 'react'
-import { BookingButton } from '@/components/ui/Button'
-
-type PageHeroProps = {
-  eyebrow: string
-  title: ReactNode
-  lead: string
-  image: string
-  imageAlt: string
-  ctaLabel?: string
-  service?: string
-}
+import Image from 'next/image'
+import type { Dictionary } from '@/i18n/get-dictionary'
 
 export function PageHero({
-  eyebrow,
+  dict,
   title,
   lead,
   image,
-  imageAlt,
-  ctaLabel = 'Agendar com a Ana',
-  service,
-}: PageHeroProps) {
+  imageAlt = '',
+  objectPosition = 'center center',
+  fit = 'cover',
+}: {
+  dict: Dictionary
+  title: string
+  lead?: string
+  image: string
+  imageAlt?: string
+  objectPosition?: string
+  fit?: 'cover' | 'contain'
+}) {
   return (
-    <section className="page-hero page-hero--visual" id="page-hero">
-      <div className="page-hero__media" aria-hidden={!imageAlt}>
-        <img
+    <section
+      className={`page-hero ${fit === 'contain' ? 'page-hero-contain' : ''}`}
+      id="page-hero"
+      data-site-hero
+      data-header-tone="on-dark"
+    >
+      <div className="hero-media" aria-hidden={!imageAlt}>
+        <Image
           src={image}
           alt={imageAlt}
-          className="parallax-img"
-          data-parallax="0.2"
-          width={1600}
-          height={900}
-          fetchPriority="high"
-          decoding="async"
+          fill
+          priority
+          quality={90}
+          sizes="100vw"
+          className="hero-photo"
+          style={{ objectFit: fit, objectPosition }}
         />
-        <div className="page-hero__overlay" />
+        <div className="hero-overlay" />
       </div>
-      <div className="container page-hero__content">
-        <p className="eyebrow">{eyebrow}</p>
+      <div className="container page-hero-content">
+        <p className="eyebrow" style={{ color: 'var(--brand-mint)' }}>
+          {dict.meta.siteName}
+        </p>
         <h1 className="display-xl">{title}</h1>
-        <p className="lead">{lead}</p>
-        <div className="btn-group" style={{ marginTop: '1.5rem' }}>
-          <BookingButton label={ctaLabel} service={service} variant="light" />
-        </div>
+        {lead ? (
+          <p className="lead" style={{ color: 'rgba(255,255,255,0.9)' }}>
+            {lead}
+          </p>
+        ) : null}
       </div>
     </section>
   )

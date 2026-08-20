@@ -1,8 +1,3 @@
-/**
- * Configuração central do website.
- * Alterar aqui facilita futuras integrações (CMS, booking, WhatsApp, etc.).
- */
-
 const WHATSAPP = '351963503988'
 
 export const siteConfig = {
@@ -15,17 +10,8 @@ export const siteConfig = {
   locale: 'pt_PT',
   lang: 'pt',
 
-  /**
-   * Agendamento:
-   * - 'whatsapp' (padrão): CTAs abrem WhatsApp
-   * - 'route': usa bookingRoute
-   * - 'url': usa bookingUrl externo (sistema de booking futuro)
-   */
   bookingMode: 'whatsapp' as 'whatsapp' | 'route' | 'url',
   bookingUrl: null as string | null,
-  bookingRoute: '/contacto#agendar',
-  bookingWhatsAppMessage:
-    'Olá Ana! Gostaria de agendar uma avaliação no Ana Sampaio Hair.',
 
   contact: {
     email: 'ana_samppaio@hotmail.com',
@@ -45,12 +31,9 @@ export const siteConfig = {
         'https://www.google.com/maps?q=Ana+Sampaio+Hair,+Rua+Machado+Santos+39,+Marinha+Grande&output=embed',
     },
     hours: [
-      { label: 'Segunda a sábado', value: '09h às 18h' },
-      {
-        label: 'Terças-feiras',
-        value: 'Horário pós-laboral até às 21h mediante agendamento',
-      },
-      { label: 'Domingos', value: 'Encerrado' },
+      { labelKey: 'weekdays', valueKey: 'weekdaysValue' },
+      { labelKey: 'tuesday', valueKey: 'tuesdayValue' },
+      { labelKey: 'sunday', valueKey: 'sundayValue' },
     ],
   },
 
@@ -65,14 +48,9 @@ export const siteConfig = {
     },
   },
 
-  /** Avaliação no Google Maps — abre a ficha para classificar com estrelas e comentário. */
   google: {
     mapsUrl:
       'https://www.google.com/maps/search/?api=1&query=Ana+Sampaio+Hair,+Rua+Machado+Santos+39,+Marinha+Grande',
-    /**
-     * Quando tiver o Place ID oficial do Google Business, substitua por:
-     * https://search.google.com/local/writereview?placeid=SEU_PLACE_ID
-     */
     reviewUrl:
       'https://www.google.com/maps/search/?api=1&query=Ana+Sampaio+Hair,+Rua+Machado+Santos+39,+Marinha+Grande',
   },
@@ -89,25 +67,50 @@ export const siteConfig = {
     complimentsImage: '/images/legal/livro-elogios.svg',
   },
 
-  /**
-   * Envio seguro do formulário via HTTPS (FormSubmit).
-   * Os dados não ficam guardados no browser — são transmitidos encriptados para o serviço
-   * e encaminhados para o email do instituto.
-   */
   form: {
-    endpoint: `https://formsubmit.co/ajax/ana_samppaio@hotmail.com`,
+    endpoint:
+      process.env.NEXT_PUBLIC_CONTACT_ENDPOINT ??
+      'https://formsubmit.co/ajax/ana_samppaio@hotmail.com',
     subject: 'Novo contacto — Ana Sampaio Hair',
   },
 
   seo: {
-    title: 'Ana Sampaio Hair | Beleza e Terapia Capilar em Marinha Grande',
-    titleTemplate: '%s | Ana Sampaio Hair',
-    ogImage: '/og-image.svg',
+    ogImage: '/images/brand/logo.png',
+  },
+
+  brand: {
+    logo: '/images/brand/logo.png',
+    /** Official salon interior — primary homepage hero */
+    heroSalon: '/images/hero/salon-interior.jpg',
+    heroSalonPortrait: '/images/hero/salon-portrait.jpg',
+    /** Cinematic hair result (landscape) — secondary / results */
+    heroResults: '/images/hero/results-wide.jpg',
+    heroMechas: '/images/hero/mechas-hero.jpg',
+    anaCutout: '/images/about/ana-cutout.png',
+    anaStudio: '/images/about/ana-studio.jpg',
+    /** Transparent full-body cutout over salon atmosphere */
+    anaHero: '/images/about/ana-hero.png',
+    /** Studio portrait (instituto) — quotes / Ana fala */
+    anaHeroPortrait: '/images/about/ana-studio.jpg',
+    /** Transparent cutout alternate */
+    anaHeroCutout: '/images/about/ana-cutout.png',
+    /** Virtual assistant face (not Ana) */
+    assistantAvatar: '/images/brand/assistant-avatar.jpg',
+    /** Full-body real Ana (fundo preto) */
+    anaFull: '/images/about/ana-full.jpg',
+    anaPortrait: '/images/about/ana-studio.jpg',
+    /** Clear studio portrait for “Escrito por” / author / legal identity */
+    anaAuthor: '/images/about/ana-studio.jpg',
+    ambiente: [
+      '/images/about/ambiente-1.jpg',
+      '/images/about/ambiente-2.jpg',
+      '/images/about/ambiente-3.jpg',
+      '/images/about/ambiente-4.jpg',
+      '/images/about/ambiente-5.jpg',
+      '/images/about/ambiente-6.jpg',
+    ] as const,
   },
 } as const
-
-export const bookingRoute = siteConfig.bookingRoute
-export const bookingUrl = siteConfig.bookingUrl
 
 export function getWhatsAppUrl(message?: string) {
   const number = siteConfig.contact.whatsapp
@@ -115,20 +118,4 @@ export function getWhatsAppUrl(message?: string) {
   const base = `https://wa.me/${number}`
   if (!message) return base
   return `${base}?text=${encodeURIComponent(message)}`
-}
-
-export function getBookingHref() {
-  if (siteConfig.bookingMode === 'url' && siteConfig.bookingUrl) {
-    return siteConfig.bookingUrl
-  }
-  if (siteConfig.bookingMode === 'whatsapp') {
-    return (
-      getWhatsAppUrl(siteConfig.bookingWhatsAppMessage) ?? siteConfig.bookingRoute
-    )
-  }
-  return siteConfig.bookingRoute
-}
-
-export function isBookingExternal() {
-  return siteConfig.bookingMode === 'whatsapp' || siteConfig.bookingMode === 'url'
 }

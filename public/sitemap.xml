@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Obsolete static sitemap removed from indexing strategy.
+  Canonical sitemap is generated dynamically at /sitemap.xml by src/app/sitemap.ts
+-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://anasampaio.pt/</loc></url>
-  <url><loc>https://anasampaio.pt/servicos</loc></url>
-  <url><loc>https://anasampaio.pt/terapia-capilar</loc></url>
-  <url><loc>https://anasampaio.pt/sobre</loc></url>
-  <url><loc>https://anasampaio.pt/resultados</loc></url>
-  <url><loc>https://anasampaio.pt/faq</loc></url>
-  <url><loc>https://anasampaio.pt/contacto</loc></url>
-  <url><loc>https://anasampaio.pt/blog</loc></url>
-  <url><loc>https://anasampaio.pt/politica-de-privacidade</loc></url>
-  <url><loc>https://anasampaio.pt/politica-de-cookies</loc></url>
-  <url><loc>https://anasampaio.pt/termos-de-utilizacao</loc></url>
-  <url><loc>https://anasampaio.pt/livro-de-reclamacoes</loc></url>
-  <url><loc>https://anasampaio.pt/livro-de-elogios</loc></url>
+  <url>
+    <loc>https://anasampaio.pt/sitemap.xml</loc>
+  </url>
 </urlset>

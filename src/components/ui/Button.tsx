@@ -1,64 +1,40 @@
-import type { AnchorHTMLAttributes, ButtonHTMLAttributes, CSSProperties, ReactNode } from 'react'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 import { cn } from '@/lib/utils'
+import type { ComponentProps } from 'react'
 
-type ButtonVariant = 'primary' | 'secondary' | 'light' | 'ghost'
+type Variant = 'primary' | 'secondary' | 'ghost' | 'on-dark' | 'ghost-on-dark'
 
-type BaseProps = {
-  children: ReactNode
+const variants: Record<Variant, string> = {
+  primary: 'btn btn-primary',
+  secondary: 'btn btn-secondary',
+  ghost: 'btn btn-ghost',
+  'on-dark': 'btn btn-on-dark',
+  'ghost-on-dark': 'btn btn-ghost btn-ghost-on-dark',
+}
+
+type ButtonProps = {
+  variant?: Variant
   className?: string
-  variant?: ButtonVariant
-}
+  children: React.ReactNode
+} & (
+  | ({ href: string } & Omit<ComponentProps<typeof Link>, 'href' | 'className' | 'children'>)
+  | ({ href?: undefined } & ComponentProps<'button'>)
+)
 
-type ButtonAsButton = BaseProps &
-  Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'className' | 'children'> & {
-    as?: 'button'
-  }
-
-type ButtonAsAnchor = BaseProps &
-  Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'className' | 'children'> & {
-    as: 'a'
-    href: string
-  }
-
-type ButtonAsLink = BaseProps & {
-  as: 'link'
-  to: string
-  style?: CSSProperties
-}
-
-export function Button(props: ButtonAsButton | ButtonAsAnchor | ButtonAsLink) {
-  const classes = cn('btn', `btn-${props.variant ?? 'primary'}`, props.className)
-
-  if (props.as === 'a') {
-    const { children, className: _c, variant: _v, as: _a, ...rest } = props
-    void _c
-    void _v
-    void _a
+export function Button({ variant = 'primary', className, children, ...props }: ButtonProps) {
+  const classes = cn(variants[variant], className)
+  if ('href' in props && props.href) {
+    const { href, ...rest } = props
     return (
-      <a className={classes} {...rest}>
+      <Link href={href} className={classes} {...rest}>
         {children}
-      </a>
-    )
-  }
-
-  if (props.as === 'link') {
-    return (
-      <Link className={classes} to={props.to} style={props.style}>
-        {props.children}
       </Link>
     )
   }
-
-  const { children, className: _c, variant: _v, as: _a, type, ...rest } = props
-  void _c
-  void _v
-  void _a
+  const buttonProps = props as ComponentProps<'button'>
   return (
-    <button type={type ?? 'button'} className={classes} {...rest}>
+    <button type={buttonProps.type ?? 'button'} className={classes} {...buttonProps}>
       {children}
     </button>
   )
 }
-
-export { BookingButton } from '@/components/ui/BookingButton'

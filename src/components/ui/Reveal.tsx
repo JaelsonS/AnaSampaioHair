@@ -1,46 +1,40 @@
-import { useEffect, useRef, type ReactNode } from 'react'
+'use client'
+
+import { useEffect, useRef } from 'react'
 import { cn } from '@/lib/utils'
 
-type RevealProps = {
-  children: ReactNode
+export function Reveal({
+  children,
+  className,
+}: {
+  children: React.ReactNode
   className?: string
-  delay?: 1 | 2 | 3 | 4
-  as?: 'div' | 'section' | 'article' | 'li'
-}
-
-export function Reveal({ children, className, delay, as: Tag = 'div' }: RevealProps) {
-  const ref = useRef<HTMLElement | null>(null)
+}) {
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const node = ref.current
-    if (!node) return
-
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (reduceMotion) {
-      node.classList.add('is-visible')
+    const el = ref.current
+    if (!el) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      el.classList.add('is-visible')
       return
     }
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          node.classList.add('is-visible')
-          observer.unobserve(node)
+          el.classList.add('is-visible')
+          observer.disconnect()
         }
       },
-      { threshold: 0.16, rootMargin: '0px 0px -8% 0px' },
+      { threshold: 0.12 },
     )
-
-    observer.observe(node)
+    observer.observe(el)
     return () => observer.disconnect()
   }, [])
 
   return (
-    <Tag
-      ref={ref as never}
-      className={cn('reveal', delay ? `reveal-delay-${delay}` : undefined, className)}
-    >
+    <div ref={ref} className={cn('reveal', className)}>
       {children}
-    </Tag>
+    </div>
   )
 }
