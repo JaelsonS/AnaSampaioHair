@@ -1,6 +1,8 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  // Align with Vercel project "Output Directory" = dist (dashboard misconfig legacy)
+  distDir: 'dist',
   eslint: {
     // Lint runs separately; missing optional plugin must not block production builds
     ignoreDuringBuilds: true,
