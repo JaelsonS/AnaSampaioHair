@@ -74,7 +74,7 @@ export const therapyStepsByLocale: Record<
 
 export const aboutHighlightsByLocale: Record<UrlLocale, string[]> = {
   pt: [
-    '14 anos como cabeleireira',
+    '16 anos como cabeleireira',
     '4 anos como terapeuta capilar integrativa',
     'Especialização em aromaterapia',
     'Visagismo aplicado ao cabelo',

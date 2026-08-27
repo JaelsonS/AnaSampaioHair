@@ -130,7 +130,7 @@ export const homeWp = {
     pillars: [
       {
         title: 'Experiência',
-        body: '14 anos como cabeleireira e 4 anos como terapeuta capilar integrativa, com soluções personalizadas para problemas capilares comuns.',
+        body: '16 anos como cabeleireira e 4 anos como terapeuta capilar integrativa, com soluções personalizadas para problemas capilares comuns.',
       },
       {
         title: 'Certificados',
