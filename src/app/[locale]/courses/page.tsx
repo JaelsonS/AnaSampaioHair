@@ -38,7 +38,7 @@ const COURSE_ICONS: Record<string, typeof IconLeaf> = {
 const COPY = {
   pt: {
     introEyebrow: 'Formação com a Ana',
-    introTitle: 'Aprenda com a prática do instituto',
+    introTitle: 'Aprenda com a prática do Instituto de Saúde e Beleza Capilar',
     introLead:
       'Seis formações alinhadas ao dia a dia real — terapia capilar, técnicas de salão e leitura crítica de cosméticos. Peça informação e confirme a próxima turma directamente.',
     wantThis: 'Quero esta formação →',
