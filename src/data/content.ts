@@ -1,6 +1,6 @@
 export const trustItems = [
-  { value: '14', labelKey: 'yearsBeauty' as const },
-  { value: '4', labelKey: 'yearsTherapy' as const },
+  { value: '16', labelKey: 'yearsBeauty' as const },
+  { value: '5', labelKey: 'yearsTherapy' as const },
   { value: 'Olhar', labelKey: 'uniqueLook' as const },
   { value: 'Estudo', labelKey: 'continuousStudy' as const },
 ]
@@ -32,6 +32,7 @@ export const aboutHighlights = [
   '16 anos como cabeleireira',
   '5 anos como terapeuta capilar integrativa',
   'Especialização em aromaterapia',
+  'Especialização em cosmetologia',
   'Visagismo e coloração pessoal aplicado ao cabelo',
   'Estudos pela ABT — Academia Brasileira de Tricologia',
   'Seminário internacional de tricologia na Europa',

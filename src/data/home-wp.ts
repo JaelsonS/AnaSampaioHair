@@ -134,7 +134,7 @@ export const homeWp = {
       },
       {
         title: 'Certificados',
-        body: 'Especialização em aromaterapia e visagismo e coloração pessoal aplicado ao cabelo; formação pela ABT e seminário internacional de tricologia na Europa.',
+        body: 'Especialização em aromaterapia e cosmetologia; visagismo e coloração pessoal aplicado ao cabelo; formação pela ABT e seminário internacional de tricologia na Europa.',
       },
       {
         title: 'Exclusividade',
@@ -215,7 +215,7 @@ export const homeWp = {
   ebook: {
     eyebrow: 'Aprenda como cuidar dos seus cabelos!',
     title: 'Guia Meu Cabelo dos Sonhos',
-    body: 'O e-book “Guia Meu Cabelo dos Sonhos” de Ana Sampaio foca em ajudar leitoras a entender e cuidar da estrutura dos seus cabelos, economizando tempo e dinheiro. Ana Sampaio, terapeuta capilar integrativa com 14 anos de experiência, oferece um guia para montar um cronograma capilar personalizado e ensina a escolher produtos adequados. O conteúdo inclui técnicas para identificar as necessidades específicas do cabelo e evitar erros comuns. O e-book é estruturado em capítulos que abordam desde a estrutura do cabelo até práticas diárias para manutenção e saúde capilar, com dicas específicas para cada tipo de cabelo e condição.',
+    body: 'O e-book “Guia Meu Cabelo dos Sonhos” de Ana Sampaio foca em ajudar leitoras a entender e cuidar da estrutura dos seus cabelos, economizando tempo e dinheiro. Ana Sampaio, cabeleireira com 16 anos de experiência e terapeuta capilar integrativa há 5 anos, oferece um guia para montar um cronograma capilar personalizado e ensina a escolher produtos adequados. O conteúdo inclui técnicas para identificar as necessidades específicas do cabelo e evitar erros comuns. O e-book é estruturado em capítulos que abordam desde a estrutura do cabelo até práticas diárias para manutenção e saúde capilar, com dicas específicas para cada tipo de cabelo e condição.',
     cta: 'Eu quero',
     url: 'https://hotmart.com/pt-br/marketplace/produtos/guia-meu-cabelo-dos-sonhos/T93244081R',
   },

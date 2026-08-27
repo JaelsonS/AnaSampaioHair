@@ -3524,22 +3524,60 @@ p {
   background: linear-gradient(135deg, var(--brand-mint-soft), var(--cream, #f6f4ef) 55%);
 }
 
+.about-book-bridge {
+  background:
+    linear-gradient(160deg, rgba(61, 90, 66, 0.08), transparent 50%),
+    var(--cream, #f6f4ef);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.about-book-inner,
 .about-ebook-inner {
   display: grid;
   gap: 2rem;
   align-items: center;
 }
 
+.about-book-copy,
 .about-ebook-copy {
   display: grid;
   gap: 0.85rem;
-  max-width: 34rem;
+  max-width: 36rem;
 }
 
+.about-book-lead {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  line-height: 1.35;
+  color: var(--brand-forest);
+}
+
+.about-book-portrait,
 .about-ebook-portrait {
   margin: 0;
   justify-self: center;
   width: min(100%, 280px);
+  display: grid;
+  gap: 0.75rem;
+}
+
+.about-book-portrait-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.about-book-caption {
+  margin: 0;
+  text-align: center;
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
 }
 
 .about-ebook-portrait-img {
@@ -3558,6 +3596,7 @@ p {
     grid-template-columns: 1.05fr 0.95fr;
   }
 
+  .about-book-inner,
   .about-ebook-inner {
     grid-template-columns: 1.2fr 0.8fr;
   }

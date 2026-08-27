@@ -161,6 +161,38 @@ export default async function AboutPage({
         </div>
       </Section>
 
+      <Section className="about-book-bridge">
+        <div className="about-book-inner">
+          <div className="about-book-copy">
+            <p className="eyebrow">{copy.bookEyebrow}</p>
+            <h2 className="display-lg">{copy.bookTitle}</h2>
+            <p className="about-book-lead">{copy.bookLead}</p>
+            <p>{copy.bookBody}</p>
+            <a
+              className="btn btn-primary"
+              href={copy.bookUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {copy.bookCta}
+            </a>
+          </div>
+          <figure className="about-book-portrait">
+            <div className="about-book-portrait-photo">
+              <Image
+                src={siteConfig.brand.anaAuthor}
+                alt="Ana Sampaio"
+                fill
+                sizes="(max-width:768px) 55vw, 280px"
+                quality={90}
+                style={{ objectFit: 'cover', objectPosition: 'center 12%' }}
+              />
+            </div>
+            <figcaption className="about-book-caption">{copy.bookTitle}</figcaption>
+          </figure>
+        </div>
+      </Section>
+
       <Section className="about-ebook-bridge">
         <div className="about-ebook-inner">
           <div className="about-ebook-copy">

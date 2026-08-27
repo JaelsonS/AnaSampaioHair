@@ -109,7 +109,7 @@ const pt: HomeContent = {
     ...homeWp.ebook,
     kicker: 'E-book · Por Ana Sampaio',
     campaignBody:
-      'O conhecimento de Ana — 14 anos de prática em terapia capilar — transformado num guia para entender o fio, escolher produtos com critério e cuidar em casa sem desperdiçar tempo.',
+      'O conhecimento de Ana — 16 anos como cabeleireira e 5 anos em terapia capilar integrativa — transformado num guia para entender o fio, escolher produtos com critério e cuidar em casa sem desperdiçar tempo.',
     byline: 'Por Ana Sampaio · Instituto de Beleza e Saúde Capilar',
     ctaCampaign: 'Conhecer o E-book',
     alt: 'Ana Sampaio — autora do Guia Meu Cabelo dos Sonhos',
@@ -259,11 +259,11 @@ const es: HomeContent = {
     pillars: [
       {
         title: 'Experiencia',
-        body: '14 años como peluquera y 4 como terapeuta capilar integrativa, con soluciones personalizadas para problemas capilares comunes.',
+        body: '16 años como peluquera y 5 como terapeuta capilar integrativa, con soluciones personalizadas para problemas capilares comunes.',
       },
       {
         title: 'Certificados',
-        body: 'Especialización en aromaterapia y visagismo aplicado al cabello; formación por la ABT y seminario internacional de tricología en Europa.',
+        body: 'Especialización en aromaterapia y cosmetología; visagismo aplicado al cabello; formación por la ABT y seminario internacional de tricología en Europa.',
       },
       {
         title: 'Exclusividad',
@@ -344,12 +344,12 @@ const es: HomeContent = {
   ebook: {
     eyebrow: '¡Aprenda a cuidar su cabello!',
     title: 'Guía Mi Cabello de Ensueño',
-    body: homeWp.ebook.body,
+    body: 'El e-book “Guía Mi Cabello de Ensueño” de Ana Sampaio ayuda a las lectoras a entender y cuidar la estructura de su cabello, ahorrando tiempo y dinero. Ana Sampaio, peluquera con 16 años de experiencia y terapeuta capilar integrativa desde hace 5 años, ofrece una guía para montar un cronograma capilar personalizado y enseña a elegir productos adecuados. El contenido incluye técnicas para identificar las necesidades específicas del cabello y evitar errores comunes. El e-book está estructurado en capítulos que abarcan desde la estructura del cabello hasta prácticas diarias de mantenimiento y salud capilar, con consejos específicos para cada tipo de cabello y condición.',
     cta: 'Lo quiero',
     url: homeWp.ebook.url,
     kicker: 'E-book · Por Ana Sampaio',
     campaignBody:
-      'El conocimiento de Ana — 14 años de práctica en terapia capilar — convertido en una guía para entender el hilo, elegir productos con criterio y cuidar en casa sin perder tiempo.',
+      'El conocimiento de Ana — 16 años como peluquera y 5 en terapia capilar integrativa — convertido en una guía para entender el hilo, elegir productos con criterio y cuidar en casa sin perder tiempo.',
     byline: 'Por Ana Sampaio · Instituto de Belleza y Salud Capilar',
     ctaCampaign: 'Conocer el e-book',
     alt: 'Ana Sampaio — autora de la Guía Mi Cabello de Ensueño',
@@ -520,11 +520,11 @@ const en: HomeContent = {
     pillars: [
       {
         title: 'Experience',
-        body: '14 years as a hairdresser and 4 as an integrative scalp therapist, with personalised solutions for common hair concerns.',
+        body: '16 years as a hairdresser and 5 as an integrative scalp therapist, with personalised solutions for common hair concerns.',
       },
       {
         title: 'Credentials',
-        body: 'Specialisation in aromatherapy and hair visagism; ABT training and an international trichology seminar in Europe.',
+        body: 'Specialisation in aromatherapy and cosmetology; hair visagism; ABT training and an international trichology seminar in Europe.',
       },
       {
         title: 'Exclusivity',
@@ -605,12 +605,12 @@ const en: HomeContent = {
   ebook: {
     eyebrow: 'Learn how to care for your hair!',
     title: 'My Dream Hair Guide',
-    body: homeWp.ebook.body,
+    body: 'The e-book “My Dream Hair Guide” by Ana Sampaio helps readers understand and care for their hair structure, saving time and money. Ana Sampaio, a hairdresser with 16 years of experience and an integrative scalp therapist for 5 years, offers a guide to build a personalised hair schedule and teaches how to choose the right products. The content includes techniques to identify specific hair needs and avoid common mistakes. The e-book is structured in chapters covering everything from hair structure to daily practices for maintenance and scalp health, with tips for each hair type and condition.',
     cta: 'I want it',
     url: homeWp.ebook.url,
     kicker: 'E-book · By Ana Sampaio',
     campaignBody:
-      'Ana’s knowledge — 14 years of scalp-therapy practice — turned into a guide to understand your hair, choose products wisely and care at home without wasting time.',
+      'Ana’s knowledge — 16 years as a hairdresser and 5 in integrative scalp therapy — turned into a guide to understand your hair, choose products wisely and care at home without wasting time.',
     byline: 'By Ana Sampaio · Beauty & Hair Health Institute',
     ctaCampaign: 'Discover the e-book',
     alt: 'Ana Sampaio — author of My Dream Hair Guide',

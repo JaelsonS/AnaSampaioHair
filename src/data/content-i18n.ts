@@ -77,22 +77,25 @@ export const aboutHighlightsByLocale: Record<UrlLocale, string[]> = {
     '16 anos como cabeleireira',
     '5 anos como terapeuta capilar integrativa',
     'Especialização em aromaterapia',
+    'Especialização em cosmetologia',
     'Visagismo e coloração pessoal aplicado ao cabelo',
     'Estudos pela ABT — Academia Brasileira de Tricologia',
     'Seminário internacional de tricologia na Europa',
   ],
   es: [
-    '14 años como peluquera',
-    '4 años como terapeuta capilar integrativa',
+    '16 años como peluquera',
+    '5 años como terapeuta capilar integrativa',
     'Especialización en aromaterapia',
+    'Especialización en cosmetología',
     'Visagismo aplicado al cabello',
     'Estudios por la ABT — Academia Brasileña de Tricología',
     'Seminario internacional de tricología en Europa',
   ],
   en: [
-    '14 years as a hairdresser',
-    '4 years as an integrative scalp therapist',
+    '16 years as a hairdresser',
+    '5 years as an integrative scalp therapist',
     'Specialisation in aromatherapy',
+    'Specialisation in cosmetology',
     'Hair visagism',
     'Studies with ABT — Brazilian Academy of Trichology',
     'International trichology seminar in Europe',
@@ -285,6 +288,13 @@ export const aboutPageCopy: Record<
     spaceLead: string
     ebookBridgeTitle: string
     ebookBridgeLead: string
+    bookEyebrow: string
+    bookTitle: string
+    bookLead: string
+    bookBody: string
+    bookCta: string
+    bookUrl: string
+    bookAlt: string
     trainingBody1: string
     trainingBody2: string
     spaceAlt: string
@@ -305,7 +315,7 @@ export const aboutPageCopy: Record<
     approachLead: 'Passos reais do cuidado — escuta, observação, plano e acompanhamento.',
     trainingTitle: 'Formação e especialização',
     trainingBody1:
-      'Além da experiência em salão, Ana aprofunda o cuidado com aromaterapia, visagismo e coloração pessoal aplicado ao cabelo e estudos em tricologia — incluindo formação pela ABT e seminário internacional na Europa.',
+      'Além da experiência em salão, Ana aprofunda o cuidado com aromaterapia, cosmetologia, visagismo e coloração pessoal aplicado ao cabelo e estudos em tricologia — incluindo formação pela ABT e seminário internacional na Europa.',
     trainingBody2:
       'O objectivo não é prometer milagres: é investigar a causa, respeitar o fio e construir um acompanhamento sustentável consigo.',
     spaceTitle: 'O espaço',
@@ -313,6 +323,14 @@ export const aboutPageCopy: Record<
     spaceAlt: 'Ambiente e trabalho no instituto Ana Sampaio',
     ebookBridgeTitle: 'O guia da Ana',
     ebookBridgeLead: 'Para cuidar em casa com critério — o e-book Guia Meu Cabelo dos Sonhos.',
+    bookEyebrow: 'Livro da Ana',
+    bookTitle: 'Raízes e Asas',
+    bookLead: 'Encontre no fundo da tua alma o poder de voar além dos limites',
+    bookBody:
+      'Em Raízes e Asas, Ana Sampaio partilha a sua jornada real de dor, superação, fé e renascimento. Entre lágrimas que regaram sonhos e desafios que pareciam intransponíveis, revela como encontrou forças para se reerguer, reconectar-se com a fé e descobrir o seu propósito. Mais do que um livro, é um abraço para quem já se sentiu perdida — e um lembrete de que os sonhos ainda têm asas.',
+    bookCta: 'Ver na Amazon',
+    bookUrl: 'https://link.amazon/B03mmuQSH',
+    bookAlt: 'Raízes e Asas — livro de Ana Sampaio',
     anaAlt: 'Ana Sampaio no instituto',
   },
   es: {
@@ -329,7 +347,7 @@ export const aboutPageCopy: Record<
     approachLead: 'Pasos reales del cuidado — escucha, observación, plan y acompañamiento.',
     trainingTitle: 'Formación y especialización',
     trainingBody1:
-      'Además de la experiencia en salón, Ana profundiza el cuidado con aromaterapia, visagismo aplicado al cabello y estudios en tricología — incluida formación por la ABT y un seminario internacional en Europa.',
+      'Además de la experiencia en salón, Ana profundiza el cuidado con aromaterapia, cosmetología, visagismo aplicado al cabello y estudios en tricología — incluida formación por la ABT y un seminario internacional en Europa.',
     trainingBody2:
       'El objetivo no es prometer milagros: es investigar la causa, respetar el hilo y construir un acompañamiento sostenible con usted.',
     spaceTitle: 'El espacio',
@@ -337,6 +355,14 @@ export const aboutPageCopy: Record<
     spaceAlt: 'Ambiente y trabajo en el instituto Ana Sampaio',
     ebookBridgeTitle: 'La guía de Ana',
     ebookBridgeLead: 'Para cuidar en casa con criterio — el e-book Guía Mi Cabello de Ensueño.',
+    bookEyebrow: 'Libro de Ana',
+    bookTitle: 'Raízes e Asas',
+    bookLead: 'Encuentra en el fondo de tu alma el poder de volar más allá de los límites',
+    bookBody:
+      'En Raízes e Asas, Ana Sampaio comparte su viaje real de dolor, superación, fe y renacimiento. Entre lágrimas que regaron sueños y desafíos que parecían infranqueables, revela cómo encontró fuerzas para levantarse, reconectar con su fe y descubrir su propósito. Más que un libro, es un abrazo para quien se ha sentido perdida — y un recordatorio de que los sueños aún tienen alas.',
+    bookCta: 'Ver en Amazon',
+    bookUrl: 'https://link.amazon/B03mmuQSH',
+    bookAlt: 'Raízes e Asas — libro de Ana Sampaio',
     anaAlt: 'Ana Sampaio en el instituto',
   },
   en: {
@@ -353,7 +379,7 @@ export const aboutPageCopy: Record<
     approachLead: 'Real care steps — listening, observation, plan and follow-up.',
     trainingTitle: 'Training and specialisation',
     trainingBody1:
-      'Beyond salon experience, Ana deepens care with aromatherapy, hair visagism and trichology studies — including ABT training and an international seminar in Europe.',
+      'Beyond salon experience, Ana deepens care with aromatherapy, cosmetology, hair visagism and trichology studies — including ABT training and an international seminar in Europe.',
     trainingBody2:
       'The goal is not to promise miracles: it is to investigate the cause, respect the fibre and build sustainable follow-up with you.',
     spaceTitle: 'The space',
@@ -361,6 +387,14 @@ export const aboutPageCopy: Record<
     spaceAlt: 'Atmosphere and work at the Ana Sampaio institute',
     ebookBridgeTitle: 'Ana’s guide',
     ebookBridgeLead: 'For at-home care with criteria — the My Dream Hair Guide e-book.',
+    bookEyebrow: 'Ana’s book',
+    bookTitle: 'Raízes e Asas',
+    bookLead: 'Find in the depths of your soul the power to fly beyond limits',
+    bookBody:
+      'In Raízes e Asas, Ana Sampaio shares her real journey of pain, overcoming, faith and rebirth. Between tears that watered dreams and challenges that seemed impossible, she reveals how she found strength to rise again, reconnect with faith and discover purpose. More than a book, it is an embrace for anyone who has felt lost — and a reminder that dreams still have wings.',
+    bookCta: 'View on Amazon',
+    bookUrl: 'https://link.amazon/B03mmuQSH',
+    bookAlt: 'Raízes e Asas — book by Ana Sampaio',
     anaAlt: 'Ana Sampaio at the institute',
   },
 }
