@@ -45,8 +45,8 @@ const COPY = {
     forWhomTitle: 'Para quem é',
     forWhomLead: 'Para profissionais e quem quer evoluir com critério — não um curso genérico online.',
     checks: [
-      'Cabeleireiras e profissionais que querem aprofundar terapia capilar',
-      'Quem procura técnica com respeito pela saúde do fio e do couro',
+      'Cabeleireiras e profissionais que querem aprofundar na terapia capilar',
+      'Quem procura técnica com respeito e uma nova profissão no mercado',
       'Quem quer ler rótulos e escolher produtos com mais segurança',
       'Quem prefere confirmar turma e detalhes directamente com a Ana Sampaio',
     ],
