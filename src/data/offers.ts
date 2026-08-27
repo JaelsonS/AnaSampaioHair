@@ -55,7 +55,7 @@ export const offers: Offer[] = [
     kind: 'course',
     slug: 'curso-terapia-capilar',
     title: {
-      'pt-PT': 'Curso / formação com a Ana',
+      'pt-PT': 'Curso / formação com a Ana Sampaio',
       es: 'Curso / formación con Ana',
       en: 'Course / training with Ana',
     },
