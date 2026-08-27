@@ -75,9 +75,9 @@ export const therapyStepsByLocale: Record<
 export const aboutHighlightsByLocale: Record<UrlLocale, string[]> = {
   pt: [
     '16 anos como cabeleireira',
-    '4 anos como terapeuta capilar integrativa',
+    '5 anos como terapeuta capilar integrativa',
     'Especialização em aromaterapia',
-    'Visagismo aplicado ao cabelo',
+    'Visagismo e coloração pessoal aplicado ao cabelo',
     'Estudos pela ABT — Academia Brasileira de Tricologia',
     'Seminário internacional de tricologia na Europa',
   ],
@@ -305,7 +305,7 @@ export const aboutPageCopy: Record<
     approachLead: 'Passos reais do cuidado — escuta, observação, plano e acompanhamento.',
     trainingTitle: 'Formação e especialização',
     trainingBody1:
-      'Além da experiência em salão, Ana aprofunda o cuidado com aromaterapia, visagismo aplicado ao cabelo e estudos em tricologia — incluindo formação pela ABT e seminário internacional na Europa.',
+      'Além da experiência em salão, Ana aprofunda o cuidado com aromaterapia, visagismo e coloração pessoal aplicado ao cabelo e estudos em tricologia — incluindo formação pela ABT e seminário internacional na Europa.',
     trainingBody2:
       'O objectivo não é prometer milagres: é investigar a causa, respeitar o fio e construir um acompanhamento sustentável consigo.',
     spaceTitle: 'O espaço',

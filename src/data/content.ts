@@ -30,9 +30,9 @@ export const therapySteps = [
 
 export const aboutHighlights = [
   '16 anos como cabeleireira',
-  '4 anos como terapeuta capilar integrativa',
+  '5 anos como terapeuta capilar integrativa',
   'Especialização em aromaterapia',
-  'Visagismo aplicado ao cabelo',
+  'Visagismo e coloração pessoal aplicado ao cabelo',
   'Estudos pela ABT — Academia Brasileira de Tricologia',
   'Seminário internacional de tricologia na Europa',
 ]

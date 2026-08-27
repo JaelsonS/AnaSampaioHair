@@ -130,11 +130,11 @@ export const homeWp = {
     pillars: [
       {
         title: 'Experiência',
-        body: '16 anos como cabeleireira e 4 anos como terapeuta capilar integrativa, com soluções personalizadas para problemas capilares comuns.',
+        body: '16 anos como cabeleireira e 5 anos como terapeuta capilar integrativa, com soluções personalizadas para problemas capilares comuns.',
       },
       {
         title: 'Certificados',
-        body: 'Especialização em aromaterapia e visagismo aplicado ao cabelo; formação pela ABT e seminário internacional de tricologia na Europa.',
+        body: 'Especialização em aromaterapia e visagismo e coloração pessoal aplicado ao cabelo; formação pela ABT e seminário internacional de tricologia na Europa.',
       },
       {
         title: 'Exclusividade',
