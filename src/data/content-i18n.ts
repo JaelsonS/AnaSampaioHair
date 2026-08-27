@@ -117,7 +117,7 @@ export const experiencePointsByLocale: Record<
     },
     {
       title: 'Honestidade no cuidado',
-      description: 'Se algo não for o melhor para o seu cabelo agora, a Ana diz-lhe — com clareza.',
+      description: 'Se algo não for o melhor para o seu cabelo agora, a Ana Sampaio diz-lhe — com clareza.',
     },
     {
       title: 'Detalhe em cada gesto',
@@ -135,7 +135,7 @@ export const experiencePointsByLocale: Record<
     },
     {
       title: 'Honestidad en el cuidado',
-      description: 'Si algo no es lo mejor para su cabello ahora, Ana se lo dice — con claridad.',
+      description: 'Si algo no es lo mejor para su cabello ahora, Ana Sampaio se lo dice — con claridad.',
     },
     {
       title: 'Detalle en cada gesto',
@@ -153,7 +153,7 @@ export const experiencePointsByLocale: Record<
     },
     {
       title: 'Honesty in care',
-      description: 'If something isn’t best for your hair right now, Ana will tell you — clearly.',
+      description: 'If something isn’t best for your hair right now, Ana Sampaio will tell you — clearly.',
     },
     {
       title: 'Detail in every gesture',
@@ -315,15 +315,15 @@ export const aboutPageCopy: Record<
     approachLead: 'Passos reais do cuidado — escuta, observação, plano e acompanhamento.',
     trainingTitle: 'Formação e especialização',
     trainingBody1:
-      'Além da experiência em salão, Ana aprofunda o cuidado com aromaterapia, cosmetologia, visagismo e coloração pessoal aplicado ao cabelo e estudos em tricologia — incluindo formação pela ABT e seminário internacional na Europa.',
+      'Além da experiência em salão, Ana Sampaio aprofunda o cuidado com aromaterapia, cosmetologia, visagismo e coloração pessoal aplicado ao cabelo e estudos em tricologia — incluindo formação pela ABT e seminário internacional na Europa.',
     trainingBody2:
       'O objectivo não é prometer milagres: é investigar a causa, respeitar o fio e construir um acompanhamento sustentável consigo.',
     spaceTitle: 'O espaço',
     spaceLead: 'Um ambiente pensado para calma, natureza e atenção individual.',
     spaceAlt: 'Ambiente e trabalho no instituto Ana Sampaio',
-    ebookBridgeTitle: 'O guia da Ana',
+    ebookBridgeTitle: 'O guia da Ana Sampaio',
     ebookBridgeLead: 'Para cuidar em casa com critério — o e-book Guia Meu Cabelo dos Sonhos.',
-    bookEyebrow: 'Livro da Ana',
+    bookEyebrow: 'Livro da Ana Sampaio',
     bookTitle: 'Raízes e Asas',
     bookLead: 'Encontre no fundo da tua alma o poder de voar além dos limites',
     bookBody:
@@ -347,15 +347,15 @@ export const aboutPageCopy: Record<
     approachLead: 'Pasos reales del cuidado — escucha, observación, plan y acompañamiento.',
     trainingTitle: 'Formación y especialización',
     trainingBody1:
-      'Además de la experiencia en salón, Ana profundiza el cuidado con aromaterapia, cosmetología, visagismo aplicado al cabello y estudios en tricología — incluida formación por la ABT y un seminario internacional en Europa.',
+      'Además de la experiencia en salón, Ana Sampaio profundiza el cuidado con aromaterapia, cosmetología, visagismo aplicado al cabello y estudios en tricología — incluida formación por la ABT y un seminario internacional en Europa.',
     trainingBody2:
       'El objetivo no es prometer milagros: es investigar la causa, respetar el hilo y construir un acompañamiento sostenible con usted.',
     spaceTitle: 'El espacio',
     spaceLead: 'Un ambiente pensado para la calma, la naturaleza y la atención individual.',
     spaceAlt: 'Ambiente y trabajo en el instituto Ana Sampaio',
-    ebookBridgeTitle: 'La guía de Ana',
+    ebookBridgeTitle: 'La guía de Ana Sampaio',
     ebookBridgeLead: 'Para cuidar en casa con criterio — el e-book Guía Mi Cabello de Ensueño.',
-    bookEyebrow: 'Libro de Ana',
+    bookEyebrow: 'Libro de Ana Sampaio',
     bookTitle: 'Raízes e Asas',
     bookLead: 'Encuentra en el fondo de tu alma el poder de volar más allá de los límites',
     bookBody:
@@ -379,15 +379,15 @@ export const aboutPageCopy: Record<
     approachLead: 'Real care steps — listening, observation, plan and follow-up.',
     trainingTitle: 'Training and specialisation',
     trainingBody1:
-      'Beyond salon experience, Ana deepens care with aromatherapy, cosmetology, hair visagism and trichology studies — including ABT training and an international seminar in Europe.',
+      'Beyond salon experience, Ana Sampaio deepens care with aromatherapy, cosmetology, hair visagism and trichology studies — including ABT training and an international seminar in Europe.',
     trainingBody2:
       'The goal is not to promise miracles: it is to investigate the cause, respect the fibre and build sustainable follow-up with you.',
     spaceTitle: 'The space',
     spaceLead: 'An environment designed for calm, nature and individual attention.',
     spaceAlt: 'Atmosphere and work at the Ana Sampaio institute',
-    ebookBridgeTitle: 'Ana’s guide',
+    ebookBridgeTitle: 'Ana Sampaio’s guide',
     ebookBridgeLead: 'For at-home care with criteria — the My Dream Hair Guide e-book.',
-    bookEyebrow: 'Ana’s book',
+    bookEyebrow: 'Ana Sampaio’s book',
     bookTitle: 'Raízes e Asas',
     bookLead: 'Find in the depths of your soul the power to fly beyond limits',
     bookBody:

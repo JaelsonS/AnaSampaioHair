@@ -118,7 +118,7 @@ export function BlogBody({
                   Quer um plano feito para o seu cabelo?
                 </h3>
                 <p>
-                  Peça avaliação no instituto ou explore o e-book e as formações da Ana — conteúdos
+                  Peça avaliação no instituto ou explore o e-book e as formações da Ana Sampaio — conteúdos
                   práticos para cuidar em casa e evoluir na profissão.
                 </p>
                 <div className="btn-group">

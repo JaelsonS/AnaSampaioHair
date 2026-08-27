@@ -15,7 +15,7 @@ import { Button } from '@/components/ui/Button'
 
 export function Footer({ locale, dict }: { locale: UrlLocale; dict: Dictionary }) {
   const year = formatYear()
-  const wa = getWhatsAppUrl('Olá Ana, vim pelo site.')
+  const wa = getWhatsAppUrl('Olá Ana Sampaio, vim pelo site.')
 
   return (
     <footer className="footer footer-premium">

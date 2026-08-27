@@ -60,9 +60,9 @@ const COPY: Record<string, Record<UrlLocale, ServiceCopy>> = {
     en: { name: 'Baldness patterns', short: 'A personalised approach for thinning patterns and alopecia.', cta: 'I want an assessment' },
   },
   alopecia: {
-    pt: { name: 'Alopecia Areata', short: 'Cuidado responsável para queda em placas, com escuta e plano.', cta: 'Falar com a Ana' },
-    es: { name: 'Alopecia areata', short: 'Cuidado responsable para caída en placas, con escucha y plan.', cta: 'Hablar con Ana' },
-    en: { name: 'Alopecia areata', short: 'Responsible care for patchy loss, with listening and a plan.', cta: 'Talk to Ana' },
+    pt: { name: 'Alopecia Areata', short: 'Cuidado responsável para queda em placas, com escuta e plano.', cta: 'Falar com a Ana Sampaio' },
+    es: { name: 'Alopecia areata', short: 'Cuidado responsable para caída en placas, con escucha y plan.', cta: 'Hablar con Ana Sampaio' },
+    en: { name: 'Alopecia areata', short: 'Responsible care for patchy loss, with listening and a plan.', cta: 'Talk to Ana Sampaio' },
   },
   reconstrucao: {
     pt: { name: 'Reconstrução do fio', short: 'Para cabelo quebradiço, sem força, que “não segura” nada.', cta: 'Quero recuperar o cabelo' },

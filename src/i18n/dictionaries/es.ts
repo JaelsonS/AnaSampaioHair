@@ -59,12 +59,12 @@ export const es: Dictionary = {
     placeholderProduct:
       'Producto ilustrativo — se sustituirá por el catálogo oficial.',
     requestOnlyNotice:
-      'Esto es una solicitud de horario. La confirmación solo ocurre cuando Ana verifica la disponibilidad.',
+      'Esto es una solicitud de horario. La confirmación solo ocurre cuando Ana Sampaio verifica la disponibilidad.',
   },
   hero: {
     eyebrow: 'Ana Sampaio Hair · Marinha Grande',
     title: 'Su cabello merece ser escuchado.',
-    lead: 'En un espacio pensado para el cuidado y la calma, Ana mira hacia usted: la salud del cabello, el cuero cabelludo y el resultado que desea ver en el espejo.',
+    lead: 'En un espacio pensado para el cuidado y la calma, Ana Sampaio mira hacia usted: la salud del cabello, el cuero cabelludo y el resultado que desea ver en el espejo.',
     ctaPrimary: 'Pedir valoración',
     ctaSecondary: 'Conocer tratamientos',
     metaBeauty: 'Belleza',
@@ -99,24 +99,24 @@ export const es: Dictionary = {
     testimonialsLead: 'Palabras reales de clientas — sin inventar elogios.',
     productsTitle: 'Cuidados para casa',
     productsLead: 'E-book, cuidados recomendados y acceso a formaciones — sin precios inventados.',
-    coursesTitle: 'Formaciones con Ana',
+    coursesTitle: 'Formaciones con Ana Sampaio',
     coursesLead:
       'Terapia capilar, técnicas de salón y lectura de cosméticos — pida información y confirme la próxima turma directamente.',
     planTitle: 'Plan de Salud Capilar',
     planLead: 'Acompañamiento continuo, personalizado y con intención.',
     blogTitle: 'Contenidos y consejos',
-    blogLead: 'Salud capilar, terapia y belleza — en el tono de Ana.',
+    blogLead: 'Salud capilar, terapia y belleza — en el tono de Ana Sampaio.',
     faqTitle: 'Preguntas frecuentes',
     faqLead: 'Respuestas claras, sin promesas milagrosas.',
     contactTitle: 'Contacto y ubicación',
     contactLead: 'Marinha Grande — listas para recibirla.',
     finalCtaTitle: '¿Lista para el siguiente paso?',
-    finalCtaLead: 'Pida su valoración. Ana confirma la disponibilidad con usted.',
+    finalCtaLead: 'Pida su valoración. Ana Sampaio confirma la disponibilidad con usted.',
     locationTitle: 'Cómo llegar',
   },
   booking: {
     title: 'Pedir un horario',
-    lead: 'Elija lo que desea, el día y la hora preferidos. Enviamos la solicitud por WhatsApp — Ana confirma si tiene disponibilidad.',
+    lead: 'Elija lo que desea, el día y la hora preferidos. Enviamos la solicitud por WhatsApp — Ana Sampaio confirma si tiene disponibilidad.',
     stepService: 'Procedimiento',
     stepDay: 'Día preferido',
     stepTime: 'Hora preferida',
@@ -126,19 +126,19 @@ export const es: Dictionary = {
     notes: 'Observación',
     submit: 'Enviar solicitud por WhatsApp',
     disclaimer:
-      'Al enviar, está pidiendo un horario — no una reserva automática. La confirmación la hace Ana.',
+      'Al enviar, está pidiendo un horario — no una reserva automática. La confirmación la hace Ana Sampaio.',
     successHint: 'Abriremos WhatsApp con su mensaje listo para enviar.',
   },
   assistant: {
     title: 'Asistente Ana Sampaio',
     subtitle: 'Recepcionista digital · pre-reserva',
     greeting:
-      '¡Hola! Soy la asistente personal de Ana Sampaio. En pocos pasos preparo su solicitud de valoración — Ana confirma la disponibilidad con usted.',
+      '¡Hola! Soy la asistente personal de Ana Sampaio. En pocos pasos preparo su solicitud de valoración — Ana Sampaio confirma la disponibilidad con usted.',
     askService: '¿Qué procedimiento desea?',
     askDay: '¿Qué día prefiere?',
     askTime: '¿Qué horario prefiere?',
     askDetails: 'Para finalizar, indíqueme su nombre y contacto.',
-    sendWhatsApp: 'Enviar solicitud a Ana',
+    sendWhatsApp: 'Enviar solicitud a Ana Sampaio',
     openLabel: 'Hablar con la asistente',
     closeLabel: 'Cerrar asistente',
     progressLabel: 'Paso',
@@ -151,9 +151,9 @@ export const es: Dictionary = {
       'Peluquera y terapeuta capilar integrativa en Marinha Grande. Contenidos con escucha, rigor y cuidado real por el cabello.',
     railBookTitle: '¿Lista para una valoración?',
     railBookLead:
-      'Pida su horario. La asistente prepara la pre-reserva y Ana confirma con usted.',
+      'Pida su horario. La asistente prepara la pre-reserva y Ana Sampaio confirma con usted.',
     coursePendingNote:
-      'Las fechas y detalles se confirman directamente con Ana — con calma y sin compromiso.',
+      'Las fechas y detalles se confirman directamente con Ana Sampaio — con calma y sin compromiso.',
     toc: 'En este artículo',
     related: 'Sigue leyendo',
     listen: 'Escucha este artículo',
@@ -210,6 +210,6 @@ export const es: Dictionary = {
   whatsapp: {
     floatLabel: 'WhatsApp',
     bookingRequest:
-      'Hola Ana, me gustaría pedir un horario para valoración.\n\nProcedimiento: {service}\nDía: {date}\nHorario: {time}\nNombre: {name}\nContacto: {contact}{notes}',
+      'Hola Ana Sampaio, me gustaría pedir un horario para valoración.\n\nProcedimiento: {service}\nDía: {date}\nHorario: {time}\nNombre: {name}\nContacto: {contact}{notes}',
   },
 }

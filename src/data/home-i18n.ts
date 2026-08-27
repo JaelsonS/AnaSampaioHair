@@ -109,7 +109,7 @@ const pt: HomeContent = {
     ...homeWp.ebook,
     kicker: 'E-book · Por Ana Sampaio',
     campaignBody:
-      'O conhecimento de Ana — 16 anos como cabeleireira e 5 anos em terapia capilar integrativa — transformado num guia para entender o fio, escolher produtos com critério e cuidar em casa sem desperdiçar tempo.',
+      'O conhecimento de Ana Sampaio — 16 anos como cabeleireira e 5 anos em terapia capilar integrativa — transformado num guia para entender o fio, escolher produtos com critério e cuidar em casa sem desperdiçar tempo.',
     byline: 'Por Ana Sampaio · Instituto de Beleza e Saúde Capilar',
     ctaCampaign: 'Conhecer o E-book',
     alt: 'Ana Sampaio — autora do Guia Meu Cabelo dos Sonhos',
@@ -349,7 +349,7 @@ const es: HomeContent = {
     url: homeWp.ebook.url,
     kicker: 'E-book · Por Ana Sampaio',
     campaignBody:
-      'El conocimiento de Ana — 16 años como peluquera y 5 en terapia capilar integrativa — convertido en una guía para entender el hilo, elegir productos con criterio y cuidar en casa sin perder tiempo.',
+      'El conocimiento de Ana Sampaio — 16 años como peluquera y 5 en terapia capilar integrativa — convertido en una guía para entender el hilo, elegir productos con criterio y cuidar en casa sin perder tiempo.',
     byline: 'Por Ana Sampaio · Instituto de Belleza y Salud Capilar',
     ctaCampaign: 'Conocer el e-book',
     alt: 'Ana Sampaio — autora de la Guía Mi Cabello de Ensueño',
@@ -610,7 +610,7 @@ const en: HomeContent = {
     url: homeWp.ebook.url,
     kicker: 'E-book · By Ana Sampaio',
     campaignBody:
-      'Ana’s knowledge — 16 years as a hairdresser and 5 in integrative scalp therapy — turned into a guide to understand your hair, choose products wisely and care at home without wasting time.',
+      'Ana Sampaio’s knowledge — 16 years as a hairdresser and 5 in integrative scalp therapy — turned into a guide to understand your hair, choose products wisely and care at home without wasting time.',
     byline: 'By Ana Sampaio · Beauty & Hair Health Institute',
     ctaCampaign: 'Discover the e-book',
     alt: 'Ana Sampaio — author of My Dream Hair Guide',

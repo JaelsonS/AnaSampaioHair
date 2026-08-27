@@ -56,14 +56,14 @@ export const offers: Offer[] = [
     slug: 'curso-terapia-capilar',
     title: {
       'pt-PT': 'Curso / formação com a Ana Sampaio',
-      es: 'Curso / formación con Ana',
-      en: 'Course / training with Ana',
+      es: 'Curso / formación con Ana Sampaio',
+      en: 'Course / training with Ana Sampaio',
     },
     description: {
       'pt-PT':
-        'Interessada em aprender com a Ana? Entre na lista da próxima turma — terapia capilar, aromaterapia, cortes, penteados e mais.',
-      es: '¿Te interesa aprender con Ana? Entra en la lista del próximo grupo — terapia capilar, aromaterapia, cortes, peinados y más.',
-      en: 'Interested in learning with Ana? Join the next cohort waitlist — hair therapy, aromatherapy, cuts, styling and more.',
+        'Interessada em aprender com a Ana Sampaio? Entre na lista da próxima turma — terapia capilar, aromaterapia, cortes, penteados e mais.',
+      es: '¿Te interesa aprender con Ana Sampaio? Entra en la lista del próximo grupo — terapia capilar, aromaterapia, cortes, peinados y más.',
+      en: 'Interested in learning with Ana Sampaio? Join the next cohort waitlist — hair therapy, aromatherapy, cuts, styling and more.',
     },
     cta: {
       'pt-PT': 'Lista da próxima turma',

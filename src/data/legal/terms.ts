@@ -135,7 +135,7 @@ export const termsByLocale: Record<UrlLocale, LegalDocument> = {
           {
             type: 'pending',
             items: [
-              'Regras de cancelamento e remarcação a definir pela Ana — [INFORMAÇÃO A CONFIRMAR]',
+              'Regras de cancelamento e remarcação a definir pela Ana Sampaio — [INFORMAÇÃO A CONFIRMAR]',
             ],
           },
           {
@@ -254,7 +254,7 @@ export const termsByLocale: Record<UrlLocale, LegalDocument> = {
       },
       {
         id: 'pi-ana',
-        title: '21. Propriedade intelectual da Ana / do instituto',
+        title: '21. Propriedade intelectual da Ana Sampaio / do instituto',
         blocks: [
           {
             type: 'p',
@@ -268,13 +268,13 @@ export const termsByLocale: Record<UrlLocale, LegalDocument> = {
         blocks: [
           {
             type: 'p',
-            text: 'As fotografias do website (incluindo retratos da Ana e imagens de ambiente/trabalhos) não podem ser reutilizadas para fins comerciais ou publicitários sem autorização.',
+            text: 'As fotografias do website (incluindo retratos da Ana Sampaio e imagens de ambiente/trabalhos) não podem ser reutilizadas para fins comerciais ou publicitários sem autorização.',
           },
         ],
       },
       {
         id: 'conteudos-ana',
-        title: '23. Conteúdos produzidos pela Ana',
+        title: '23. Conteúdos produzidos pela Ana Sampaio',
         blocks: [
           {
             type: 'p',

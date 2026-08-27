@@ -43,7 +43,7 @@ const faqByLocale: Record<UrlLocale, FAQ[]> = {
       id: 'agendamento',
       question: 'Como peço um horário?',
       answer:
-        'Escolha o dia e a hora que prefere e envie o pedido no WhatsApp. A Ana confirma se tem disponibilidade — ou sugere outra opção. Isto é um pedido, não uma reserva automática.',
+        'Escolha o dia e a hora que prefere e envie o pedido no WhatsApp. A Ana Sampaio confirma se tem disponibilidade — ou sugere outra opção. Isto é um pedido, não uma reserva automática.',
     },
   ],
   es: [
@@ -87,7 +87,7 @@ const faqByLocale: Record<UrlLocale, FAQ[]> = {
       id: 'agendamento',
       question: '¿Cómo pido un horario?',
       answer:
-        'Elija el día y la hora que prefiere y envíe la solicitud por WhatsApp. Ana confirma si tiene disponibilidad — o sugiere otra opción. Esto es una solicitud, no una reserva automática.',
+        'Elija el día y la hora que prefiere y envíe la solicitud por WhatsApp. Ana Sampaio confirma si tiene disponibilidad — o sugiere otra opción. Esto es una solicitud, no una reserva automática.',
     },
   ],
   en: [
@@ -131,7 +131,7 @@ const faqByLocale: Record<UrlLocale, FAQ[]> = {
       id: 'agendamento',
       question: 'How do I request a time?',
       answer:
-        'Choose your preferred day and time and send the request on WhatsApp. Ana confirms availability — or suggests another option. This is a request, not an automatic booking.',
+        'Choose your preferred day and time and send the request on WhatsApp. Ana Sampaio confirms availability — or suggests another option. This is a request, not an automatic booking.',
     },
   ],
 }

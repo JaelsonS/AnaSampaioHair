@@ -179,7 +179,7 @@ export const privacyByLocale: Record<UrlLocale, LegalDocument> = {
           },
           {
             type: 'p',
-            text: 'Após o envio, a conversa é encaminhada para o WhatsApp do instituto. A Ana (ou a equipa) analisa a disponibilidade e confirma consigo. Só após essa confirmação deve considerar a marcação como efetivada.',
+            text: 'Após o envio, a conversa é encaminhada para o WhatsApp do instituto. A Ana Sampaio (ou a equipa) analisa a disponibilidade e confirma consigo. Só após essa confirmação deve considerar a marcação como efetivada.',
           },
           {
             type: 'p',
@@ -219,7 +219,7 @@ export const privacyByLocale: Record<UrlLocale, LegalDocument> = {
           },
           {
             type: 'callout',
-            text: 'Recomendamos que não envie dados sensíveis desnecessários por mensagem. Em caso de dúvida, prefira o atendimento presencial ou o canal que a Ana indicar.',
+            text: 'Recomendamos que não envie dados sensíveis desnecessários por mensagem. Em caso de dúvida, prefira o atendimento presencial ou o canal que a Ana Sampaio indicar.',
           },
         ],
       },

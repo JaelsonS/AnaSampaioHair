@@ -61,7 +61,7 @@ export function buildCourseLeadWhatsAppMessage(input: {
     ? `\nNotas: ${input.notes.trim()}`
     : ''
   return (
-    `Olá Ana! Quero entrar na lista da próxima turma.\n\n` +
+    `Olá Ana Sampaio! Quero entrar na lista da próxima turma.\n\n` +
     `Formação: ${input.courseTitle}\n` +
     `Nome: ${input.name}\n` +
     `Contacto: ${input.contact}` +

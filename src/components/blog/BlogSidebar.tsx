@@ -16,9 +16,9 @@ const CATEGORY_HINTS = {
 } as const
 
 const SIDEBAR = {
-  pt: { explore: 'Explorar', categories: 'Categorias', fromAna: 'Da Ana para si', aria: 'Explorar conteúdos' },
-  es: { explore: 'Explorar', categories: 'Categorías', fromAna: 'De Ana para ti', aria: 'Explorar contenidos' },
-  en: { explore: 'Explore', categories: 'Categories', fromAna: 'From Ana to you', aria: 'Browse content' },
+  pt: { explore: 'Explorar', categories: 'Categorias', fromAna: 'Da Ana Sampaio para si', aria: 'Explorar conteúdos' },
+  es: { explore: 'Explorar', categories: 'Categorías', fromAna: 'De Ana Sampaio para ti', aria: 'Explorar contenidos' },
+  en: { explore: 'Explore', categories: 'Categories', fromAna: 'From Ana Sampaio to you', aria: 'Browse content' },
 } as const
 
 export function BlogSidebar({

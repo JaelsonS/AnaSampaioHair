@@ -10,7 +10,7 @@ const FORM = {
   pt: {
     kicker: 'Próxima turma',
     title: 'Quero informação das formações',
-    lead: 'Preencha e avance para o WhatsApp da Ana com a mensagem já preparada — sem compromisso.',
+    lead: 'Preencha e avance para o WhatsApp da Ana Sampaio com a mensagem já preparada — sem compromisso.',
     name: 'Nome',
     contact: 'Telefone / WhatsApp',
     course: 'Formação de interesse',
@@ -18,12 +18,12 @@ const FORM = {
     notesPh: 'Ex.: preferência de horário, experiência prévia…',
     error: 'Preencha nome, contacto e a formação de interesse.',
     submit: 'Enviar e abrir WhatsApp',
-    notice: 'Ao enviar, abre o WhatsApp com o seu pedido já preenchido para a Ana (963 503 988).',
+    notice: 'Ao enviar, abre o WhatsApp com o seu pedido já preenchido para a Ana Sampaio (963 503 988).',
   },
   es: {
     kicker: 'Próxima turma',
     title: 'Quiero información de las formaciones',
-    lead: 'Rellene y avance al WhatsApp de Ana con el mensaje ya preparado — sin compromiso.',
+    lead: 'Rellene y avance al WhatsApp de Ana Sampaio con el mensaje ya preparado — sin compromiso.',
     name: 'Nombre',
     contact: 'Teléfono / WhatsApp',
     course: 'Formación de interés',
@@ -31,12 +31,12 @@ const FORM = {
     notesPh: 'Ej.: preferencia de horario, experiencia previa…',
     error: 'Rellene nombre, contacto y la formación de interés.',
     submit: 'Enviar y abrir WhatsApp',
-    notice: 'Al enviar, se abre WhatsApp con su solicitud lista para Ana (963 503 988).',
+    notice: 'Al enviar, se abre WhatsApp con su solicitud lista para Ana Sampaio (963 503 988).',
   },
   en: {
     kicker: 'Next group',
     title: 'I want course information',
-    lead: 'Fill in and continue to Ana’s WhatsApp with a ready message — no commitment.',
+    lead: 'Fill in and continue to Ana Sampaio’s WhatsApp with a ready message — no commitment.',
     name: 'Name',
     contact: 'Phone / WhatsApp',
     course: 'Course of interest',
@@ -44,7 +44,7 @@ const FORM = {
     notesPh: 'E.g. preferred schedule, prior experience…',
     error: 'Please fill in name, contact and the course of interest.',
     submit: 'Send and open WhatsApp',
-    notice: 'Sending opens WhatsApp with your request ready for Ana (963 503 988).',
+    notice: 'Sending opens WhatsApp with your request ready for Ana Sampaio (963 503 988).',
   },
 } as const
 

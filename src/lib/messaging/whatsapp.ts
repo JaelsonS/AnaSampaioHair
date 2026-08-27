@@ -54,8 +54,8 @@ export function openWhatsAppMessage(message: string) {
 export function getWhatsAppHumanUrl(topic?: string) {
   const clean = topic ? sanitizeMessagePart(topic, 120) : ''
   const message = clean
-    ? `Olá Ana, vi no site sobre “${clean}” e gostaria de falar consigo.`
-    : 'Olá Ana, gostaria de falar consigo sobre um atendimento.'
+    ? `Olá Ana Sampaio, vi no site sobre “${clean}” e gostaria de falar consigo.`
+    : 'Olá Ana Sampaio, gostaria de falar consigo sobre um atendimento.'
   return createWhatsAppHref(message) ?? getWhatsAppUrl(message) ?? '#'
 }
 

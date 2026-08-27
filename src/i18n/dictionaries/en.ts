@@ -59,12 +59,12 @@ export const en: Dictionary = {
     placeholderProduct:
       'Illustrative product — will be replaced by the official catalogue.',
     requestOnlyNotice:
-      'This is a time request. Confirmation only happens after Ana checks availability.',
+      'This is a time request. Confirmation only happens after Ana Sampaio checks availability.',
   },
   hero: {
     eyebrow: 'Ana Sampaio Hair · Marinha Grande',
     title: 'Your hair deserves to be heard.',
-    lead: 'In a space designed for care and calm, Ana looks at you — the health of your hair, your scalp, and the look you want to see in the mirror.',
+    lead: 'In a space designed for care and calm, Ana Sampaio looks at you — the health of your hair, your scalp, and the look you want to see in the mirror.',
     ctaPrimary: 'Request a consultation',
     ctaSecondary: 'Explore treatments',
     metaBeauty: 'Beauty',
@@ -99,24 +99,24 @@ export const en: Dictionary = {
     testimonialsLead: 'Real words from real clients — never invented praise.',
     productsTitle: 'Home care',
     productsLead: 'E-book, recommended care and training access — no invented shelf prices.',
-    coursesTitle: 'Training with Ana',
+    coursesTitle: 'Training with Ana Sampaio',
     coursesLead:
       'Scalp therapy, salon techniques and cosmetics literacy — ask for details and confirm the next group directly.',
     planTitle: 'Hair Health Plan',
     planLead: 'Continuous, personalised care with intention.',
     blogTitle: 'Articles & tips',
-    blogLead: 'Hair health, therapy and beauty — in Ana’s voice.',
+    blogLead: 'Hair health, therapy and beauty — in Ana Sampaio’s voice.',
     faqTitle: 'Frequently asked questions',
     faqLead: 'Clear answers, without miracle promises.',
     contactTitle: 'Contact & location',
     contactLead: 'Marinha Grande — ready to welcome you.',
     finalCtaTitle: 'Ready for the next step?',
-    finalCtaLead: 'Request your consultation. Ana will confirm availability with you.',
+    finalCtaLead: 'Request your consultation. Ana Sampaio will confirm availability with you.',
     locationTitle: 'How to find us',
   },
   booking: {
     title: 'Request an appointment time',
-    lead: 'Choose what you need, your preferred day and time. We send the request via WhatsApp — Ana confirms if she is available.',
+    lead: 'Choose what you need, your preferred day and time. We send the request via WhatsApp — Ana Sampaio confirms if she is available.',
     stepService: 'Procedure',
     stepDay: 'Preferred day',
     stepTime: 'Preferred time',
@@ -126,19 +126,19 @@ export const en: Dictionary = {
     notes: 'Notes',
     submit: 'Send request on WhatsApp',
     disclaimer:
-      'By sending, you are requesting a time — not an automatic booking. Ana confirms availability.',
+      'By sending, you are requesting a time — not an automatic booking. Ana Sampaio confirms availability.',
     successHint: 'We will open WhatsApp with your message ready to send.',
   },
   assistant: {
     title: 'Ana Sampaio Assistant',
     subtitle: 'Digital receptionist · pre-booking',
     greeting:
-      'Hello! I am Ana Sampaio’s personal assistant. In a few steps I prepare your consultation request — Ana confirms availability with you.',
+      'Hello! I am Ana Sampaio’s personal assistant. In a few steps I prepare your consultation request — Ana Sampaio confirms availability with you.',
     askService: 'Which procedure would you like?',
     askDay: 'Which day do you prefer?',
     askTime: 'Which time do you prefer?',
     askDetails: 'To finish, please share your name and contact details.',
-    sendWhatsApp: 'Send request to Ana',
+    sendWhatsApp: 'Send request to Ana Sampaio',
     openLabel: 'Talk to the assistant',
     closeLabel: 'Close assistant',
     progressLabel: 'Step',
@@ -151,9 +151,9 @@ export const en: Dictionary = {
       'Hairdresser and integrative scalp therapist in Marinha Grande. Content with care, clarity and real attention to hair health.',
     railBookTitle: 'Ready for a consultation?',
     railBookLead:
-      'Request your preferred time. The assistant prepares the pre-booking and Ana confirms with you.',
+      'Request your preferred time. The assistant prepares the pre-booking and Ana Sampaio confirms with you.',
     coursePendingNote:
-      'Dates and details are confirmed directly with Ana — calmly and with no commitment.',
+      'Dates and details are confirmed directly with Ana Sampaio — calmly and with no commitment.',
     toc: 'In this article',
     related: 'Keep reading',
     listen: 'Listen to this article',
@@ -210,6 +210,6 @@ export const en: Dictionary = {
   whatsapp: {
     floatLabel: 'WhatsApp',
     bookingRequest:
-      'Hello Ana, I would like to request an appointment time.\n\nProcedure: {service}\nDay: {date}\nTime: {time}\nName: {name}\nContact: {contact}{notes}',
+      'Hello Ana Sampaio, I would like to request an appointment time.\n\nProcedure: {service}\nDay: {date}\nTime: {time}\nName: {name}\nContact: {contact}{notes}',
   },
 }

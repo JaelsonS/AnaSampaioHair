@@ -239,12 +239,12 @@ export const ptPT: Dictionary = {
     placeholderProduct:
       'Produto ilustrativo — será substituído pelo catálogo oficial.',
     requestOnlyNotice:
-      'Isto é um pedido de horário. A confirmação só acontece depois de a Ana verificar a disponibilidade.',
+      'Isto é um pedido de horário. A confirmação só acontece depois de a Ana Sampaio verificar a disponibilidade.',
   },
   hero: {
     eyebrow: 'Ana Sampaio Hair · Marinha Grande',
     title: 'O seu cabelo merece ser escutado.',
-    lead: 'Num espaço pensado para cuidado e tranquilidade, a Ana olha para si — para a saúde dos fios, para o couro cabeludo e para o visual que quer sentir no espelho.',
+    lead: 'Num espaço pensado para cuidado e tranquilidade, a Ana Sampaio olha para si — para a saúde dos fios, para o couro cabeludo e para o visual que quer sentir no espelho.',
     ctaPrimary: 'Pedir avaliação',
     ctaSecondary: 'Conhecer tratamentos',
     metaBeauty: 'Beleza',
@@ -280,24 +280,24 @@ export const ptPT: Dictionary = {
     productsTitle: 'Cuidados para casa',
     productsLead:
       'E-book, cuidados recomendados e acesso às formações — sem inventar preços de prateleira.',
-    coursesTitle: 'Formações com a Ana',
+    coursesTitle: 'Formações com a Ana Sampaio',
     coursesLead:
       'Terapia capilar, técnicas de salão e leitura de cosméticos — peça informação e confirme a próxima turma directamente.',
     planTitle: 'Plano de Saúde Capilar',
     planLead: 'Acompanhamento contínuo, personalizado e com intenção.',
     blogTitle: 'Conteúdos e dicas',
-    blogLead: 'Saúde capilar, terapia e beleza — no tom da Ana.',
+    blogLead: 'Saúde capilar, terapia e beleza — no tom da Ana Sampaio.',
     faqTitle: 'Perguntas frequentes',
     faqLead: 'Respostas claras, sem promessas milagrosas.',
     contactTitle: 'Contacto e localização',
     contactLead: 'Marinha Grande — estamos prontas para a receber.',
     finalCtaTitle: 'Pronta para o próximo passo?',
-    finalCtaLead: 'Peça a sua avaliação. A Ana confirma a disponibilidade consigo.',
+    finalCtaLead: 'Peça a sua avaliação. A Ana Sampaio confirma a disponibilidade consigo.',
     locationTitle: 'Como chegar',
   },
   booking: {
     title: 'Pedir um horário',
-    lead: 'Escolha o que pretende, o dia e a hora preferidos. Enviamos o pedido pelo WhatsApp — a Ana confirma se tem disponibilidade.',
+    lead: 'Escolha o que pretende, o dia e a hora preferidos. Enviamos o pedido pelo WhatsApp — a Ana Sampaio confirma se tem disponibilidade.',
     stepService: 'Procedimento',
     stepDay: 'Dia preferido',
     stepTime: 'Hora preferida',
@@ -307,19 +307,19 @@ export const ptPT: Dictionary = {
     notes: 'Observação',
     submit: 'Enviar pedido no WhatsApp',
     disclaimer:
-      'Ao enviar, está a pedir um horário — não uma reserva automática. A confirmação é feita pela Ana.',
+      'Ao enviar, está a pedir um horário — não uma reserva automática. A confirmação é feita pela Ana Sampaio.',
     successHint: 'Vamos abrir o WhatsApp com a sua mensagem pronta a enviar.',
   },
   assistant: {
     title: 'Assistente Ana Sampaio',
     subtitle: 'Recepcionista digital · pré-agendamento',
     greeting:
-      'Olá! Sou a assistente pessoal da Ana Sampaio. Em poucos passos preparo o seu pedido de avaliação — a Ana confirma a disponibilidade consigo.',
+      'Olá! Sou a assistente pessoal da Ana Sampaio. Em poucos passos preparo o seu pedido de avaliação — a Ana Sampaio confirma a disponibilidade consigo.',
     askService: 'Qual procedimento deseja?',
     askDay: 'Qual dia prefere?',
     askTime: 'Qual horário prefere?',
     askDetails: 'Para finalizar, indique o seu nome e contacto.',
-    sendWhatsApp: 'Enviar pedido à Ana',
+    sendWhatsApp: 'Enviar pedido à Ana Sampaio',
     openLabel: 'Falar com a assistente',
     closeLabel: 'Fechar assistente',
     progressLabel: 'Passo',
@@ -332,9 +332,9 @@ export const ptPT: Dictionary = {
       'Cabeleireira e terapeuta capilar integrativa em Marinha Grande. Conteúdos com escuta, rigor e cuidado real pelos fios.',
     railBookTitle: 'Pronta para uma avaliação?',
     railBookLead:
-      'Peça o seu horário. A assistente prepara o pré-agendamento e a Ana confirma consigo.',
+      'Peça o seu horário. A assistente prepara o pré-agendamento e a Ana Sampaio confirma consigo.',
     coursePendingNote:
-      'Datas e detalhes são confirmados directamente com a Ana — com calma e sem compromisso.',
+      'Datas e detalhes são confirmados directamente com a Ana Sampaio — com calma e sem compromisso.',
     toc: 'Neste artigo',
     related: 'Continue a ler',
     listen: 'Ouça este artigo',
@@ -391,6 +391,6 @@ export const ptPT: Dictionary = {
   whatsapp: {
     floatLabel: 'WhatsApp',
     bookingRequest:
-      'Olá Ana, gostaria de pedir um horário para avaliação.\n\nProcedimento: {service}\nDia: {date}\nHorário: {time}\nNome: {name}\nContacto: {contact}{notes}',
+      'Olá Ana Sampaio, gostaria de pedir um horário para avaliação.\n\nProcedimento: {service}\nDia: {date}\nHorário: {time}\nNome: {name}\nContacto: {contact}{notes}',
   },
 }

@@ -49,7 +49,7 @@ export const experiencePoints = [
   },
   {
     title: 'Honestidade no cuidado',
-    description: 'Se algo não for o melhor para o seu cabelo agora, a Ana diz-lhe — com clareza.',
+    description: 'Se algo não for o melhor para o seu cabelo agora, a Ana Sampaio diz-lhe — com clareza.',
   },
   {
     title: 'Detalhe em cada gesto',

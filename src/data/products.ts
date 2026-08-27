@@ -7,7 +7,7 @@ export const products: Product[] = [
     slug: 'oleo-capilar-placeholder',
     name: 'Óleo capilar (placeholder)',
     description:
-      'Exemplo de produto para estrutura de catálogo. Será substituído pelo produto oficial da Ana.',
+      'Exemplo de produto para estrutura de catálogo. Será substituído pelo produto oficial da Ana Sampaio.',
     image: '/images/services/lipidica.jpg',
     category: 'Cuidados',
     price: null,

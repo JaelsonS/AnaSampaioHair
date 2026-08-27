@@ -32,9 +32,9 @@ type FlowStep = 'gate' | 'service' | 'day' | 'time' | 'details'
 
 const SALES_LINES_PT = [
   'Cuidar do cabelo é um gesto de autoestima — e merece tempo dedicado só para si.',
-  'Perfeito. Vamos preparar o pedido com calma para a Ana receber tudo organizado.',
+  'Perfeito. Vamos preparar o pedido com calma para a Ana Sampaio receber tudo organizado.',
   'Quase lá. Um horário bem escolhido faz toda a diferença no seu protocolo.',
-  'Excelente. Agora só preciso dos seus dados para a Ana confirmar consigo.',
+  'Excelente. Agora só preciso dos seus dados para a Ana Sampaio confirmar consigo.',
 ]
 
 export function SiteChrome({ locale, dict }: { locale: UrlLocale; dict: Dictionary }) {
@@ -127,8 +127,8 @@ export function SiteChrome({ locale, dict }: { locale: UrlLocale; dict: Dictiona
 
   function talkToHuman() {
     const msg = topic
-      ? `Olá Ana, vi no site sobre “${topic}” e gostaria de falar consigo.`
-      : 'Olá Ana, gostaria de falar consigo sobre um atendimento.'
+      ? `Olá Ana Sampaio, vi no site sobre “${topic}” e gostaria de falar consigo.`
+      : 'Olá Ana Sampaio, gostaria de falar consigo sobre um atendimento.'
     openWhatsAppMessage(msg)
     setAssistantOpen(false)
   }
@@ -233,7 +233,7 @@ export function SiteChrome({ locale, dict }: { locale: UrlLocale; dict: Dictiona
                 <div className="btn-group" style={{ flexDirection: 'column' }}>
                   <Button onClick={() => setStep('service')}>Quero agendar com a assistente</Button>
                   <Button variant="secondary" onClick={talkToHuman}>
-                    Quero falar com a Ana (WhatsApp)
+                    Quero falar com a Ana Sampaio (WhatsApp)
                   </Button>
                 </div>
                 <p className="notice">{dict.assistant.tip}</p>

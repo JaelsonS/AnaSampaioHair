@@ -48,32 +48,32 @@ const COPY = {
       'Cabeleireiras e profissionais que querem aprofundar terapia capilar',
       'Quem procura técnica com respeito pela saúde do fio e do couro',
       'Quem quer ler rótulos e escolher produtos com mais segurança',
-      'Quem prefere confirmar turma e detalhes directamente com a Ana',
+      'Quem prefere confirmar turma e detalhes directamente com a Ana Sampaio',
     ],
     howTitle: 'Como funciona',
     how: [
       { t: 'Escolhe a formação', d: 'Indica o tema que mais lhe interessa no formulário.' },
-      { t: 'Envia o pedido', d: 'Abrimos o WhatsApp da Ana com os seus dados já preparados.' },
+      { t: 'Envia o pedido', d: 'Abrimos o WhatsApp da Ana Sampaio com os seus dados já preparados.' },
       { t: 'Confirmação humana', d: 'Datas, formato e detalhes são confirmados consigo — com calma.' },
     ],
     waBtn: 'Falar já no WhatsApp',
-    waMsg: 'Olá Ana! Vi as formações no site e quero informação sobre a próxima turma.',
+    waMsg: 'Olá Ana Sampaio! Vi as formações no site e quero informação sobre a próxima turma.',
     leadEyebrow: 'Próxima turma',
     leadTitle: 'Peça informação com calma',
     leadBody:
-      'Preencha o formulário. Abrimos o WhatsApp com a mensagem pronta para a Ana — telefone 963 503 988.',
+      'Preencha o formulário. Abrimos o WhatsApp com a mensagem pronta para a Ana Sampaio — telefone 963 503 988.',
     leadNote:
-      'A Ana responde pessoalmente com datas, formato e detalhes — com calma e sem compromisso.',
-    meetAna: 'Conhecer a Ana →',
+      'A Ana Sampaio responde pessoalmente com datas, formato e detalhes — com calma e sem compromisso.',
+    meetAna: 'Conhecer a Ana Sampaio →',
     faqTitle: 'Perguntas frequentes',
     faqs: [
       {
         q: 'As datas já estão no site?',
-        a: 'Publicamos informação quando a turma está confirmada. Até lá, a Ana responde-lhe por WhatsApp após o pedido — com datas reais.',
+        a: 'Publicamos informação quando a turma está confirmada. Até lá, a Ana Sampaio responde-lhe por WhatsApp após o pedido — com datas reais.',
       },
       {
         q: 'Preciso de experiência prévia?',
-        a: 'Depende da formação. Conte a sua experiência nas notas do formulário para a Ana orientar melhor.',
+        a: 'Depende da formação. Conte a sua experiência nas notas do formulário para a Ana Sampaio orientar melhor.',
       },
       {
         q: 'Posso perguntar só por uma formação?',
@@ -88,10 +88,10 @@ const COPY = {
     finalLead: 'Entre na lista ou fale connosco — o passo seguinte é humano.',
     finalCta: 'Entrar na lista',
     quote:
-      'Nas formações, partilho o que uso no dia a dia do instituto — com honestidade sobre o que funciona e o que precisa de avaliação caso a caso.',
+      'Nas formações, partilho o que uso no dia a dia do Instituto — com honestidade sobre o que funciona e o que precisa de avaliação caso a caso.',
   },
   es: {
-    introEyebrow: 'Formación con Ana',
+    introEyebrow: 'Formación con Ana Sampaio',
     introTitle: 'Aprenda con la práctica del instituto',
     introLead:
       'Seis formaciones alineadas al día a día real — terapia capilar, técnicas de salón y lectura crítica de cosméticos. Pida información y confirme la próxima turma directamente.',
@@ -102,32 +102,32 @@ const COPY = {
       'Peluqueras y profesionales que quieren profundizar en terapia capilar',
       'Quien busca técnica con respeto por la salud del cabello y el cuero',
       'Quien quiere leer etiquetas y elegir productos con más seguridad',
-      'Quien prefiere confirmar detalles directamente con Ana',
+      'Quien prefiere confirmar detalles directamente con Ana Sampaio',
     ],
     howTitle: 'Cómo funciona',
     how: [
       { t: 'Elige la formación', d: 'Indica el tema que más le interesa en el formulario.' },
-      { t: 'Envía la solicitud', d: 'Abrimos el WhatsApp de Ana con sus datos preparados.' },
+      { t: 'Envía la solicitud', d: 'Abrimos el WhatsApp de Ana Sampaio con sus datos preparados.' },
       { t: 'Confirmación humana', d: 'Fechas, formato y detalles se confirman con usted — con calma.' },
     ],
     waBtn: 'Hablar ya por WhatsApp',
-    waMsg: '¡Hola Ana! Vi las formaciones en la web y quiero información sobre la próxima turma.',
+    waMsg: '¡Hola Ana Sampaio! Vi las formaciones en la web y quiero información sobre la próxima turma.',
     leadEyebrow: 'Próxima turma',
     leadTitle: 'Pida información con calma',
     leadBody:
-      'Rellene el formulario. Abrimos WhatsApp con el mensaje listo para Ana — teléfono 963 503 988.',
+      'Rellene el formulario. Abrimos WhatsApp con el mensaje listo para Ana Sampaio — teléfono 963 503 988.',
     leadNote:
-      'Ana responde personalmente con fechas, formato y detalles — con calma y sin compromiso.',
-    meetAna: 'Conocer a Ana →',
+      'Ana Sampaio responde personalmente con fechas, formato y detalles — con calma y sin compromiso.',
+    meetAna: 'Conocer a Ana Sampaio →',
     faqTitle: 'Preguntas frecuentes',
     faqs: [
       {
         q: '¿Las fechas ya están en la web?',
-        a: 'Publicamos información cuando la turma está confirmada. Hasta entonces, Ana le responde por WhatsApp tras la solicitud — con fechas reales.',
+        a: 'Publicamos información cuando la turma está confirmada. Hasta entonces, Ana Sampaio le responde por WhatsApp tras la solicitud — con fechas reales.',
       },
       {
         q: '¿Necesito experiencia previa?',
-        a: 'Depende de la formación. Cuente su experiencia en las notas del formulario para que Ana oriente mejor.',
+        a: 'Depende de la formación. Cuente su experiencia en las notas del formulario para que Ana Sampaio oriente mejor.',
       },
       {
         q: '¿Puedo preguntar solo por una formación?',
@@ -145,7 +145,7 @@ const COPY = {
       'En las formaciones, comparto lo que uso en el día a día del instituto — con honestidad sobre lo que funciona y lo que necesita valoración caso a caso.',
   },
   en: {
-    introEyebrow: 'Training with Ana',
+    introEyebrow: 'Training with Ana Sampaio',
     introTitle: 'Learn from real institute practice',
     introLead:
       'Six programmes aligned with real daily work — scalp therapy, salon techniques and critical reading of cosmetics. Ask for details and confirm the next group directly.',
@@ -156,32 +156,32 @@ const COPY = {
       'Hairdressers and professionals who want to deepen scalp therapy',
       'Anyone seeking technique that respects hair and scalp health',
       'Anyone who wants to read labels and choose products more safely',
-      'Anyone who prefers to confirm details directly with Ana',
+      'Anyone who prefers to confirm details directly with Ana Sampaio',
     ],
     howTitle: 'How it works',
     how: [
       { t: 'Choose a programme', d: 'Tell us which topic interests you most in the form.' },
-      { t: 'Send your request', d: 'We open Ana’s WhatsApp with your details ready.' },
+      { t: 'Send your request', d: 'We open Ana Sampaio’s WhatsApp with your details ready.' },
       { t: 'Human confirmation', d: 'Dates, format and details are confirmed with you — calmly.' },
     ],
     waBtn: 'Chat on WhatsApp now',
-    waMsg: 'Hi Ana! I saw the training on the site and would like information about the next group.',
+    waMsg: 'Hi Ana Sampaio! I saw the training on the site and would like information about the next group.',
     leadEyebrow: 'Next group',
     leadTitle: 'Ask for information calmly',
     leadBody:
-      'Fill in the form. We open WhatsApp with a ready message for Ana — phone 963 503 988.',
+      'Fill in the form. We open WhatsApp with a ready message for Ana Sampaio — phone 963 503 988.',
     leadNote:
-      'Ana replies personally with dates, format and details — calmly and with no commitment.',
-    meetAna: 'Meet Ana →',
+      'Ana Sampaio replies personally with dates, format and details — calmly and with no commitment.',
+    meetAna: 'Meet Ana Sampaio →',
     faqTitle: 'Frequently asked questions',
     faqs: [
       {
         q: 'Are dates already on the site?',
-        a: 'We publish details when a group is confirmed. Until then, Ana replies on WhatsApp after your request — with real dates.',
+        a: 'We publish details when a group is confirmed. Until then, Ana Sampaio replies on WhatsApp after your request — with real dates.',
       },
       {
         q: 'Do I need prior experience?',
-        a: 'It depends on the programme. Share your background in the form notes so Ana can guide you better.',
+        a: 'It depends on the programme. Share your background in the form notes so Ana Sampaio can guide you better.',
       },
       {
         q: 'Can I ask about just one course?',

@@ -164,7 +164,7 @@ export const services: Service[] = [
     image: '/images/services/alopecia.jpg',
     imageAlt: 'Acompanhamento em alopecia areata',
     ctaType: 'whatsapp',
-    ctaLabel: 'Falar com a Ana',
+    ctaLabel: 'Falar com a Ana Sampaio',
   },
   {
     id: 'reconstrucao',
