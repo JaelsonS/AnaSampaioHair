@@ -5,9 +5,21 @@ type ServiceCopy = { name: string; short: string; cta: string }
 
 const COPY: Record<string, Record<UrlLocale, ServiceCopy>> = {
   mechas: {
-    pt: { name: 'Mechas / Madeixas', short: 'Luz no rosto, tom certo e fios respeitados — do teste à escolha da cor.', cta: 'Quero falar de mechas' },
-    es: { name: 'Mechas / Madeixas', short: 'Luz en el rostro, tono adecuado y cabello respetado — de la prueba a la elección del color.', cta: 'Quiero hablar de mechas' },
-    en: { name: 'Highlights / Madeixas', short: 'Light around the face, the right tone and respected fibre — from test to colour choice.', cta: 'Talk about highlights' },
+    pt: {
+      name: 'Mechas / Madeixas',
+      short: 'Cor escolhida para si — análise da íris, temperatura de pele, coloração pessoal e visagismo antes da técnica.',
+      cta: 'Agendar consultoria de mechas',
+    },
+    es: {
+      name: 'Mechas / Madeixas',
+      short: 'Color elegido para usted — análisis del iris, temperatura de piel, coloración personal y visagismo antes de la técnica.',
+      cta: 'Reservar consultoría de mechas',
+    },
+    en: {
+      name: 'Highlights / Madeixas',
+      short: 'Colour chosen for you — iris analysis, skin undertone, personal colour and visagism before technique.',
+      cta: 'Book a highlights consultation',
+    },
   },
   brushing: {
     pt: { name: 'Brushing', short: 'Acabamento que faz o cabelo cair bem e o dia fluir melhor.', cta: 'Pedir brushing' },

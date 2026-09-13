@@ -12,6 +12,7 @@ import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
 import { Button } from '@/components/ui/Button'
 import { AnaSpeaks } from '@/components/brand/AnaSpeaks'
 import { ServiceCardCta } from '@/components/services/ServiceCardCta'
+import { MechasSpotlight } from '@/components/treatments/MechasSpotlight'
 import { IconHairStrand, IconScissors } from '@/components/icons'
 import { siteConfig } from '@/config/site'
 import { treatmentsHubCopy, therapyStepsByLocale } from '@/data/content-i18n'
@@ -34,7 +35,8 @@ function ServiceGrid({
               alt={getLocalizedServiceName(s.id, locale)}
               fill
               sizes="(max-width:900px) 100vw, 33vw"
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: 'cover', objectPosition: 'center 38%' }}
+              className="service-card-img"
             />
           </div>
           <h3 className="display-md service-card-title">{getLocalizedServiceName(s.id, locale)}</h3>
@@ -77,8 +79,8 @@ export default async function TreatmentsHubPage({
   const beautyAll = getServicesByCategory('beleza')
   const care = getServicesByCategory('tratamentos')
 
-  /** Salon beauty (visual) — corte bordado goes with fibre care */
-  const beauty = beautyAll.filter((s) => s.id !== 'corte-bordado')
+  /** Salon beauty — mechas has dedicated spotlight; corte bordado goes with fibre care */
+  const beauty = beautyAll.filter((s) => s.id !== 'corte-bordado' && s.id !== 'mechas')
   const fioIds = new Set([
     'reconstrucao',
     'reposicao-hidrica',
@@ -118,7 +120,7 @@ export default async function TreatmentsHubPage({
           lead={copy.chooseLead}
         />
         <div className="treatments-intent-grid">
-          <a className="treatments-intent-card" href="#beleza">
+          <a className="treatments-intent-card" href="#mechas-madeixas">
             <span className="icon-badge">
               <IconScissors />
             </span>
@@ -172,6 +174,10 @@ export default async function TreatmentsHubPage({
         <div className="btn-group" style={{ marginTop: '1.5rem' }}>
           <Button href={localizedPath(locale, 'booking')}>{dict.nav.book}</Button>
         </div>
+      </Section>
+
+      <Section id="mechas-madeixas" className="mechas-section treatments-mechas-spotlight">
+        <MechasSpotlight locale={locale} />
       </Section>
 
       <Section id="beleza">

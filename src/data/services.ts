@@ -15,13 +15,14 @@ export const services: Service[] = [
     slug: 'mechas-madeixas',
     name: 'Mechas / Madeixas',
     category: 'beleza',
-    shortDescription: 'Luz no rosto, tom certo e fios respeitados — do teste à escolha da cor.',
+    shortDescription:
+      'Cor escolhida para si — análise da íris, temperatura de pele, coloração pessoal e visagismo antes da técnica.',
     description:
-      'Se sonha com mechas, começamos por olhar para o seu cabelo de verdade. Testamos quando faz sentido, escolhemos o tom consigo e avançamos com calma para um resultado bonito, cuidando da fibra.',
-    image: '/images/services/mechas.jpg',
-    imageAlt: 'Mechas luminosas no Instituto Ana Sampaio',
+      'Especialista em mechas personalizadas: cada consultoria começa pela análise da íris, temperatura da pele, coloração pessoal e visagismo. Só depois definimos técnica e tons — com testes quando necessário e respeito pela fibra.',
+    image: '/images/services/mechas-visagismo.webp',
+    imageAlt: 'Mechas personalizadas no Instituto Ana Sampaio',
     ctaType: 'whatsapp',
-    ctaLabel: 'Quero falar de mechas',
+    ctaLabel: 'Agendar consultoria de mechas',
   },
   {
     id: 'brushing',
@@ -31,7 +32,7 @@ export const services: Service[] = [
     shortDescription: 'Acabamento que faz o cabelo cair bem e o dia fluir melhor.',
     description:
       'Brushing pensado para o seu tipo de fio e para a rotina que tem. Sai com movimento, brilho e a sensação de “está feito”.',
-    image: '/images/services/brushing.jpg',
+    image: '/images/about/ambiente-trabalho-04.webp',
     imageAlt: 'Brushing profissional',
     ctaType: 'booking',
     ctaLabel: 'Pedir brushing',
@@ -44,7 +45,7 @@ export const services: Service[] = [
     shortDescription: 'Um corte que respeita o seu rosto, o seu estilo e o crescimento natural.',
     description:
       'Conversamos sobre o que quer ver no espelho — e sobre o que é realista para o seu cabelo. O corte é preciso, pessoal e feito para crescer bem.',
-    image: '/images/services/corte.jpg',
+    image: '/images/about/ambiente-trabalho-03.webp',
     imageAlt: 'Corte com movimento',
     ctaType: 'booking',
     ctaLabel: 'Pedir corte',
@@ -57,7 +58,7 @@ export const services: Service[] = [
     shortDescription: 'Cor com intenção: a sua história capilar conta tanto quanto o tom desejado.',
     description:
       'Antes de colorir, olhamos para o histórico dos fios. Assim evitamos surpresas e construímos uma cor que fica bem — e que o cabelo consegue acompanhar.',
-    image: '/images/services/coloracao.jpg',
+    image: '/images/about/ambiente-trabalho-02.webp',
     imageAlt: 'Coloração capilar',
     ctaType: 'whatsapp',
     ctaLabel: 'Quero saber sobre cor',
@@ -70,7 +71,7 @@ export const services: Service[] = [
     shortDescription: 'Alisar sim — mas só depois de perceber se o cabelo está preparado.',
     description:
       'O alisamento começa com avaliação. Se for o caminho certo para si, avançamos com cuidado. Se não for, dizemos-lhe com honestidade e propomos outra solução.',
-    image: '/images/services/alisamento.jpg',
+    image: '/images/about/ambiente-trabalho-01.webp',
     imageAlt: 'Alisamento',
     ctaType: 'booking',
     ctaLabel: 'Pedir avaliação',

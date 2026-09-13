@@ -75,16 +75,16 @@ export function Hero({ locale, dict }: { locale: UrlLocale; dict: Dictionary }) 
         <div className="hero-stage-portrait reveal-stagger" style={{ ['--i' as string]: 2 }}>
           <div className="hero-portrait-glow" aria-hidden />
           <div className="hero-portrait-ground" aria-hidden />
-          <figure className="hero-portrait-cutout">
+          <figure className="hero-portrait-cutout hero-portrait-cutout--featured">
             <Image
-              src={siteConfig.brand.anaHero}
+              src={siteConfig.brand.anaHeroHome}
               alt={content.alts.ana}
-              width={520}
-              height={1140}
+              width={408}
+              height={612}
               priority
               quality={90}
               className="hero-portrait-img"
-              sizes="(max-width:768px) 70vw, 44vw"
+              sizes="(max-width: 640px) 78vw, (max-width: 900px) 68vw, 42vw"
             />
           </figure>
         </div>

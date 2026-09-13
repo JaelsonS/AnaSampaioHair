@@ -39,7 +39,7 @@ export const offers: Offer[] = [
       es: 'Lo quiero',
       en: 'I want it',
     },
-    image: '/images/about/ana-studio.jpg',
+    image: '/images/ebook/guia-meu-cabelo-dos-sonhos.webp',
     hrefKey: 'external',
     externalUrl:
       'https://hotmart.com/pt-br/marketplace/produtos/guia-meu-cabelo-dos-sonhos/T93244081R',

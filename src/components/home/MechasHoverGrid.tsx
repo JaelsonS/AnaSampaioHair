@@ -6,8 +6,9 @@ import { getHomeContent, therapyLearnMore } from '@/data/home-i18n'
 import { openAssistantIntent } from '@/lib/assistant-bridge'
 
 export function MechasHoverGrid({ locale = 'pt' }: { locale?: UrlLocale }) {
-  const mechas = getHomeContent(locale).mechas
-  const topics = getHomeContent(locale).topics
+  const content = getHomeContent(locale)
+  const mechas = content.mechas
+  const topics = content.topics
   const cta = therapyLearnMore[locale]
 
   return (
@@ -16,9 +17,10 @@ export function MechasHoverGrid({ locale = 'pt' }: { locale?: UrlLocale }) {
         <article key={card.id} className={`mechas-card mechas-card-${card.id}`}>
           <Image
             src={card.image}
-            alt=""
+            alt={`${card.title} — ${content.topics.mechas}`}
             fill
-            sizes="(max-width:900px) 100vw, 40vw"
+            sizes="(max-width: 900px) 100vw, 50vw"
+            quality={85}
             className="mechas-card-img"
           />
           <div className="mechas-card-overlay">

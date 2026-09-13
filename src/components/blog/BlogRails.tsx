@@ -77,7 +77,7 @@ export function BlogOffersRail({
               alt=""
               fill
               sizes="360px"
-              style={{ objectFit: 'cover', objectPosition: 'center 18%' }}
+              style={{ objectFit: 'cover', objectPosition: 'center 38%' }}
             />
           </div>
           <div className="blog-offer-copy">

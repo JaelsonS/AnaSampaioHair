@@ -46,12 +46,12 @@ export function EbookCampaign({ locale = 'pt' }: { locale?: UrlLocale }) {
 
         <figure className="ebook-campaign-portrait">
           <Image
-            src={siteConfig.brand.anaStudio}
+            src={siteConfig.brand.ebookGuia}
             alt={ebook.alt}
-            width={680}
-            height={1024}
-            sizes="(max-width:900px) 70vw, 380px"
-            quality={90}
+            width={1067}
+            height={1600}
+            sizes="(max-width:900px) 78vw, 420px"
+            quality={85}
             className="ebook-campaign-portrait-img"
           />
           <figcaption className="ebook-campaign-caption">Ana Sampaio</figcaption>

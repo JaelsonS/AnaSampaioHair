@@ -34,6 +34,9 @@ export type HomeContent = {
     eyebrow: string
     title: string
     lead: string
+    manifesto: string
+    processSteps: { id: string; label: string }[]
+    techniqueNote: string
     cta: string
     cards: { id: string; title: string; short: string; long: string; image: string }[]
   }
@@ -89,6 +92,9 @@ const pt: HomeContent = {
     eyebrow: homeWp.mechas.eyebrow,
     title: homeWp.mechas.title,
     lead: homeWp.mechas.lead,
+    manifesto: homeWp.mechas.manifesto,
+    processSteps: homeWp.mechas.processSteps.map((s) => ({ id: s.id, label: s.label })),
+    techniqueNote: homeWp.mechas.techniqueNote,
     cta: homeWp.mechas.cta,
     cards: homeWp.mechas.cards.map((c) => ({
       id: c.id,
@@ -276,31 +282,49 @@ const es: HomeContent = {
     ],
   },
   mechas: {
-    eyebrow: 'Transformación visual con precisión y cuidado',
-    title: 'Especialista en mechas (madeixas)',
-    lead: 'Especializados en técnicas avanzadas de mechas, usamos métodos que cuidan la salud del cabello mientras transformamos el visual. Con Ana Sampaio, espere un acabado que complementa su personalidad.',
-    cta: 'Quiero iniciar el tratamiento',
+    eyebrow: 'Mechas personalizadas · consultoría antes del color',
+    title: 'Especialista en Mechas (Madeixas)',
+    lead: 'Cada cabello, cada rostro y cada identidad son únicos. En el Instituto Ana Sampaio, las mechas no empiezan en un catálogo de tendencias — empiezan en una consultoría: observamos quién es usted, qué comunican su piel y sus ojos, y solo después definimos técnica y tonos. La aplicación es parte del trabajo; el diferencial está en traducir ese análisis en un color hecho a su medida.',
+    manifesto:
+      'No elegimos solo un color bonito. Encontramos el color que tiene sentido para usted.',
+    processSteps: [
+      { id: 'analise', label: 'Análisis' },
+      { id: 'identidade', label: 'Identidad' },
+      { id: 'harmonia', label: 'Armonía' },
+      { id: 'tecnica', label: 'Técnica' },
+      { id: 'resultado', label: 'Resultado' },
+    ],
+    techniqueNote:
+      'Balayage, mechas finas, papel u otra técnica entra solo cuando el análisis está concluido — con pruebas de mechas cuando sea necesario y respeto por la salud del hilo.',
+    cta: 'Reservar consultoría de mechas',
     cards: [
       {
-        id: 'tecnicas',
-        title: 'Técnicas avanzadas',
-        short: 'Descubra la elegancia y la precisión de nuestras técnicas exclusivas de mechas con papel',
-        long: 'Esta innovación garantiza una aplicación más precisa y una exhibición deslumbrante de las mechas, especialmente visibles cuando el cabello está recogido. Transforme su visual con mechas que destacan de forma natural.',
-        image: '/images/hero/mechas-hero.jpg',
+        id: 'iris',
+        title: 'Análisis del Iris',
+        short: 'Observación de las características naturales que orientan la elección de tonos.',
+        long: 'El iris revela matices y particularidades que ayudan a comprender qué familias de color tienden a armonizar con usted — antes de cualquier prueba de mechas en el cabello.',
+        image: '/images/services/mechas-iris.webp',
       },
       {
-        id: 'produtos',
-        title: 'Productos de alta calidad',
-        short: 'Seleccionamos productos brasileños reconocidos, con más de 15 años de éxito en el mercado portugués',
-        long: 'Nuestros productos cuidan la belleza de las mechas y la salud del cabello. Elegidos por su variedad de tonos y eficacia, ofrecen resultados vibrantes y duraderos.',
-        image: '/images/services/coloracao.jpg',
+        id: 'pele',
+        title: 'Temperatura de la Piel',
+        short: 'Cálida, fría o neutra: la base para elegir familias de tono con criterio.',
+        long: 'Evaluamos la temperatura de la piel para entender qué matices — dorados, cenizos, cobrizos — crean mayor equilibrio con su apariencia natural, sin depender de modas pasajeras.',
+        image: '/images/services/mechas-produtos-qualidade.webp',
       },
       {
-        id: 'saude',
-        title: 'Salud capilar',
-        short: 'Priorizamos por encima de todo la salud de su cabello',
-        long: 'Antes de cualquier tratamiento, realizamos un análisis meticuloso y pruebas de mechas para asegurar un servicio personalizado. Invierta en un visual deslumbrante y en la longevidad de sus hilos.',
-        image: '/images/about/ambiente-3.jpg',
+        id: 'coloracao',
+        title: 'Coloración Personal',
+        short: 'Armonía entre piel, ojos, cabello y la imagen que desea transmitir.',
+        long: 'La coloración personal se integra en el proceso de definición de tonos: consideramos contraste natural, profundidad e intensidad — y la presencia que desea tener.',
+        image: '/images/services/mechas-coloracao.webp',
+      },
+      {
+        id: 'visagismo',
+        title: 'Visagismo',
+        short: 'Rostro, rasgos y proporciones orientan dónde debe incidir la luz.',
+        long: 'Aplicamos principios de visagismo para comprender cómo el color y la iluminación del cabello valorizan la estructura facial y refuerzan la identidad que desea expresar.',
+        image: '/images/services/mechas-visagismo.webp',
       },
     ],
   },
@@ -537,31 +561,49 @@ const en: HomeContent = {
     ],
   },
   mechas: {
-    eyebrow: 'Visual transformation with precision and care',
-    title: 'Highlights specialist (madeixas)',
-    lead: 'We use advanced highlight techniques that protect hair health while transforming your look. With Ana Sampaio, expect a finish that complements your personality.',
-    cta: 'I want to start treatment',
+    eyebrow: 'Personalised highlights · consultation before colour',
+    title: 'Specialist in Highlights (Madeixas)',
+    lead: 'Every head of hair, every face and every identity is unique. At Ana Sampaio’s institute, highlights do not start from a trend catalogue — they start with a consultation: we observe who you are, what your skin and eyes communicate, and only then define technique and tones. Application is part of the work; the difference is turning that analysis into colour made for you.',
+    manifesto:
+      'We do not choose just a pretty colour. We find the colour that makes sense for you.',
+    processSteps: [
+      { id: 'analise', label: 'Analysis' },
+      { id: 'identidade', label: 'Identity' },
+      { id: 'harmonia', label: 'Harmony' },
+      { id: 'tecnica', label: 'Technique' },
+      { id: 'resultado', label: 'Result' },
+    ],
+    techniqueNote:
+      'Balayage, fine highlights, foils or another technique comes only once analysis is complete — with strand tests when needed and respect for fibre health.',
+    cta: 'Book a highlights consultation',
     cards: [
       {
-        id: 'tecnicas',
-        title: 'Advanced techniques',
-        short: 'Discover the elegance and precision of our exclusive paper highlight methods',
-        long: 'This approach allows more precise placement and beautiful visibility — especially when hair is worn up. Transform your look with highlights that feel natural.',
-        image: '/images/hero/mechas-hero.jpg',
+        id: 'iris',
+        title: 'Iris Analysis',
+        short: 'Observing natural characteristics that guide tone selection.',
+        long: 'The iris reveals nuances that help us understand which colour families tend to harmonise with you — before any highlight test on the hair.',
+        image: '/images/services/mechas-iris.webp',
       },
       {
-        id: 'produtos',
-        title: 'High-quality products',
-        short: 'We select renowned Brazilian products with over 15 years of success in the Portuguese market',
-        long: 'Our products support both beautiful highlights and fibre health — chosen for tone range and proven results.',
-        image: '/images/services/coloracao.jpg',
+        id: 'pele',
+        title: 'Skin Undertone',
+        short: 'Warm, cool or neutral: the basis for choosing tone families with criteria.',
+        long: 'We assess skin undertone to understand which shades — golden, ash, copper — create the greatest balance with your natural appearance, without relying on passing trends.',
+        image: '/images/services/mechas-produtos-qualidade.webp',
       },
       {
-        id: 'saude',
-        title: 'Hair health',
-        short: 'We put your hair’s health first',
-        long: 'Before any treatment we assess carefully and run highlight tests when needed, so every service is personalised. Invest in a stunning look and lasting fibre health.',
-        image: '/images/about/ambiente-3.jpg',
+        id: 'coloracao',
+        title: 'Personal Colour',
+        short: 'Harmony between skin, eyes, hair and the image you want to convey.',
+        long: 'Personal colour is part of defining tones: we consider natural contrast, depth and intensity — and the presence you want to have.',
+        image: '/images/services/mechas-coloracao.webp',
+      },
+      {
+        id: 'visagismo',
+        title: 'Visagism',
+        short: 'Face, features and proportions guide where light should fall.',
+        long: 'We apply visagism principles to understand how hair colour and illumination can enhance facial structure and reinforce the identity you want to express.',
+        image: '/images/services/mechas-visagismo.webp',
       },
     ],
   },

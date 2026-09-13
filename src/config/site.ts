@@ -86,9 +86,23 @@ export const siteConfig = {
     /** Cinematic hair result (landscape) — secondary / results */
     heroResults: '/images/hero/results-wide.jpg',
     heroMechas: '/images/hero/mechas-hero.jpg',
+    /** Homepage mechas — Ana com painel Art Visage (destaque) */
+    mechasFeatured: '/images/services/mechas-visagismo.webp',
     anaCutout: '/images/about/ana-cutout.png',
     anaStudio: '/images/about/ana-studio.jpg',
-    /** Transparent full-body cutout over salon atmosphere */
+    /** E-book “Guia Meu Cabelo dos Sonhos” — resultado / instituto */
+    ebookGuia: '/images/ebook/guia-meu-cabelo-dos-sonhos.webp',
+    /** Homepage hero — Ana cutout (transparent, from studio portrait) */
+    anaHeroHome: '/images/hero/ana-home-destaque-cutout.webp',
+    /** Homepage “Quem sou?” — Ana full-body at the institute */
+    anaAboutHome: '/images/about/ana-about-home.webp',
+    /** About page — “Um olhar que une…” (Ana com tablet) */
+    anaAboutLook: '/images/blog/como-escolher-um-terapeuta-capilar.webp',
+    /** About page — Formação e especialização */
+    anaAboutTraining: '/images/about/ana-formacao-especialidade.webp',
+    /** About page — livro Raízes e Asas (capa) */
+    bookRaizesAsas: '/images/about/livro-raizes-e-asas.webp',
+    /** Transparent full-body cutout — secondary use */
     anaHero: '/images/about/ana-hero.png',
     /** Studio portrait (instituto) — quotes / Ana fala */
     anaHeroPortrait: '/images/about/ana-studio.jpg',
@@ -101,13 +115,14 @@ export const siteConfig = {
     anaPortrait: '/images/about/ana-studio.jpg',
     /** Clear studio portrait for “Escrito por” / author / legal identity */
     anaAuthor: '/images/about/ana-studio.jpg',
+    /** About page — O espaço (instituto + trabalhos) */
     ambiente: [
-      '/images/about/ambiente-1.jpg',
-      '/images/about/ambiente-2.jpg',
-      '/images/about/ambiente-3.jpg',
-      '/images/about/ambiente-4.jpg',
-      '/images/about/ambiente-5.jpg',
-      '/images/about/ambiente-6.jpg',
+      '/images/about/ambiente-espaco.webp',
+      '/images/about/ambiente-trabalho-01.webp',
+      '/images/about/ambiente-trabalho-02.webp',
+      '/images/about/ambiente-trabalho-03.webp',
+      '/images/about/ambiente-trabalho-04.webp',
+      '/images/about/ambiente-guia.webp',
     ] as const,
   },
 } as const

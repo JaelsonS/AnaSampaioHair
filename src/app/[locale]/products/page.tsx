@@ -132,7 +132,7 @@ export default async function ProductsPage({
               alt=""
               fill
               sizes="40vw"
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: 'cover', objectPosition: 'center 38%' }}
             />
           </div>
           <div>

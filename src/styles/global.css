@@ -1208,6 +1208,72 @@ p {
   object-position: center 12%;
 }
 
+/* Homepage hero — Ana cutout (transparent PNG over salon atmosphere) */
+.hero-portrait-cutout--featured {
+  width: min(100%, 520px);
+  height: min(88svh, 840px);
+  filter: drop-shadow(0 28px 42px rgba(28, 31, 26, 0.28));
+}
+
+.hero-portrait-cutout--featured .hero-portrait-img {
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+@media (min-width: 901px) {
+  .hero-portrait-cutout--featured {
+    width: min(100%, 480px);
+    height: min(86svh, 780px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-portrait-cutout--featured {
+    width: min(100%, 520px);
+    height: min(88svh, 820px);
+  }
+}
+
+/* Legacy framed portrait variant (unused on home hero) */
+.hero-portrait-frame--featured {
+  position: relative;
+  margin: 0 auto 0.75rem;
+  width: min(100%, 460px);
+  aspect-ratio: 1067 / 1600;
+  max-height: min(88svh, 800px);
+  border-radius: clamp(18px, 2.5vw, 28px);
+  overflow: hidden;
+  box-shadow:
+    0 32px 64px rgba(28, 31, 26, 0.22),
+    0 0 0 1px rgba(255, 252, 248, 0.45) inset;
+  animation: portraitRise 1.1s var(--ease) both;
+  animation-delay: 0.2s;
+}
+
+.hero-portrait-frame--featured .hero-portrait-img {
+  object-fit: cover;
+  object-position: center 28%;
+}
+
+@media (min-width: 901px) {
+  .hero-stage-portrait {
+    justify-items: end;
+    padding-bottom: 1.5rem;
+  }
+
+  .hero-portrait-frame--featured {
+    width: min(100%, 440px);
+    max-height: min(86svh, 760px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-portrait-frame--featured {
+    width: min(100%, 480px);
+    max-height: min(88svh, 820px);
+  }
+}
+
 .hero-stage .btn-secondary {
   background: rgba(255, 252, 248, 0.92);
   border: 1px solid rgba(48, 96, 56, 0.22);
@@ -1670,29 +1736,162 @@ p {
 }
 
 .about-home-portrait {
-  background: linear-gradient(180deg, #efeae2, #e3ebda);
+  aspect-ratio: 1067 / 1600;
+  width: 100%;
+  min-height: clamp(360px, 72vw, 520px);
+  max-height: min(78vh, 680px);
+  margin-inline: auto;
+  background: linear-gradient(180deg, #f4f0ea, #e8efe3);
   border: none;
+  box-shadow:
+    0 24px 56px rgba(28, 31, 26, 0.12),
+    0 0 0 1px rgba(48, 96, 56, 0.08) inset;
+}
+
+.about-home-portrait .portrait-img {
+  object-fit: cover;
+  object-position: center 14%;
+}
+
+@media (min-width: 768px) {
+  .about-home-portrait {
+    min-height: clamp(420px, 48vw, 600px);
+    max-height: min(82vh, 720px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-home-portrait {
+    min-height: clamp(480px, 36vw, 640px);
+  }
+
+  .about-home-portrait .portrait-img {
+    object-position: center 12%;
+  }
+}
+
+@media (max-width: 767px) {
+  .split .about-home-portrait {
+    order: -1;
+    max-width: min(100%, 420px);
+    min-height: clamp(340px, 92vw, 480px);
+  }
+}
+
+.mechas-section {
+  background:
+    linear-gradient(180deg, rgba(61, 90, 66, 0.04) 0%, transparent 28%),
+    var(--cream, #f6f4ef);
+}
+
+.treatments-mechas-spotlight {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.service-card-img {
+  object-position: center 38%;
+}
+
+.mechas-intro {
+  align-items: center;
+  margin-bottom: 2.25rem;
+}
+
+.mechas-intro-copy {
+  display: grid;
+  gap: 0;
+}
+
+.mechas-feature-portrait {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1120 / 1680;
+  min-height: clamp(360px, 52vw, 640px);
+  max-height: min(82vh, 720px);
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: linear-gradient(165deg, #9a9590 0%, #7a7570 100%);
+  box-shadow: var(--shadow-soft);
+}
+
+.mechas-feature-img {
+  object-fit: contain;
+  object-position: center center;
+}
+
+.mechas-manifesto {
+  margin: 0 0 1.35rem;
+  max-width: 38rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  line-height: 1.35;
+  color: var(--brand-forest);
+  border: none;
+  padding: 0;
+}
+
+.mechas-process {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.mechas-process-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mechas-process-label {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(61, 90, 66, 0.1);
+  color: var(--brand-forest);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mechas-process-arrow {
+  color: var(--brand-forest);
+  opacity: 0.45;
+  font-size: 0.95rem;
+}
+
+.mechas-technique-note {
+  margin: 1.25rem 0 0;
+  max-width: 42rem;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 .mechas-grid {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 1rem;
-  min-height: 520px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.15rem;
 }
 
 .mechas-card {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  min-height: 240px;
+  min-height: min(380px, 42vw);
   color: white;
+  background: linear-gradient(165deg, #8a9096 0%, #636970 100%);
 }
 
-.mechas-card-tecnicas {
-  grid-row: 1 / 3;
-  min-height: 100%;
+.mechas-card .mechas-card-img {
+  object-fit: contain;
+  object-position: center center;
 }
 
 .mechas-card-img {
@@ -1739,7 +1938,7 @@ p {
 
 .mechas-card:hover .mechas-card-img,
 .mechas-card:focus-within .mechas-card-img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .mechas-card .btn {
@@ -1865,7 +2064,9 @@ p {
   .hero-stage-portrait {
     order: 2;
     min-height: 0;
-    margin-top: 0.25rem;
+    margin-top: 0.15rem;
+    justify-items: center;
+    padding-bottom: 1.25rem;
   }
 
   .hero-portrait-cutout {
@@ -1879,19 +2080,43 @@ p {
     margin-bottom: 0.5rem;
   }
 
+  .hero-portrait-cutout--featured {
+    width: min(78vw, 340px);
+    height: min(56svh, 480px);
+  }
+
+  .hero-portrait-frame--featured {
+    width: min(88vw, 360px);
+    max-height: min(62svh, 540px);
+    margin-inline: auto;
+    border-radius: 22px;
+  }
+
+  .hero-portrait-frame--featured .hero-portrait-img {
+    object-position: center 24%;
+  }
+
   .hero-portrait-glow {
     height: 55%;
   }
 
   .mechas-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: none;
-    min-height: 0;
   }
 
-  .mechas-card-tecnicas {
-    grid-row: auto;
-    min-height: 280px;
+  .mechas-card {
+    min-height: clamp(360px, 88vw, 520px);
+  }
+
+  .mechas-intro .mechas-feature-portrait {
+    order: -1;
+    max-width: min(100%, 420px);
+    margin-inline: auto;
+    min-height: clamp(340px, 88vw, 520px);
+  }
+
+  .mechas-process {
+    gap: 0.5rem;
   }
 
   .mechas-long,
@@ -2931,6 +3156,7 @@ p {
 
 .blog-grid-related {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
   margin-top: 1rem;
 }
 
@@ -2950,6 +3176,46 @@ p {
   overflow: hidden;
   background: var(--surface-soft);
   position: relative;
+}
+
+/* Home blog row — taller cards so portrait covers aren’t cropped */
+.blog-grid-related .blog-card-image {
+  aspect-ratio: 4 / 5;
+  min-height: clamp(220px, 32vw, 320px);
+}
+
+.blog-card-image .blog-card-img {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.blog-card-image[data-focus='portrait-top'] {
+  background: linear-gradient(165deg, #9a9590 0%, #7a7570 100%);
+}
+
+.blog-card-image[data-focus='portrait-top'] .blog-card-img {
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.blog-card-image[data-focus='hair'] .blog-card-img {
+  object-position: center 40%;
+}
+
+@media (max-width: 900px) {
+  .blog-grid-related {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-grid-related .blog-card-image {
+    aspect-ratio: 4 / 5;
+    max-height: min(72vw, 420px);
+  }
+
+  .blog-card-image[data-focus='portrait-top'] .blog-card-img {
+    object-fit: contain;
+    object-position: center bottom;
+  }
 }
 
 .blog-card-excerpt {
@@ -3239,6 +3505,11 @@ p {
     grid-template-columns: 1.05fr 0.95fr;
   }
 
+  .mechas-intro {
+    grid-template-columns: 1fr min(46%, 520px);
+    gap: clamp(2rem, 4vw, 3.5rem);
+  }
+
   .footer-grid {
     grid-template-columns: 1.4fr 1fr 1fr;
   }
@@ -3375,7 +3646,7 @@ p {
 .ebook-campaign-portrait {
   margin: 0;
   justify-self: end;
-  width: min(100%, 360px);
+  width: min(100%, 420px);
   position: relative;
 }
 
@@ -3383,12 +3654,13 @@ p {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 2px;
-  box-shadow: none;
-  object-fit: cover;
-  object-position: center 12%;
-  aspect-ratio: 3 / 4;
-  mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 100%);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+  object-fit: contain;
+  object-position: center bottom;
+  aspect-ratio: 1067 / 1600;
+  background: linear-gradient(165deg, #e8e0d4 0%, #c9b99a 100%);
+  max-height: min(72vh, 640px);
 }
 
 .ebook-campaign-caption {
@@ -3424,7 +3696,12 @@ p {
   .ebook-campaign-portrait {
     order: -1;
     justify-self: center;
-    width: min(72vw, 280px);
+    width: min(84vw, 340px);
+  }
+
+  .ebook-campaign-portrait-img {
+    max-height: min(58vh, 520px);
+    object-position: center bottom;
   }
 }
 
@@ -3516,6 +3793,74 @@ p {
   padding-bottom: 0.25rem;
 }
 
+.about-look-portrait {
+  aspect-ratio: 1067 / 1600;
+  width: 100%;
+  min-height: clamp(360px, 48vw, 560px);
+  max-height: min(78vh, 640px);
+  margin-inline: auto;
+  background: linear-gradient(165deg, #9a9590 0%, #7a7570 100%);
+}
+
+.about-look-portrait .portrait-img {
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+@media (max-width: 767px) {
+  .split .about-look-portrait {
+    order: -1;
+    max-width: min(100%, 400px);
+    min-height: clamp(340px, 88vw, 480px);
+  }
+}
+
+.about-training-portrait {
+  aspect-ratio: 1067 / 1600;
+  width: 100%;
+  min-height: clamp(360px, 48vw, 560px);
+  max-height: min(78vh, 640px);
+  margin-inline: auto;
+  background: linear-gradient(165deg, #e8e0d4 0%, #c9b99a 100%);
+}
+
+.about-training-portrait .portrait-img {
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+@media (max-width: 767px) {
+  .split .about-training-portrait {
+    order: -1;
+    max-width: min(100%, 400px);
+    min-height: clamp(340px, 88vw, 480px);
+  }
+}
+
+.about-space-frame {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(165deg, #e8e0d4 0%, #c9b99a 100%);
+}
+
+.about-space-img {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.about-space-frame[data-space='espaco'] .about-space-img {
+  object-position: center 42%;
+}
+
+.about-space-frame[data-space='trabalho'] .about-space-img {
+  object-position: center 38%;
+}
+
+.about-space-frame[data-space='portrait'] .about-space-img {
+  object-fit: contain;
+  object-position: center bottom;
+}
+
 .about-speaks-section {
   padding-top: 2rem !important;
 }
@@ -3554,7 +3899,7 @@ p {
   color: var(--brand-forest);
 }
 
-.about-book-portrait,
+.about-book-cover,
 .about-ebook-portrait {
   margin: 0;
   justify-self: center;
@@ -3563,13 +3908,19 @@ p {
   gap: 0.75rem;
 }
 
-.about-book-portrait-photo {
+.about-book-cover-frame {
   position: relative;
   width: 100%;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1079 / 1584;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
+  background: #f3ebe0;
+}
+
+.about-book-cover-img {
+  object-fit: contain;
+  object-position: center center;
 }
 
 .about-book-caption {
@@ -3585,10 +3936,11 @@ p {
   height: auto;
   display: block;
   border-radius: var(--radius-md);
-  object-fit: cover;
-  object-position: center 12%;
-  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  object-position: center bottom;
+  aspect-ratio: 1067 / 1600;
   box-shadow: var(--shadow-soft);
+  background: linear-gradient(165deg, #e8e0d4 0%, #c9b99a 100%);
 }
 
 @media (min-width: 900px) {

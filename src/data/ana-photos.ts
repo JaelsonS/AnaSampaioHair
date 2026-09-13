@@ -4,6 +4,8 @@
  */
 
 export type AnaPhotoId =
+  | 'ana-hero-home'
+  | 'ana-about-home'
   | 'ana-hero'
   | 'ana-hero-portrait'
   | 'ana-full'
@@ -25,6 +27,32 @@ export type AnaPhotoAsset = {
 }
 
 export const anaPhotoInventory: AnaPhotoAsset[] = [
+  {
+    id: 'ana-hero-home',
+    src: '/images/hero/ana-home-destaque-cutout.webp',
+    width: 408,
+    height: 612,
+    orientation: 'portrait',
+    mode: 'RGBA',
+    recommendedUse: 'Hero home — cutout sobre atmosfera do salão',
+    context: 'Primeira impressão / página inicial',
+    cropHint: 'Corpo completo; object-position center bottom',
+    alt: 'Ana Sampaio, cabeleireira e terapeuta capilar integrativa',
+    avoid: 'Não repetir na mesma página abaixo do hero',
+  },
+  {
+    id: 'ana-about-home',
+    src: '/images/about/ana-about-home.webp',
+    width: 1067,
+    height: 1600,
+    orientation: 'portrait',
+    mode: 'RGB',
+    recommendedUse: 'Home — secção “Quem sou?” ao lado dos pilares',
+    context: 'Instituto / credibilidade / botão Saber mais',
+    cropHint: 'Corpo completo no instituto; object-position center 12–14%',
+    alt: 'Ana Sampaio no Instituto de Beleza e Saúde Capilar',
+    avoid: 'Não usar como cutout no hero',
+  },
   {
     id: 'ana-hero',
     src: '/images/about/ana-hero.png',

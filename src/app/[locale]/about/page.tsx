@@ -85,15 +85,14 @@ export default async function AboutPage({
             </ul>
             <Button href={localizedPath(locale, 'booking')}>{dict.nav.book}</Button>
           </div>
-          <div className="portrait-frame portrait-full">
+          <div className="portrait-frame about-look-portrait">
             <Image
-              src={siteConfig.brand.anaStudio}
+              src={siteConfig.brand.anaAboutLook}
               alt={copy.anaAlt}
               fill
-              sizes="(max-width:768px) 100vw, 45vw"
-              quality={90}
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 45vw, 42vw"
+              quality={85}
               className="portrait-img"
-              style={{ objectFit: 'cover', objectPosition: 'center top' }}
             />
           </div>
         </div>
@@ -133,15 +132,14 @@ export default async function AboutPage({
 
       <Section>
         <div className="split">
-          <div className="portrait-frame portrait-contain" style={{ background: '#0a0a0a' }}>
+          <div className="portrait-frame about-training-portrait">
             <Image
-              src={siteConfig.brand.anaCutout}
-              alt="Ana Sampaio"
+              src={siteConfig.brand.anaAboutTraining}
+              alt={copy.anaAlt}
               fill
-              sizes="(max-width:768px) 100vw, 45vw"
-              quality={90}
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 45vw, 42vw"
+              quality={85}
               className="portrait-img"
-              style={{ objectFit: 'contain', objectPosition: 'center bottom' }}
             />
           </div>
           <div className="prose">
@@ -177,15 +175,15 @@ export default async function AboutPage({
               {copy.bookCta}
             </a>
           </div>
-          <figure className="about-book-portrait">
-            <div className="about-book-portrait-photo">
+          <figure className="about-book-cover">
+            <div className="about-book-cover-frame">
               <Image
-                src={siteConfig.brand.anaAuthor}
-                alt="Ana Sampaio"
+                src={siteConfig.brand.bookRaizesAsas}
+                alt={copy.bookAlt}
                 fill
                 sizes="(max-width:768px) 55vw, 280px"
                 quality={90}
-                style={{ objectFit: 'cover', objectPosition: 'center 12%' }}
+                className="about-book-cover-img"
               />
             </div>
             <figcaption className="about-book-caption">{copy.bookTitle}</figcaption>
@@ -210,10 +208,10 @@ export default async function AboutPage({
           </div>
           <figure className="about-ebook-portrait">
             <Image
-              src={siteConfig.brand.anaPortrait}
+              src={siteConfig.brand.ebookGuia}
               alt={ebook.alt}
-              width={480}
-              height={720}
+              width={1067}
+              height={1600}
               sizes="(max-width:768px) 55vw, 280px"
               quality={90}
               className="about-ebook-portrait-img"
@@ -224,15 +222,20 @@ export default async function AboutPage({
 
       <Section>
         <SectionHeading title={copy.spaceTitle} lead={copy.spaceLead} />
-        <div className="grid-3">
+        <div className="grid-3 about-space-grid">
           {siteConfig.brand.ambiente.map((src, i) => (
-            <div key={src} className="media-frame" style={{ aspectRatio: '3/4', position: 'relative' }}>
+            <div
+              key={src}
+              className="media-frame about-space-frame"
+              data-space={i === 0 ? 'espaco' : i === 5 ? 'portrait' : 'trabalho'}
+            >
               <Image
                 src={src}
                 alt={`${copy.spaceAlt} ${i + 1}`}
                 fill
-                sizes="33vw"
-                style={{ objectFit: 'cover', objectPosition: i === 0 ? 'center center' : 'center top' }}
+                sizes="(max-width:768px) 50vw, 33vw"
+                quality={85}
+                className="about-space-img"
               />
             </div>
           ))}

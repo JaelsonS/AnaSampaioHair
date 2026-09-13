@@ -37,13 +37,13 @@ export function AboutHero({
         </div>
         <figure className="about-hero-portrait">
           <Image
-            src={siteConfig.brand.anaHero}
+            src={siteConfig.brand.anaHeroHome}
             alt="Ana Sampaio — cabeleireira e terapeuta capilar integrativa"
-            width={520}
-            height={1140}
+            width={408}
+            height={612}
             priority
             quality={90}
-            sizes="(max-width:900px) 55vw, 360px"
+            sizes="(max-width:900px) 55vw, 380px"
             className="about-hero-portrait-img"
           />
         </figure>

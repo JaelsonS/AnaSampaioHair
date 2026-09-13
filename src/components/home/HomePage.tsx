@@ -28,7 +28,7 @@ import { siteConfig } from '@/config/site'
 import { toAppLocale } from '@/i18n/config'
 import { Hero } from './Hero'
 import { TherapyAccordion } from './TherapyAccordion'
-import { MechasHoverGrid } from './MechasHoverGrid'
+import { MechasSpotlight } from '@/components/treatments/MechasSpotlight'
 import { HomeCtaButtons } from './HomeCtaButtons'
 import { EbookCampaign } from './EbookCampaign'
 import { TestimonialsCarousel } from '@/components/testimonials/TestimonialsCarousel'
@@ -135,15 +135,14 @@ export function HomePage({ locale, dict }: { locale: UrlLocale; dict: Dictionary
             </div>
           </Reveal>
           <Reveal>
-            <div className="portrait-frame portrait-contain about-home-portrait">
+            <div className="portrait-frame about-home-portrait">
               <Image
-                src={siteConfig.brand.anaHero}
+                src={siteConfig.brand.anaAboutHome}
                 alt={wp.alts.ana}
                 fill
-                sizes="(max-width:768px) 100vw, 45vw"
-                quality={90}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 88vw, 42vw"
+                quality={85}
                 className="portrait-img"
-                style={{ objectFit: 'contain', objectPosition: 'center bottom' }}
               />
             </div>
           </Reveal>
@@ -169,24 +168,8 @@ export function HomePage({ locale, dict }: { locale: UrlLocale; dict: Dictionary
         </div>
       </Section>
 
-      <Section>
-        <Reveal>
-          <SectionHeading
-            eyebrow={wp.mechas.eyebrow}
-            title={wp.mechas.title}
-            lead={wp.mechas.lead}
-          />
-        </Reveal>
-        <Reveal>
-          <MechasHoverGrid locale={locale} />
-        </Reveal>
-        <div className="btn-group" style={{ marginTop: '1.5rem' }}>
-          <HomeCtaButtons
-            primaryLabel={wp.mechas.cta}
-            topic={wp.topics.mechas}
-            serviceName={wp.topics.mechas}
-          />
-        </div>
+      <Section className="mechas-section">
+        <MechasSpotlight locale={locale} />
       </Section>
 
       <Section dark>
@@ -255,14 +238,23 @@ export function HomePage({ locale, dict }: { locale: UrlLocale; dict: Dictionary
             return (
               <article key={post.id} className="blog-card-premium">
                 <Link href={localizedPath(locale, 'blog', slug)}>
-                  <div className="blog-card-image media-frame">
+                  <div
+                    className="blog-card-image media-frame"
+                    data-focus={
+                      slug === 'como-escolher-um-terapeuta-capilar'
+                        ? 'portrait-top'
+                        : slug === 'terapia-capilar-para-cabelos-oleosos'
+                          ? 'hair'
+                          : undefined
+                    }
+                  >
                     {post.featuredImage ? (
                       <Image
                         src={post.featuredImage}
                         alt={post.featuredImageAlt ?? title}
                         fill
-                        sizes="33vw"
-                        style={{ objectFit: 'cover' }}
+                        sizes="(max-width: 900px) 100vw, 33vw"
+                        className="blog-card-img"
                       />
                     ) : null}
                   </div>
