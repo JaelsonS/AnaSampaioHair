@@ -16,8 +16,10 @@ import { Section, SectionHeading } from '@/components/ui/Section'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
 import { Button } from '@/components/ui/Button'
 import { AnaSpeaks } from '@/components/brand/AnaSpeaks'
-import { IconHeartPulse, IconLeaf, IconShield } from '@/components/icons'
+import { IconHeartPulse, IconLeaf, IconShield, IconSpark } from '@/components/icons'
 import { siteConfig } from '@/config/site'
+
+const PHILOSOPHY_ICONS = [IconHeartPulse, IconLeaf, IconShield, IconSpark] as const
 
 export async function generateMetadata({
   params,
@@ -101,17 +103,20 @@ export default async function AboutPage({
       <Section dark>
         <SectionHeading title={copy.philosophyTitle} />
         <div className="grid-2">
-          {experiencePoints.map((p) => (
+          {experiencePoints.map((p, index) => {
+            const Icon = PHILOSOPHY_ICONS[index % PHILOSOPHY_ICONS.length]
+            return (
             <article key={p.title} style={{ display: 'grid', gap: '0.65rem' }}>
               <span className="icon-badge">
-                <IconHeartPulse />
+                <Icon />
               </span>
               <h3 className="display-md" style={{ fontSize: '1.45rem' }}>
                 {p.title}
               </h3>
               <p style={{ opacity: 0.88 }}>{p.description}</p>
             </article>
-          ))}
+            )
+          })}
         </div>
       </Section>
 

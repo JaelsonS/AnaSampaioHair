@@ -13,7 +13,7 @@ import { Button } from '@/components/ui/Button'
 import { AnaSpeaks } from '@/components/brand/AnaSpeaks'
 import { ServiceCardCta } from '@/components/services/ServiceCardCta'
 import { MechasSpotlight } from '@/components/treatments/MechasSpotlight'
-import { IconHairStrand, IconScissors } from '@/components/icons'
+import { IconHairStrand, IconScissors, IconTarget } from '@/components/icons'
 import { siteConfig } from '@/config/site'
 import { treatmentsHubCopy, therapyStepsByLocale } from '@/data/content-i18n'
 import { getLocalizedServiceName, getLocalizedServiceShort } from '@/data/service-i18n'
@@ -140,7 +140,7 @@ export default async function TreatmentsHubPage({
           </a>
           <a className="treatments-intent-card" href="#fio">
             <span className="icon-badge">
-              <IconHairStrand />
+              <IconTarget />
             </span>
             <h2 className="display-md" style={{ fontSize: '1.35rem' }}>
               {copy.intentFibreTitle}

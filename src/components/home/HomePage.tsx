@@ -19,7 +19,7 @@ import {
   IconSpark,
   IconLeaf,
   IconHeartPulse,
-  IconScissors,
+  IconBookOpen,
 } from '@/components/icons'
 import { getTestimonials } from '@/data/testimonials'
 import { getBlogPosts } from '@/data/blog'
@@ -46,7 +46,7 @@ const BENEFIT_ICONS = [
   IconSpark,
   IconHeartPulse,
   IconLeaf,
-  IconScissors,
+  IconBookOpen,
 ] as const
 
 

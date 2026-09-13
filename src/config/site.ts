@@ -115,7 +115,7 @@ export const siteConfig = {
     anaPortrait: '/images/about/ana-studio.jpg',
     /** Clear studio portrait for “Escrito por” / author / legal identity */
     anaAuthor: '/images/about/ana-studio.jpg',
-    /** About page — O espaço (instituto + trabalhos) */
+    /** About page — O espaço (instituto + trabalhos reais) */
     ambiente: [
       '/images/about/ambiente-espaco.webp',
       '/images/about/ambiente-trabalho-01.webp',

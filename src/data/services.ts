@@ -33,7 +33,7 @@ export const services: Service[] = [
     description:
       'Brushing pensado para o seu tipo de fio e para a rotina que tem. Sai com movimento, brilho e a sensação de “está feito”.',
     image: '/images/about/ambiente-trabalho-04.webp',
-    imageAlt: 'Brushing profissional',
+    imageAlt: 'Brushing profissional — resultado no instituto Ana Sampaio',
     ctaType: 'booking',
     ctaLabel: 'Pedir brushing',
   },
@@ -46,7 +46,7 @@ export const services: Service[] = [
     description:
       'Conversamos sobre o que quer ver no espelho — e sobre o que é realista para o seu cabelo. O corte é preciso, pessoal e feito para crescer bem.',
     image: '/images/about/ambiente-trabalho-03.webp',
-    imageAlt: 'Corte com movimento',
+    imageAlt: 'Corte com movimento — resultado no instituto Ana Sampaio',
     ctaType: 'booking',
     ctaLabel: 'Pedir corte',
   },
@@ -59,7 +59,7 @@ export const services: Service[] = [
     description:
       'Antes de colorir, olhamos para o histórico dos fios. Assim evitamos surpresas e construímos uma cor que fica bem — e que o cabelo consegue acompanhar.',
     image: '/images/about/ambiente-trabalho-02.webp',
-    imageAlt: 'Coloração capilar',
+    imageAlt: 'Coloração capilar — resultado no instituto Ana Sampaio',
     ctaType: 'whatsapp',
     ctaLabel: 'Quero saber sobre cor',
   },
@@ -72,7 +72,7 @@ export const services: Service[] = [
     description:
       'O alisamento começa com avaliação. Se for o caminho certo para si, avançamos com cuidado. Se não for, dizemos-lhe com honestidade e propomos outra solução.',
     image: '/images/about/ambiente-trabalho-01.webp',
-    imageAlt: 'Alisamento',
+    imageAlt: 'Alisamento — resultado no instituto Ana Sampaio',
     ctaType: 'booking',
     ctaLabel: 'Pedir avaliação',
   },
@@ -97,7 +97,7 @@ export const services: Service[] = [
     shortDescription: 'Avaliação com tricoscopia e plano personalizado para a causa da queda.',
     description:
       'A queda é multifatorial. Identificamos causas com avaliação detalhada (tricoscopia e biorressonância quando indicado) e desenhamos um protocolo à sua medida.',
-    image: '/images/services/queda.jpg',
+    image: '/images/services/queda-capilar-resultado.webp',
     imageAlt: 'Avaliação de queda capilar',
     ctaType: 'booking',
     ctaLabel: 'Avaliar queda',
