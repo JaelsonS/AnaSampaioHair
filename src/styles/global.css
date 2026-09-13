@@ -3784,7 +3784,7 @@ p {
   display: block;
   max-height: min(78vh, 720px);
   object-fit: contain;
-  object-position: bottom center;
+  object-position: center bottom;
   filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.35));
 }
 

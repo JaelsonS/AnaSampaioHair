@@ -39,8 +39,8 @@ export function AboutHero({
           <Image
             src={siteConfig.brand.anaHeroHome}
             alt="Ana Sampaio — cabeleireira e terapeuta capilar integrativa"
-            width={408}
-            height={612}
+            width={682}
+            height={1024}
             priority
             quality={90}
             sizes="(max-width:900px) 55vw, 380px"

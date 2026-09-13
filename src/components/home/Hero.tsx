@@ -79,8 +79,8 @@ export function Hero({ locale, dict }: { locale: UrlLocale; dict: Dictionary }) 
             <Image
               src={siteConfig.brand.anaHeroHome}
               alt={content.alts.ana}
-              width={408}
-              height={612}
+              width={682}
+              height={1024}
               priority
               quality={90}
               className="hero-portrait-img"

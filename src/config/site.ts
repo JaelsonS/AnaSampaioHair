@@ -92,8 +92,8 @@ export const siteConfig = {
     anaStudio: '/images/about/ana-studio.jpg',
     /** E-book “Guia Meu Cabelo dos Sonhos” — resultado / instituto */
     ebookGuia: '/images/ebook/guia-meu-cabelo-dos-sonhos.webp',
-    /** Homepage hero — Ana cutout (transparent, from studio portrait) */
-    anaHeroHome: '/images/hero/ana-home-destaque-cutout.webp',
+    /** Homepage & About hero — Ana portrait cutout (transparent) */
+    anaHeroHome: '/images/hero/ana-home-destaque-hero.webp',
     /** Homepage “Quem sou?” — Ana full-body at the institute */
     anaAboutHome: '/images/about/ana-about-home.webp',
     /** About page — “Um olhar que une…” (Ana com tablet) */
