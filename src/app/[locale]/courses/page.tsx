@@ -234,7 +234,7 @@ export default async function CoursesPage({
         dict={dict}
         title={dict.sections.coursesTitle}
         lead={dict.sections.coursesLead}
-        image="/images/about/ambiente-2.jpg"
+        image="/images/about/ambiente-2.webp"
       />
 
       <div className="container" style={{ paddingTop: '1.25rem' }}>

@@ -1,17 +1,17 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import Image from 'next/image'
 import Link from 'next/link'
 import { isUrlLocale, type UrlLocale } from '@/i18n/config'
 import { getDictionary } from '@/i18n/get-dictionary'
 import { localizedPath } from '@/i18n/routes'
-import { getServicesByCategory } from '@/data/services'
+import { beautyShowcaseImages, getServicesByCategory } from '@/data/services'
 import { PageHero } from '@/components/layout/PageHero'
 import { Section, SectionHeading } from '@/components/ui/Section'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
 import { Button } from '@/components/ui/Button'
 import { AnaSpeaks } from '@/components/brand/AnaSpeaks'
 import { ServiceCardCta } from '@/components/services/ServiceCardCta'
+import { ServiceCardMedia } from '@/components/services/ServiceCardMedia'
 import { MechasSpotlight } from '@/components/treatments/MechasSpotlight'
 import { IconHairStrand, IconScissors, IconTarget } from '@/components/icons'
 import { siteConfig } from '@/config/site'
@@ -29,16 +29,10 @@ function ServiceGrid({
     <div className="treatments-service-grid">
       {services.map((s) => (
         <article key={s.id} className="service-card">
-          <div className="service-card-media media-frame">
-            <Image
-              src={s.image}
-              alt={getLocalizedServiceName(s.id, locale)}
-              fill
-              sizes="(max-width:900px) 100vw, 33vw"
-              style={{ objectFit: 'cover', objectPosition: 'center 38%' }}
-              className="service-card-img"
-            />
-          </div>
+          <ServiceCardMedia
+            image={s.image}
+            alt={s.imageAlt || getLocalizedServiceName(s.id, locale)}
+          />
           <h3 className="display-md service-card-title">{getLocalizedServiceName(s.id, locale)}</h3>
           <p className="service-card-text">{getLocalizedServiceShort(s.id, locale)}</p>
           <ServiceCardCta locale={locale} service={s} />
@@ -100,8 +94,8 @@ export default async function TreatmentsHubPage({
         dict={dict}
         title={dict.nav.treatments}
         lead={copy.heroLead}
-        image="/images/about/tratamento-env.jpg"
-        objectPosition="center 40%"
+        image="/images/mechas/gallery/coloracao-02-depois.webp"
+        objectPosition="center 35%"
       />
 
       <div className="container" style={{ paddingTop: '1.25rem' }}>
@@ -183,6 +177,16 @@ export default async function TreatmentsHubPage({
       <Section id="beleza">
         <SectionHeading title={copy.beautyTitle} lead={copy.beautyLead} />
         <ServiceGrid locale={locale} services={beauty} />
+        <p className="eyebrow" style={{ marginTop: '2.5rem', marginBottom: '1rem' }}>
+          {copy.beautyShowcaseEyebrow}
+        </p>
+        <div className="treatments-service-grid treatments-showcase-grid">
+          {beautyShowcaseImages.map((item) => (
+            <figure key={item.src} className="service-card service-card--showcase">
+              <ServiceCardMedia image={item.src} alt={item.alt} sizes="(max-width:900px) 50vw, 20vw" />
+            </figure>
+          ))}
+        </div>
       </Section>
 
       <Section id="terapia">

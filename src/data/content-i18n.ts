@@ -182,6 +182,7 @@ export const treatmentsHubCopy: Record<
     methodLead: string
     beautyTitle: string
     beautyLead: string
+    beautyShowcaseEyebrow: string
     therapyEyebrow: string
     therapyTitle: string
     therapyLead: string
@@ -210,6 +211,7 @@ export const treatmentsHubCopy: Record<
     methodLead: 'Passos reais do instituto — sem inventar durações ou resultados.',
     beautyTitle: 'Beleza & transformação',
     beautyLead: 'Serviços de salão com o mesmo cuidado de avaliação quando o fio precisa.',
+    beautyShowcaseEyebrow: 'Mais resultados reais',
     therapyEyebrow: 'Terapia capilar',
     therapyTitle: 'Terapia & cuidados do couro',
     therapyLead: 'Onde a intenção de pesquisa encontra a avaliação personalizada.',
@@ -237,6 +239,7 @@ export const treatmentsHubCopy: Record<
     methodLead: 'Pasos reales del instituto — sin inventar duraciones o resultados.',
     beautyTitle: 'Belleza y transformación',
     beautyLead: 'Servicios de salón con el mismo cuidado de valoración cuando el hilo lo necesita.',
+    beautyShowcaseEyebrow: 'Más resultados reales',
     therapyEyebrow: 'Terapia capilar',
     therapyTitle: 'Terapia y cuidados del cuero',
     therapyLead: 'Donde la intención de investigación encuentra la valoración personalizada.',
@@ -264,6 +267,7 @@ export const treatmentsHubCopy: Record<
     methodLead: 'Real institute steps — without inventing durations or results.',
     beautyTitle: 'Beauty & transformation',
     beautyLead: 'Salon services with the same assessment care when the fibre needs it.',
+    beautyShowcaseEyebrow: 'More real results',
     therapyEyebrow: 'Scalp therapy',
     therapyTitle: 'Therapy & scalp care',
     therapyLead: 'Where research intent meets personalised assessment.',
@@ -295,9 +299,23 @@ export const aboutPageCopy: Record<
     bookCta: string
     bookUrl: string
     bookAlt: string
+    circuloEyebrow: string
+    circuloTitle: string
+    circuloLead: string
+    circuloBody1: string
+    circuloBody2: string
+    circuloClosing: string
+    circuloCta: string
+    circuloWaMessage: string
     trainingBody1: string
     trainingBody2: string
     spaceAlt: string
+    spaceAmbienteEyebrow: string
+    spaceResultsEyebrow: string
+    resultLabels: Record<string, string>
+    lightboxClose: string
+    lightboxPrev: string
+    lightboxNext: string
     anaAlt: string
   }
 > = {
@@ -331,6 +349,43 @@ export const aboutPageCopy: Record<
     bookCta: 'Ver na Amazon',
     bookUrl: 'https://link.amazon/B03mmuQSH',
     bookAlt: 'Raízes e Asas — livro de Ana Sampaio',
+    circuloEyebrow: 'Projeto',
+    circuloTitle: 'Círculo de Mulheres, Raízes & Asas',
+    circuloLead: 'Um espaço para pausar, acolher, partilhar e reconectar-se consigo mesma.',
+    circuloBody1:
+      'O Círculo de Mulheres é um encontro criado para mulheres que desejam olhar com mais carinho para si, cuidar do emocional e fortalecer a autoestima. Um espaço de acolhimento, escuta e troca, onde podemos conversar sobre autocuidado, autoestima, emoções, relacionamentos, propósito e os desafios da vida — sempre com respeito à história e à individualidade de cada mulher.',
+    circuloBody2:
+      'Porque, assim como as raízes nos sustentam, são as asas que nos lembram que podemos recomeçar, crescer e voar.',
+    circuloClosing: 'Um encontro para cuidar de dentro para fora.',
+    circuloCta: 'Saber mais',
+    circuloWaMessage:
+      'Olá Ana Sampaio, gostaria de saber mais sobre o Círculo de Mulheres, Raízes & Asas.',
+    spaceAmbienteEyebrow: 'Ambiente do instituto',
+    spaceResultsEyebrow: 'Trabalhos realizados',
+    resultLabels: {
+      ambiente: 'Ambiente do instituto',
+      mechas: 'Mechas personalizadas',
+      coloracao: 'Coloração',
+      corte: 'Corte',
+      brushing: 'Brushing',
+      alisamento: 'Alisamento',
+      escova: 'Escova terapêutica',
+      queda: 'Queda capilar',
+      caspa: 'Caspa',
+      dermatite: 'Dermatite seborreica',
+      calvicie: 'Calvície',
+      alopecia: 'Alopecia areata',
+      microagulhamento: 'Microagulhamento',
+      detox: 'Detox do couro',
+      oleosidade: 'Oleosidade',
+      hidrica: 'Reposição hídrica',
+      lipidica: 'Reposição lipídica',
+      reconstrucao: 'Reconstrução do fio',
+      blend: 'Blend de óleos',
+    },
+    lightboxClose: 'Fechar',
+    lightboxPrev: 'Imagem anterior',
+    lightboxNext: 'Imagem seguinte',
     anaAlt: 'Ana Sampaio no instituto',
   },
   es: {
@@ -363,6 +418,43 @@ export const aboutPageCopy: Record<
     bookCta: 'Ver en Amazon',
     bookUrl: 'https://link.amazon/B03mmuQSH',
     bookAlt: 'Raízes e Asas — libro de Ana Sampaio',
+    circuloEyebrow: 'Proyecto',
+    circuloTitle: 'Círculo de Mujeres, Raízes & Asas',
+    circuloLead: 'Un espacio para pausar, acoger, compartir y reconectar consigo misma.',
+    circuloBody1:
+      'El Círculo de Mujeres es un encuentro creado para mujeres que desean mirarse con más cariño, cuidar lo emocional y fortalecer la autoestima. Un espacio de acogida, escucha e intercambio, donde podemos hablar de autocuidado, autoestima, emociones, relaciones, propósito y los desafíos de la vida — siempre con respeto a la historia y a la individualidad de cada mujer.',
+    circuloBody2:
+      'Porque, así como las raíces nos sostienen, son las alas las que nos recuerdan que podemos recomenzar, crecer y volar.',
+    circuloClosing: 'Un encuentro para cuidar de dentro hacia fuera.',
+    circuloCta: 'Saber más',
+    circuloWaMessage:
+      'Hola Ana Sampaio, me gustaría saber más sobre el Círculo de Mujeres, Raízes & Asas.',
+    spaceAmbienteEyebrow: 'Ambiente del instituto',
+    spaceResultsEyebrow: 'Trabajos realizados',
+    resultLabels: {
+      ambiente: 'Ambiente del instituto',
+      mechas: 'Mechas personalizadas',
+      coloracao: 'Coloración',
+      corte: 'Corte',
+      brushing: 'Brushing',
+      alisamento: 'Alisado',
+      escova: 'Cepillado terapéutico',
+      queda: 'Caída capilar',
+      caspa: 'Caspa',
+      dermatite: 'Dermatitis seborreica',
+      calvicie: 'Calvicie',
+      alopecia: 'Alopecia areata',
+      microagulhamento: 'Microagujado',
+      detox: 'Detox del cuero',
+      oleosidade: 'Oleosidad',
+      hidrica: 'Reposición hídrica',
+      lipidica: 'Reposición lipídica',
+      reconstrucao: 'Reconstrucción del cabello',
+      blend: 'Blend de aceites',
+    },
+    lightboxClose: 'Cerrar',
+    lightboxPrev: 'Imagen anterior',
+    lightboxNext: 'Imagen siguiente',
     anaAlt: 'Ana Sampaio en el instituto',
   },
   en: {
@@ -395,6 +487,43 @@ export const aboutPageCopy: Record<
     bookCta: 'View on Amazon',
     bookUrl: 'https://link.amazon/B03mmuQSH',
     bookAlt: 'Raízes e Asas — book by Ana Sampaio',
+    circuloEyebrow: 'Project',
+    circuloTitle: 'Women’s Circle, Raízes & Asas',
+    circuloLead: 'A space to pause, welcome, share and reconnect with yourself.',
+    circuloBody1:
+      'The Women’s Circle is a gathering created for women who want to look at themselves with more kindness, care for their emotional wellbeing and strengthen self-esteem. A space of welcome, listening and exchange, where we can talk about self-care, self-esteem, emotions, relationships, purpose and life’s challenges — always respecting each woman’s story and individuality.',
+    circuloBody2:
+      'Because, just as roots sustain us, wings remind us that we can begin again, grow and fly.',
+    circuloClosing: 'A gathering to care from the inside out.',
+    circuloCta: 'Learn more',
+    circuloWaMessage:
+      'Hello Ana Sampaio, I would like to know more about the Women’s Circle, Raízes & Asas.',
+    spaceAmbienteEyebrow: 'Institute atmosphere',
+    spaceResultsEyebrow: 'Completed work',
+    resultLabels: {
+      ambiente: 'Institute atmosphere',
+      mechas: 'Personalised highlights',
+      coloracao: 'Colour',
+      corte: 'Cut',
+      brushing: 'Blow-dry',
+      alisamento: 'Straightening',
+      escova: 'Therapeutic brushing',
+      queda: 'Hair loss',
+      caspa: 'Dandruff',
+      dermatite: 'Seborrheic dermatitis',
+      calvicie: 'Hair loss pattern',
+      alopecia: 'Alopecia areata',
+      microagulhamento: 'Microneedling',
+      detox: 'Scalp detox',
+      oleosidade: 'Oiliness',
+      hidrica: 'Hydration',
+      lipidica: 'Lipid replenishment',
+      reconstrucao: 'Hair reconstruction',
+      blend: 'Oil blend',
+    },
+    lightboxClose: 'Close',
+    lightboxPrev: 'Previous image',
+    lightboxNext: 'Next image',
     anaAlt: 'Ana Sampaio at the institute',
   },
 }

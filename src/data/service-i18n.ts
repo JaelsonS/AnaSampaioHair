@@ -6,18 +6,18 @@ type ServiceCopy = { name: string; short: string; cta: string }
 const COPY: Record<string, Record<UrlLocale, ServiceCopy>> = {
   mechas: {
     pt: {
-      name: 'Mechas / Madeixas',
-      short: 'Cor escolhida para si — análise da íris, temperatura de pele, coloração pessoal e visagismo antes da técnica.',
+      name: 'Consultoria de Cor e Visagismo para Mechas Personalizadas',
+      short: 'Descubra os tons que harmonizam com a temperatura da sua pele, os seus olhos e a imagem que deseja transmitir.',
       cta: 'Agendar consultoria de mechas',
     },
     es: {
-      name: 'Mechas / Madeixas',
-      short: 'Color elegido para usted — análisis del iris, temperatura de piel, coloración personal y visagismo antes de la técnica.',
+      name: 'Consultoría de Color y Visagismo para Mechas Personalizadas',
+      short: 'Descubra los tonos que armonizan con la temperatura de su piel, sus ojos y la imagen que desea transmitir.',
       cta: 'Reservar consultoría de mechas',
     },
     en: {
-      name: 'Highlights / Madeixas',
-      short: 'Colour chosen for you — iris analysis, skin undertone, personal colour and visagism before technique.',
+      name: 'Colour & Visagism Consultation for Personalised Highlights',
+      short: 'Discover tones that harmonise with your skin undertone, your eyes and the image you want to convey.',
       cta: 'Book a highlights consultation',
     },
   },

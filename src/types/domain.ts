@@ -18,6 +18,9 @@ export type Service = {
   description: string
   image: string
   imageAlt: string
+  /** Optional antes/depois — card shows toggle when both are set */
+  imageBefore?: string
+  imageAfter?: string
   durationMinutes?: number | null
   price?: number | null
   benefits?: string[]

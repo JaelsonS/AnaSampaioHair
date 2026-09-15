@@ -18,6 +18,8 @@ import { Button } from '@/components/ui/Button'
 import { AnaSpeaks } from '@/components/brand/AnaSpeaks'
 import { IconHeartPulse, IconLeaf, IconShield, IconSpark } from '@/components/icons'
 import { siteConfig } from '@/config/site'
+import { AboutSpaceGallery } from '@/components/about/AboutSpaceGallery'
+import { getWhatsAppUrl } from '@/config/site'
 
 const PHILOSOPHY_ICONS = [IconHeartPulse, IconLeaf, IconShield, IconSpark] as const
 
@@ -196,6 +198,27 @@ export default async function AboutPage({
         </div>
       </Section>
 
+      <Section className="about-circulo-bridge">
+        <div className="about-circulo-inner">
+          <div className="about-circulo-copy">
+            <p className="eyebrow">{copy.circuloEyebrow}</p>
+            <h2 className="display-lg">{copy.circuloTitle}</h2>
+            <p className="about-circulo-lead">{copy.circuloLead}</p>
+            <p>{copy.circuloBody1}</p>
+            <p className="about-circulo-quote">{copy.circuloBody2}</p>
+            <p className="about-circulo-closing">{copy.circuloClosing}</p>
+            <a
+              className="btn btn-primary"
+              href={getWhatsAppUrl(copy.circuloWaMessage) ?? '#'}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {copy.circuloCta}
+            </a>
+          </div>
+        </div>
+      </Section>
+
       <Section className="about-ebook-bridge">
         <div className="about-ebook-inner">
           <div className="about-ebook-copy">
@@ -227,24 +250,17 @@ export default async function AboutPage({
 
       <Section>
         <SectionHeading title={copy.spaceTitle} lead={copy.spaceLead} />
-        <div className="grid-3 about-space-grid">
-          {siteConfig.brand.ambiente.map((src, i) => (
-            <div
-              key={src}
-              className="media-frame about-space-frame"
-              data-space={i === 0 ? 'espaco' : i === 5 ? 'portrait' : 'trabalho'}
-            >
-              <Image
-                src={src}
-                alt={`${copy.spaceAlt} ${i + 1}`}
-                fill
-                sizes="(max-width:768px) 50vw, 33vw"
-                quality={85}
-                className="about-space-img"
-              />
-            </div>
-          ))}
-        </div>
+        <AboutSpaceGallery
+          copy={{
+            spaceAlt: copy.spaceAlt,
+            spaceAmbienteEyebrow: copy.spaceAmbienteEyebrow,
+            spaceResultsEyebrow: copy.spaceResultsEyebrow,
+            resultLabels: copy.resultLabels,
+            lightboxClose: copy.lightboxClose,
+            lightboxPrev: copy.lightboxPrev,
+            lightboxNext: copy.lightboxNext,
+          }}
+        />
       </Section>
 
       <Section dark>

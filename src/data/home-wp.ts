@@ -148,10 +148,10 @@ export const homeWp = {
   },
   mechas: {
     eyebrow: 'Mechas personalizadas · consultoria antes da cor',
-    title: 'Especialista em Mechas (Madeixas)',
-    lead: 'Cada cabelo, cada rosto e cada identidade são únicos. No Instituto Ana Sampaio, as mechas não começam num catálogo de tendências — começam numa consultoria: observamos quem é, o que a pele e os olhos comunicam, e só depois definimos técnica e tons. A aplicação é parte do trabalho; o diferencial está em traduzir essa análise numa cor feita à sua medida.',
+    title: 'Consultoria de Cor e Visagismo para Mechas Personalizadas',
+    lead: 'Descubra os tons que harmonizam com a temperatura da sua pele, as características dos seus olhos e a imagem que deseja transmitir. A partir dessa análise, criamos uma proposta de mechas personalizada para iluminar o seu rosto, valorizar os seus traços naturais e respeitar a sua identidade.',
     manifesto:
-      'Não escolhemos apenas uma cor bonita. Encontramos a cor que faz sentido para si.',
+      'A sua cor não precisa seguir tendências. Precisa combinar consigo.',
     processSteps: [
       { id: 'analise', label: 'Análise' },
       { id: 'identidade', label: 'Identidade' },

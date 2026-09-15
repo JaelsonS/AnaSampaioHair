@@ -283,10 +283,10 @@ const es: HomeContent = {
   },
   mechas: {
     eyebrow: 'Mechas personalizadas · consultoría antes del color',
-    title: 'Especialista en Mechas (Madeixas)',
-    lead: 'Cada cabello, cada rostro y cada identidad son únicos. En el Instituto Ana Sampaio, las mechas no empiezan en un catálogo de tendencias — empiezan en una consultoría: observamos quién es usted, qué comunican su piel y sus ojos, y solo después definimos técnica y tonos. La aplicación es parte del trabajo; el diferencial está en traducir ese análisis en un color hecho a su medida.',
+    title: 'Consultoría de Color y Visagismo para Mechas Personalizadas',
+    lead: 'Descubra los tonos que armonizan con la temperatura de su piel, las características de sus ojos y la imagen que desea transmitir. A partir de ese análisis, creamos una propuesta de mechas personalizada para iluminar su rostro, valorar sus rasgos naturales y respetar su identidad.',
     manifesto:
-      'No elegimos solo un color bonito. Encontramos el color que tiene sentido para usted.',
+      'Su color no necesita seguir tendencias. Necesita combinar con usted.',
     processSteps: [
       { id: 'analise', label: 'Análisis' },
       { id: 'identidade', label: 'Identidad' },
@@ -562,10 +562,10 @@ const en: HomeContent = {
   },
   mechas: {
     eyebrow: 'Personalised highlights · consultation before colour',
-    title: 'Specialist in Highlights (Madeixas)',
-    lead: 'Every head of hair, every face and every identity is unique. At Ana Sampaio’s institute, highlights do not start from a trend catalogue — they start with a consultation: we observe who you are, what your skin and eyes communicate, and only then define technique and tones. Application is part of the work; the difference is turning that analysis into colour made for you.',
+    title: 'Colour & Visagism Consultation for Personalised Highlights',
+    lead: 'Discover the tones that harmonise with your skin undertone, the characteristics of your eyes and the image you want to convey. From that analysis, we create a personalised highlight proposal to illuminate your face, enhance your natural features and respect your identity.',
     manifesto:
-      'We do not choose just a pretty colour. We find the colour that makes sense for you.',
+      'Your colour does not need to follow trends. It needs to suit you.',
     processSteps: [
       { id: 'analise', label: 'Analysis' },
       { id: 'identidade', label: 'Identity' },

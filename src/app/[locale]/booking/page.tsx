@@ -33,7 +33,7 @@ export default async function BookingPage({ params }: { params: Promise<{ locale
         dict={dict}
         title={dict.booking.title}
         lead={dict.booking.lead}
-        image="/images/about/ambiente-3.jpg"
+        image="/images/about/ambiente-3.webp"
         objectPosition="center 35%"
       />
       <Section>

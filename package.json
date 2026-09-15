@@ -3,11 +3,16 @@
   "private": true,
   "version": "2.0.0",
   "scripts": {
+    "clean": "rm -rf dist .next",
     "dev": "next dev",
-    "dev:clean": "rm -rf dist && next dev",
+    "dev:clean": "npm run clean && next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "verify": "npm run build",
+    "smoke": "node scripts/smoke-routes.mjs",
+    "test:routes": "npm run build && npm run smoke:prod",
+    "smoke:prod": "node scripts/smoke-prod.mjs"
   },
   "dependencies": {
     "@eslint/eslintrc": "^3.3.6",

@@ -1,11 +1,11 @@
-import Image from 'next/image'
 import type { UrlLocale } from '@/i18n/config'
 import { SectionHeading } from '@/components/ui/Section'
 import { Reveal } from '@/components/ui/Reveal'
 import { MechasHoverGrid } from '@/components/home/MechasHoverGrid'
 import { HomeCtaButtons } from '@/components/home/HomeCtaButtons'
+import { MechasAnaGrid } from '@/components/mechas/MechasAnaGrid'
+import { MechasColorCarousel } from '@/components/mechas/MechasColorCarousel'
 import { getHomeContent } from '@/data/home-i18n'
-import { siteConfig } from '@/config/site'
 
 /** Premium mechas consultative block — shared by home and treatments hub. */
 export function MechasSpotlight({ locale }: { locale: UrlLocale }) {
@@ -38,18 +38,12 @@ export function MechasSpotlight({ locale }: { locale: UrlLocale }) {
           </Reveal>
         </div>
         <Reveal>
-          <figure className="mechas-feature-portrait">
-            <Image
-              src={siteConfig.brand.mechasFeatured}
-              alt={`${mechas.title} — ${content.alts.ana}`}
-              fill
-              sizes="(max-width: 899px) 88vw, 480px"
-              quality={90}
-              className="mechas-feature-img"
-            />
-          </figure>
+          <MechasAnaGrid locale={locale} />
         </Reveal>
       </div>
+      <Reveal>
+        <MechasColorCarousel locale={locale} />
+      </Reveal>
       <Reveal>
         <MechasHoverGrid locale={locale} />
       </Reveal>
