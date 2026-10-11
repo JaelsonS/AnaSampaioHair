@@ -82,7 +82,7 @@ const COPY: Record<
   }
 > = {
   pt: {
-    galleryTitle: 'Trabalhos reais de coloração',
+    galleryTitle: 'Trabalhos reais de coloração pessoal',
     galleryLead:
       'Cada transformação aparece em sequência: primeiro o antes, depois o resultado. Use as setas ou deslize.',
     before: 'Antes',
