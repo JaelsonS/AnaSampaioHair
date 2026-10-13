@@ -143,8 +143,8 @@ export function MechasColorCarousel({
 
       <div className="mechas-color-highlight-aside">
         <header className="mechas-color-highlight-head">
-          <h3 className="display-md mechas-color-carousel-title">{copy.galleryTitle}</h3>
-          <p className="mechas-color-carousel-lead">{copy.galleryLead}</p>
+          <h3 className="display-lg mechas-color-carousel-title">{copy.galleryTitle}</h3>
+          <p className="lead mechas-color-carousel-lead">{copy.galleryLead}</p>
         </header>
 
         {showFoot ? (

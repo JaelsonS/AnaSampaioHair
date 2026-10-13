@@ -1,6 +1,9 @@
 import type { UrlLocale } from '@/i18n/config'
 
 const G = '/images/mechas/gallery'
+/** Força recarregar webp após troca de fonte (evita cache do browser / `/_next/image`). */
+const GALLERY_V = '20261013-9202'
+const g = (name: string) => `${G}/${name}?v=${GALLERY_V}`
 const A = '/images/mechas/ana'
 
 /** Três retratos da Ana — consultoria de mechas (sem duplicados) */
@@ -27,22 +30,22 @@ export type MechasColorPair = {
 export const mechasColorPairs: MechasColorPair[] = [
   {
     id: 'pessoal-01',
-    before: `${G}/coloracao-pessoal-01-antes.webp`,
-    after: `${G}/coloracao-pessoal-01-depois.webp`,
+    before: g('coloracao-pessoal-01-antes.webp'),
+    after: g('coloracao-pessoal-01-depois.webp'),
     beforeSize: { width: 1800, height: 3173 },
     afterSize: { width: 1800, height: 2876 },
   },
   {
     id: 'pessoal-02',
-    before: `${G}/coloracao-pessoal-02-antes.webp`,
-    after: `${G}/coloracao-pessoal-02-depois.webp`,
+    before: g('coloracao-pessoal-02-antes.webp'),
+    after: g('coloracao-pessoal-02-depois.webp'),
     beforeSize: { width: 1800, height: 2400 },
     afterSize: { width: 1800, height: 2691 },
   },
   {
     id: 'pessoal-03',
-    before: `${G}/coloracao-pessoal-03-antes.webp`,
-    after: `${G}/coloracao-pessoal-03-depois.webp`,
+    before: g('coloracao-pessoal-03-antes.webp'),
+    after: g('coloracao-pessoal-03-depois.webp'),
     beforeSize: { width: 1800, height: 2403 },
     afterSize: { width: 1800, height: 2403 },
   },

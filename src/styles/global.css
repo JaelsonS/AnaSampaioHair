@@ -2743,6 +2743,8 @@ p {
 }
 
 .mechas-color-highlight-head {
+  display: grid;
+  gap: 0.75rem;
   max-width: 42rem;
 }
 
@@ -2753,7 +2755,7 @@ p {
 
 .mechas-color-highlight-aside {
   display: grid;
-  gap: 1.15rem;
+  gap: 1.35rem;
 }
 
 .mechas-color-highlight-foot {
@@ -2762,25 +2764,33 @@ p {
   max-width: 42rem;
 }
 
-.mechas-color-highlight-foot .mechas-technique-note {
-  margin: 0;
-}
-
 .mechas-color-highlight-foot .btn-group {
   margin: 0;
   justify-content: flex-start;
 }
 
 .mechas-color-carousel-title {
-  margin: 0 0 0.35rem;
-  font-size: clamp(1.35rem, 2.5vw, 1.65rem) !important;
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.85rem, 3.4vw, 2.45rem);
+  line-height: 1.12;
+  color: var(--ink);
+  letter-spacing: -0.02em;
 }
 
 .mechas-color-carousel-lead {
   margin: 0;
+  max-width: none;
+  font-size: clamp(1.08rem, 1.75vw, 1.28rem);
+  line-height: 1.55;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.mechas-color-highlight-foot .mechas-technique-note {
+  margin: 0;
+  font-size: clamp(1.02rem, 1.55vw, 1.15rem);
+  line-height: 1.62;
   color: var(--ink-soft);
-  font-size: 0.95rem;
-  line-height: 1.5;
 }
 
 .mechas-color-carousel-frame {
