@@ -209,6 +209,16 @@ p {
   font-weight: 500;
 }
 
+.display-lg-split {
+  display: grid;
+  gap: 0.12em;
+  text-wrap: balance;
+}
+
+.display-lg-split-line {
+  display: block;
+}
+
 .display-md {
   font-family: var(--font-display);
   font-size: clamp(1.6rem, 3vw, 2.2rem);
@@ -412,19 +422,23 @@ p {
 
 .reveal {
   opacity: 1;
-  transform: translateY(10px);
-  transition: transform 0.35s var(--ease);
+  transform: none;
 }
 
 .reveal.is-visible {
   transform: none;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .reveal {
-    transform: none;
-    transition: none;
-  }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Header — transparent over hero; never a black/cream navigation bar */
@@ -1234,7 +1248,7 @@ p {
   object-position: center 40%;
   transform: scale(1.06);
   filter: saturate(0.85) brightness(0.92);
-  animation: heroDrift 28s var(--ease) infinite alternate;
+  animation: none;
 }
 
 @keyframes heroDrift {
@@ -1473,10 +1487,10 @@ p {
   display: grid;
   gap: 0.35rem;
   margin: 0.15rem 0 0;
-  min-height: 4.6rem;
 }
 
 .hero-typewriter-prefix {
+  margin: 0;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.14em;
@@ -1484,10 +1498,29 @@ p {
   color: var(--brand-forest);
 }
 
+.hero-typewriter-rotator {
+  position: relative;
+  /* Reserva sempre 2 linhas — rotação sem saltos de layout */
+  min-height: calc(2 * 1.15 * clamp(1.55rem, 3.4vw, 2.35rem));
+}
+
+.hero-typewriter-phrase {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.45s var(--ease);
+  pointer-events: none;
+}
+
+.hero-typewriter-phrase.is-active {
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .hero-typewriter-line {
-  display: inline-flex;
-  align-items: baseline;
-  min-height: 1.25em;
+  display: grid;
+  gap: 0.08rem;
   font-family: var(--font-display);
   font-size: clamp(1.55rem, 3.4vw, 2.35rem);
   line-height: 1.15;
@@ -1495,22 +1528,21 @@ p {
   color: var(--brand-forest-deep);
 }
 
-.hero-typewriter-text {
+.hero-typewriter-text-line {
+  display: block;
+  min-height: 1.15em;
   border-bottom: 2px solid rgba(48, 96, 56, 0.28);
   padding-bottom: 0.1rem;
+  text-wrap: balance;
 }
 
-.hero-typewriter-cursor {
-  display: inline-block;
-  margin-left: 2px;
-  font-weight: 400;
-  color: var(--brand-forest);
-  animation: typeCaret 0.85s steps(1) infinite;
+.hero-typewriter-text-line:empty {
+  visibility: hidden;
 }
 
-@keyframes typeCaret {
-  50% {
-    opacity: 0;
+@media (prefers-reduced-motion: reduce) {
+  .hero-typewriter-phrase {
+    transition: none;
   }
 }
 
@@ -1563,7 +1595,8 @@ p {
   border-radius: 50%;
   background: radial-gradient(circle, rgba(200, 224, 192, 0.4), transparent 68%);
   filter: blur(22px);
-  animation: glowPulse 5.5s var(--ease) infinite alternate;
+  animation: none;
+  opacity: 0.85;
 }
 
 @keyframes glowPulse {
@@ -1596,8 +1629,7 @@ p {
   align-items: end;
   justify-items: center;
   filter: drop-shadow(0 28px 42px rgba(28, 31, 26, 0.3));
-  animation: portraitRise 1.1s var(--ease) both;
-  animation-delay: 0.2s;
+  animation: none;
 }
 
 .hero-portrait-frame {
@@ -1610,8 +1642,7 @@ p {
   box-shadow:
     0 30px 60px rgba(28, 31, 26, 0.22),
     0 0 0 1px rgba(255, 252, 248, 0.35) inset;
-  animation: portraitRise 1.1s var(--ease) both;
-  animation-delay: 0.2s;
+  animation: none;
 }
 
 @keyframes portraitRise {
@@ -1675,8 +1706,7 @@ p {
   box-shadow:
     0 32px 64px rgba(28, 31, 26, 0.22),
     0 0 0 1px rgba(255, 252, 248, 0.45) inset;
-  animation: portraitRise 1.1s var(--ease) both;
-  animation-delay: 0.2s;
+  animation: none;
 }
 
 .hero-portrait-frame--featured .hero-portrait-img {
@@ -1715,24 +1745,9 @@ p {
 }
 
 .reveal-stagger {
-  opacity: 0;
-  transform: translateY(14px);
-  animation: revealUp 0.45s var(--ease) forwards;
-  animation-delay: calc(var(--i, 0) * 0.06s + 0.04s);
-}
-
-.hero-stage-pane--portrait.reveal-stagger {
   opacity: 1;
   transform: none;
   animation: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reveal-stagger {
-    opacity: 1;
-    transform: none;
-    animation: none;
-  }
 }
 
 .therapy-accordion {
@@ -3302,8 +3317,8 @@ p {
     font-size: clamp(2.35rem, 11vw, 3.15rem);
   }
 
-  .hero-typewriter {
-    min-height: 3.8rem;
+  .hero-typewriter-rotator {
+    min-height: calc(2 * 1.15 * clamp(1.35rem, 6.5vw, 1.85rem));
     width: 100%;
   }
 
@@ -4822,11 +4837,11 @@ p {
 }
 
 .reveal-in {
-  animation: revealUp 0.4s var(--ease) both;
+  animation: none;
 }
 
 .blog-card-premium.reveal-in {
-  animation: revealUpSoft 0.35s var(--ease) both;
+  animation: none;
 }
 
 @keyframes revealUpSoft {

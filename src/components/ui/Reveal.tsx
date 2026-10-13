@@ -16,24 +16,8 @@ export function Reveal({
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const el = ref.current
-    if (!el) return
-    if (eager || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      el.classList.add('is-visible')
-      return
-    }
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add('is-visible')
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.08, rootMargin: '80px 0px 80px 0px' },
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [eager])
+    ref.current?.classList.add('is-visible')
+  }, [])
 
   return (
     <div ref={ref} className={cn('reveal', eager && 'is-visible', className)}>

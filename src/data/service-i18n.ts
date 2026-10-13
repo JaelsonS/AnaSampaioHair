@@ -1,22 +1,31 @@
 import type { UrlLocale } from '@/i18n/config'
 import { services } from '@/data/services'
 
-type ServiceCopy = { name: string; short: string; cta: string }
+type ServiceCopy = {
+  name: string
+  short: string
+  cta: string
+  /** Hero home — duas linhas fixas (evita quebra de layout). */
+  heroLines?: [string, string]
+}
 
 const COPY: Record<string, Record<UrlLocale, ServiceCopy>> = {
   mechas: {
     pt: {
       name: 'Consultoria de Cor e Visagismo para Mechas Personalizadas',
+      heroLines: ['Consultoria de Cor e Visagismo', 'para Mechas Personalizadas'],
       short: 'Descubra os tons que harmonizam com a temperatura da sua pele, os seus olhos e a imagem que deseja transmitir.',
       cta: 'Agendar consultoria de mechas',
     },
     es: {
       name: 'Consultoría de Color y Visagismo para Mechas Personalizadas',
+      heroLines: ['Consultoría de Color y Visagismo', 'para Mechas Personalizadas'],
       short: 'Descubra los tonos que armonizan con la temperatura de su piel, sus ojos y la imagen que desea transmitir.',
       cta: 'Reservar consultoría de mechas',
     },
     en: {
       name: 'Colour & Visagism Consultation for Personalised Highlights',
+      heroLines: ['Colour & Visagism Consultation', 'for Personalised Highlights'],
       short: 'Discover tones that harmonise with your skin undertone, your eyes and the image you want to convey.',
       cta: 'Book a highlights consultation',
     },
@@ -155,4 +164,15 @@ export function getServiceOptionsForLocale(locale: UrlLocale) {
     id: s.id,
     name: getLocalizedServiceName(s.id, locale),
   }))
+}
+
+export function getServiceHeroPhrasesForLocale(locale: UrlLocale) {
+  return services.map((s) => {
+    const copy = COPY[s.id]?.[locale]
+    if (copy?.heroLines) {
+      return { lines: copy.heroLines }
+    }
+    const name = copy?.name ?? s.name
+    return { lines: [name] as [string] }
+  })
 }

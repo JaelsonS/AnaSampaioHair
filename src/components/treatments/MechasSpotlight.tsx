@@ -15,7 +15,12 @@ export function MechasSpotlight({ locale }: { locale: UrlLocale }) {
       <div className="split mechas-intro">
         <div className="mechas-intro-copy">
           <Reveal>
-            <SectionHeading eyebrow={mechas.eyebrow} title={mechas.title} lead={mechas.lead} />
+            <SectionHeading
+              eyebrow={mechas.eyebrow}
+              title={mechas.title}
+              titleLines={mechas.titleLines}
+              lead={mechas.lead}
+            />
           </Reveal>
           <Reveal>
             <blockquote className="mechas-manifesto">{mechas.manifesto}</blockquote>

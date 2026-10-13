@@ -5,7 +5,7 @@ import type { UrlLocale } from '@/i18n/config'
 import { localizedPath } from '@/i18n/routes'
 import { HeroAnaPortrait } from '@/components/layout/HeroAnaPortrait'
 import { getHomeContent, servicesPrefix } from '@/data/home-i18n'
-import { getServiceOptionsForLocale } from '@/data/service-i18n'
+import { getServiceHeroPhrasesForLocale } from '@/data/service-i18n'
 import { Button } from '@/components/ui/Button'
 import { IconArrowRight } from '@/components/icons'
 import { openAssistantIntent } from '@/lib/assistant-bridge'
@@ -14,7 +14,7 @@ import { HeroTypewriter } from '@/components/home/HeroTypewriter'
 export function Hero({ locale, dict }: { locale: UrlLocale; dict: Dictionary }) {
   const content = getHomeContent(locale)
   const h = content.hero
-  const serviceNames = getServiceOptionsForLocale(locale).map((s) => s.name)
+  const servicePhrases = getServiceHeroPhrasesForLocale(locale)
 
   return (
     <section
@@ -36,7 +36,7 @@ export function Hero({ locale, dict }: { locale: UrlLocale; dict: Dictionary }) 
             </h1>
 
             <div className="reveal-stagger" style={{ ['--i' as string]: 2 }}>
-              <HeroTypewriter phrases={serviceNames} prefix={servicesPrefix[locale]} />
+              <HeroTypewriter phrases={servicePhrases} prefix={servicesPrefix[locale]} />
             </div>
 
             <p className="hero-lede reveal-stagger" style={{ ['--i' as string]: 3 }}>

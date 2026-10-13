@@ -1,66 +1,62 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { cn } from '@/lib/utils'
+
+export type HeroServicePhrase = {
+  lines: [string] | [string, string]
+}
+
+const ROTATE_MS = 5200
 
 /**
- * Cycles through service names with a typewriter effect.
- * Respects prefers-reduced-motion (shows first phrase fully).
+ * Rotação de serviços no hero — texto completo, altura fixa (sem efeito máquina de escrever / CLS).
  */
 export function HeroTypewriter({
   phrases,
   prefix = 'Hoje no instituto',
 }: {
-  phrases: string[]
+  phrases: HeroServicePhrase[]
   prefix?: string
 }) {
   const [index, setIndex] = useState(0)
-  const [text, setText] = useState('')
-  const [phase, setPhase] = useState<'typing' | 'pause' | 'deleting'>('typing')
 
   useEffect(() => {
-    if (!phrases.length) return
+    if (phrases.length < 2) return
 
     const reduced =
       typeof window !== 'undefined' &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    if (reduced) return
 
-    if (reduced) {
-      setText(phrases[0] ?? '')
-      return
-    }
+    const id = window.setInterval(() => {
+      setIndex((i) => (i + 1) % phrases.length)
+    }, ROTATE_MS)
+    return () => window.clearInterval(id)
+  }, [phrases.length])
 
-    const full = phrases[index] ?? ''
-    let timer: ReturnType<typeof setTimeout>
+  if (!phrases.length) return null
 
-    if (phase === 'typing') {
-      if (text.length < full.length) {
-        timer = setTimeout(() => setText(full.slice(0, text.length + 1)), 48)
-      } else {
-        timer = setTimeout(() => setPhase('pause'), 1600)
-      }
-    } else if (phase === 'pause') {
-      timer = setTimeout(() => setPhase('deleting'), 400)
-    } else {
-      if (text.length > 0) {
-        timer = setTimeout(() => setText(text.slice(0, -1)), 28)
-      } else {
-        setIndex((i) => (i + 1) % phrases.length)
-        setPhase('typing')
-      }
-    }
-
-    return () => clearTimeout(timer)
-  }, [phrases, index, text, phase])
+  const active = phrases[index] ?? phrases[0]
 
   return (
-    <p className="hero-typewriter" aria-live="polite">
-      <span className="hero-typewriter-prefix">{prefix}</span>
-      <span className="hero-typewriter-line">
-        <span className="hero-typewriter-text">{text}</span>
-        <span className="hero-typewriter-cursor" aria-hidden>
-          |
-        </span>
-      </span>
-    </p>
+    <div className="hero-typewriter" aria-live="polite">
+      <p className="hero-typewriter-prefix">{prefix}</p>
+      <div className="hero-typewriter-rotator">
+        {phrases.map((phrase, i) => (
+          <div
+            key={`${i}-${phrase.lines[0]}`}
+            className={cn('hero-typewriter-phrase', i === index && 'is-active')}
+            aria-hidden={i !== index}
+          >
+            <span className="hero-typewriter-line">
+              <span className="hero-typewriter-text-line">{phrase.lines[0]}</span>
+              <span className="hero-typewriter-text-line">{phrase.lines[1] ?? ''}</span>
+            </span>
+          </div>
+        ))}
+      </div>
+      <span className="sr-only">{active.lines.filter(Boolean).join(' ')}</span>
+    </div>
   )
 }

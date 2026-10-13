@@ -149,6 +149,7 @@ export const homeWp = {
   mechas: {
     eyebrow: 'Mechas personalizadas · consultoria antes da cor',
     title: 'Consultoria de Cor e Visagismo para Mechas Personalizadas',
+    titleLines: ['Consultoria de Cor e Visagismo', 'para Mechas Personalizadas'] as [string, string],
     lead: 'Descubra os tons que harmonizam com a temperatura da sua pele, as características dos seus olhos e a imagem que deseja transmitir. A partir dessa análise, criamos uma proposta de mechas personalizada para iluminar o seu rosto, valorizar os seus traços naturais e respeitar a sua identidade.',
     manifesto:
       'A sua cor não precisa seguir tendências. Precisa combinar consigo.',

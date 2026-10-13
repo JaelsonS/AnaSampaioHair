@@ -33,6 +33,7 @@ export type HomeContent = {
   mechas: {
     eyebrow: string
     title: string
+    titleLines?: [string, string]
     lead: string
     manifesto: string
     processSteps: { id: string; label: string }[]
@@ -91,6 +92,7 @@ const pt: HomeContent = {
   mechas: {
     eyebrow: homeWp.mechas.eyebrow,
     title: homeWp.mechas.title,
+    titleLines: homeWp.mechas.titleLines,
     lead: homeWp.mechas.lead,
     manifesto: homeWp.mechas.manifesto,
     processSteps: homeWp.mechas.processSteps.map((s) => ({ id: s.id, label: s.label })),
@@ -284,6 +286,7 @@ const es: HomeContent = {
   mechas: {
     eyebrow: 'Mechas personalizadas · consultoría antes del color',
     title: 'Consultoría de Color y Visagismo para Mechas Personalizadas',
+    titleLines: ['Consultoría de Color y Visagismo', 'para Mechas Personalizadas'],
     lead: 'Descubra los tonos que armonizan con la temperatura de su piel, las características de sus ojos y la imagen que desea transmitir. A partir de ese análisis, creamos una propuesta de mechas personalizada para iluminar su rostro, valorar sus rasgos naturales y respetar su identidad.',
     manifesto:
       'Su color no necesita seguir tendencias. Necesita combinar con usted.',
@@ -556,6 +559,7 @@ const en: HomeContent = {
   mechas: {
     eyebrow: 'Personalised highlights · consultation before colour',
     title: 'Colour & Visagism Consultation for Personalised Highlights',
+    titleLines: ['Colour & Visagism Consultation', 'for Personalised Highlights'],
     lead: 'Discover the tones that harmonise with your skin undertone, the characteristics of your eyes and the image you want to convey. From that analysis, we create a personalised highlight proposal to illuminate your face, enhance your natural features and respect your identity.',
     manifesto:
       'Your colour does not need to follow trends. It needs to suit you.',
