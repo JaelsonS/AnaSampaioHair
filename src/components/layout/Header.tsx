@@ -26,6 +26,12 @@ const localeLabels: Record<UrlLocale, string> = {
   en: 'EN',
 }
 
+const localeAriaNames: Record<UrlLocale, string> = {
+  pt: 'Português',
+  es: 'Español',
+  en: 'English',
+}
+
 const localeFlags: Record<UrlLocale, typeof IconFlagPt> = {
   pt: IconFlagPt,
   es: IconFlagEs,
@@ -371,17 +377,24 @@ export function Header({
               </Link>
             ))}
             <p className="mobile-nav-label">{dict.nav.language}</p>
-            {locales.map((l) => (
-              <Link
-                key={l}
-                href={localizedPath(l, pathKey, pageSlug)}
-                onClick={close}
-                className="mobile-nav-sub"
-                hrefLang={l === 'pt' ? 'pt-PT' : l}
-              >
-                {localeLabels[l]} — {l === 'pt' ? 'Português' : l === 'es' ? 'Español' : 'English'}
-              </Link>
-            ))}
+            <div className="mobile-lang-flags" role="group" aria-label={dict.nav.language}>
+              {locales.map((l) => {
+                const Flag = localeFlags[l]
+                return (
+                  <Link
+                    key={l}
+                    href={localizedPath(l, pathKey, pageSlug)}
+                    onClick={close}
+                    className={cn('mobile-lang-flag', l === locale && 'is-active')}
+                    hrefLang={l === 'pt' ? 'pt-PT' : l}
+                    aria-current={l === locale ? 'true' : undefined}
+                    aria-label={localeAriaNames[l]}
+                  >
+                    <Flag />
+                  </Link>
+                )
+              })}
+            </div>
           </nav>
           <Button href={localizedPath(locale, 'booking')} onClick={close}>
             {dict.nav.book}
