@@ -24,14 +24,25 @@ function workLabel(slideId: string): AboutGalleryItem['label'] {
 /** Sobre — só resultados finais (nunca «antes» nem fotos de arquivo erradas). */
 const ABOUT_TRABALHO_SKIP = /imganatrabalhos04|antes/i
 
+const slideById = new Map(treatmentsHeroWorkSlides.map((s) => [s.id, s]))
+
+/** Substituições — foto dourada / evitar ficheiros que falham no optimizador. */
+const ABOUT_GALLERY_REPLACE: Record<string, string> = {
+  imgcoloracaodepois02frente: 'coloracaodepois05',
+}
+
 export const aboutTrabalhosGallery: AboutGalleryItem[] = treatmentsHeroWorkSlides
   .filter((slide) => !ABOUT_TRABALHO_SKIP.test(slide.id))
   .slice(0, ABOUT_TRABALHOS_GRID_SIZE)
-  .map((slide) => ({
-    id: `work-${slide.id}`,
-    src: slide.src,
-    label: workLabel(slide.id),
-  }))
+  .map((slide, index) => {
+    const replaceId = ABOUT_GALLERY_REPLACE[slide.id]
+    const resolved = replaceId ? slideById.get(replaceId) ?? slide : slide
+    return {
+      id: `work-${resolved.id}-${index}`,
+      src: resolved.src,
+      label: workLabel(resolved.id),
+    }
+  })
 
 export const aboutGalleryAll = aboutTrabalhosGallery
 

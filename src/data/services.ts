@@ -340,9 +340,9 @@ const BEAUTY_SHOWCASE_IDS = [
   'imgcoloracaomechasdepois02',
   'imgcoloracaomechasdepois01',
   'imganatrabalhos02',
-  'imgcoloracaodepois02frente',
-  'imgcorte01',
   'coloracaodepois05',
+  'imgcorte01',
+  'imgcoloracaodepois01frente',
 ] as const
 
 function beautyShowcaseAlt(slideId: string): string {
