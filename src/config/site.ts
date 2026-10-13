@@ -60,6 +60,14 @@ export const siteConfig = {
     url: 'https://www.afdigitalweb.com',
   },
 
+  /** Livro Raízes e Asas — link único de afiliado Amazon (amzn.to / link.amazon). */
+  commerce: {
+    bookRaizesAsas: {
+      title: 'Raízes e Asas',
+      amazonUrl: 'https://link.amazon/B03mmuQSH',
+    },
+  },
+
   legal: {
     complaintsBookUrl: 'https://www.livroreclamacoes.pt/Inicio/',
     complimentsBookUrl: 'https://www.livroreclamacoes.pt/Pedido/ElogioSugestao',

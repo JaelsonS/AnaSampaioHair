@@ -32,6 +32,7 @@ import { TherapyAccordion } from './TherapyAccordion'
 import { MechasSpotlight } from '@/components/treatments/MechasSpotlight'
 import { HomeCtaButtons } from './HomeCtaButtons'
 import { EbookCampaign } from './EbookCampaign'
+import { textWithBookAmazonLink } from '@/components/brand/BookAmazonLink'
 import { TestimonialsCarousel } from '@/components/testimonials/TestimonialsCarousel'
 
 const PILLAR_ICONS = [
@@ -127,7 +128,7 @@ export function HomePage({ locale, dict }: { locale: UrlLocale; dict: Dictionary
                         <Icon />
                       </span>
                       <h3>{p.title}</h3>
-                      <p>{p.body}</p>
+                      <p>{textWithBookAmazonLink(p.body)}</p>
                     </article>
                   )
                 })}

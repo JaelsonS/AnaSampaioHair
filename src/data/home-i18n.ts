@@ -117,7 +117,7 @@ const pt: HomeContent = {
     ...homeWp.ebook,
     kicker: 'E-book · Por Ana Sampaio',
     campaignBody:
-      'O conhecimento de Ana Sampaio — 16 anos como cabeleireira e 5 anos em terapia capilar integrativa — transformado num guia para entender o fio, escolher produtos com critério e cuidar em casa sem desperdiçar tempo.',
+      'O conhecimento de Ana Sampaio — 16 anos como cabeleireira e 7 anos em terapia capilar integrativa — transformado num guia para entender o fio, escolher produtos com critério e cuidar em casa sem desperdiçar tempo.',
     byline: 'Por Ana Sampaio · Instituto de Beleza e Saúde Capilar',
     ctaCampaign: 'Conhecer o E-book',
     alt: 'Ana Sampaio — autora do Guia Meu Cabelo dos Sonhos',
@@ -271,7 +271,7 @@ const es: HomeContent = {
       },
       {
         title: 'Certificados',
-        body: 'Especialización en aromaterapia y cosmetología; visagismo aplicado al cabello; formación por la ABT y seminario internacional de tricología en Europa.',
+        body: 'Especialización en aromaterapia y cosmetología; visagismo aplicado al cabello; formación por la ABT y seminario internacional de tricología en Europa. Autora del libro Raízes e Asas.',
       },
       {
         title: 'Exclusividad',
@@ -544,7 +544,7 @@ const en: HomeContent = {
       },
       {
         title: 'Credentials',
-        body: 'Specialisation in aromatherapy and cosmetology; hair visagism; ABT training and an international trichology seminar in Europe.',
+        body: 'Specialisation in aromatherapy and cosmetology; hair visagism; ABT training and an international trichology seminar in Europe. Author of Raízes e Asas.',
       },
       {
         title: 'Exclusivity',

@@ -1,4 +1,7 @@
 import type { UrlLocale } from '@/i18n/config'
+import { siteConfig } from '@/config/site'
+
+const BOOK_AMAZON_URL = siteConfig.commerce.bookRaizesAsas.amazonUrl
 
 export const therapyStepsByLocale: Record<
   UrlLocale,
@@ -75,12 +78,13 @@ export const therapyStepsByLocale: Record<
 export const aboutHighlightsByLocale: Record<UrlLocale, string[]> = {
   pt: [
     '16 anos como cabeleireira',
-    '5 anos como terapeuta capilar integrativa',
+    '7 anos como terapeuta capilar integrativa',
     'Especialização em aromaterapia',
     'Especialização em cosmetologia',
     'Visagismo e coloração pessoal aplicado ao cabelo',
     'Estudos pela ABT — Academia Brasileira de Tricologia',
     'Seminário internacional de tricologia na Europa',
+    'Autora do livro Raízes e Asas',
   ],
   es: [
     '16 años como peluquera',
@@ -90,6 +94,7 @@ export const aboutHighlightsByLocale: Record<UrlLocale, string[]> = {
     'Visagismo aplicado al cabello',
     'Estudios por la ABT — Academia Brasileña de Tricología',
     'Seminario internacional de tricología en Europa',
+    'Autora del libro Raízes e Asas',
   ],
   en: [
     '16 years as a hairdresser',
@@ -99,6 +104,7 @@ export const aboutHighlightsByLocale: Record<UrlLocale, string[]> = {
     'Hair visagism',
     'Studies with ABT — Brazilian Academy of Trichology',
     'International trichology seminar in Europe',
+    'Author of Raízes e Asas',
   ],
 }
 
@@ -342,6 +348,8 @@ export const aboutPageCopy: Record<
     circuloWaMessage: string
     trainingBody1: string
     trainingBody2: string
+    trainingAuthorNote: string
+    trainingBookMoreCta: string
     spaceAlt: string
     spaceSalonAlt: string
     spaceAmbienteEyebrow: string
@@ -373,6 +381,9 @@ export const aboutPageCopy: Record<
       'Além da experiência em salão, Ana Sampaio aprofunda o cuidado com aromaterapia, cosmetologia, visagismo e coloração pessoal aplicado ao cabelo e estudos em tricologia — incluindo formação pela ABT e seminário internacional na Europa.',
     trainingBody2:
       'O objectivo não é prometer milagres: é investigar a causa, respeitar o fio e construir um acompanhamento sustentável consigo.',
+    trainingAuthorNote:
+      'Para além da clínica e do salão, Ana Sampaio é autora de Raízes e Asas — um livro sobre fé, superação e renascimento, escrito para quem precisa de um abraço e de acreditar de novo nos sonhos.',
+    trainingBookMoreCta: 'Conhecer o livro',
     spaceTitle: 'O espaço',
     spaceLead: 'Um ambiente pensado para calma, natureza e atenção individual.',
     spaceAlt: 'Ambiente e trabalho no instituto Ana Sampaio',
@@ -385,7 +396,7 @@ export const aboutPageCopy: Record<
     bookBody:
       'Em Raízes e Asas, Ana Sampaio partilha a sua jornada real de dor, superação, fé e renascimento. Entre lágrimas que regaram sonhos e desafios que pareciam intransponíveis, revela como encontrou forças para se reerguer, reconectar-se com a fé e descobrir o seu propósito. Mais do que um livro, é um abraço para quem já se sentiu perdida — e um lembrete de que os sonhos ainda têm asas.',
     bookCta: 'Ver na Amazon',
-    bookUrl: 'https://link.amazon/B03mmuQSH',
+    bookUrl: BOOK_AMAZON_URL,
     bookAlt: 'Raízes e Asas — livro de Ana Sampaio',
     circuloEyebrow: 'Projeto',
     circuloTitle: 'Círculo de Mulheres, Raízes & Asas',
@@ -448,6 +459,9 @@ export const aboutPageCopy: Record<
       'Además de la experiencia en salón, Ana Sampaio profundiza el cuidado con aromaterapia, cosmetología, visagismo aplicado al cabello y estudios en tricología — incluida formación por la ABT y un seminario internacional en Europa.',
     trainingBody2:
       'El objetivo no es prometer milagros: es investigar la causa, respetar el hilo y construir un acompañamiento sostenible con usted.',
+    trainingAuthorNote:
+      'Además de la clínica y el salón, Ana Sampaio es autora de Raízes e Asas — un libro sobre fe, superación y renacimiento, escrito para quien necesita un abrazo y volver a creer en los sueños.',
+    trainingBookMoreCta: 'Conocer el libro',
     spaceTitle: 'El espacio',
     spaceLead: 'Un ambiente pensado para la calma, la naturaleza y la atención individual.',
     spaceAlt: 'Ambiente y trabajo en el instituto Ana Sampaio',
@@ -460,7 +474,7 @@ export const aboutPageCopy: Record<
     bookBody:
       'En Raízes e Asas, Ana Sampaio comparte su viaje real de dolor, superación, fe y renacimiento. Entre lágrimas que regaron sueños y desafíos que parecían infranqueables, revela cómo encontró fuerzas para levantarse, reconectar con su fe y descubrir su propósito. Más que un libro, es un abrazo para quien se ha sentido perdida — y un recordatorio de que los sueños aún tienen alas.',
     bookCta: 'Ver en Amazon',
-    bookUrl: 'https://link.amazon/B03mmuQSH',
+    bookUrl: BOOK_AMAZON_URL,
     bookAlt: 'Raízes e Asas — libro de Ana Sampaio',
     circuloEyebrow: 'Proyecto',
     circuloTitle: 'Círculo de Mujeres, Raízes & Asas',
@@ -523,6 +537,9 @@ export const aboutPageCopy: Record<
       'Beyond salon experience, Ana Sampaio deepens care with aromatherapy, cosmetology, hair visagism and trichology studies — including ABT training and an international seminar in Europe.',
     trainingBody2:
       'The goal is not to promise miracles: it is to investigate the cause, respect the fibre and build sustainable follow-up with you.',
+    trainingAuthorNote:
+      'Beyond the clinic and salon, Ana Sampaio is the author of Raízes e Asas — a book about faith, overcoming and rebirth, written for anyone who needs an embrace and to believe in dreams again.',
+    trainingBookMoreCta: 'About the book',
     spaceTitle: 'The space',
     spaceLead: 'An environment designed for calm, nature and individual attention.',
     spaceAlt: 'Atmosphere and work at the Ana Sampaio institute',
@@ -535,7 +552,7 @@ export const aboutPageCopy: Record<
     bookBody:
       'In Raízes e Asas, Ana Sampaio shares her real journey of pain, overcoming, faith and rebirth. Between tears that watered dreams and challenges that seemed impossible, she reveals how she found strength to rise again, reconnect with faith and discover purpose. More than a book, it is an embrace for anyone who has felt lost — and a reminder that dreams still have wings.',
     bookCta: 'View on Amazon',
-    bookUrl: 'https://link.amazon/B03mmuQSH',
+    bookUrl: BOOK_AMAZON_URL,
     bookAlt: 'Raízes e Asas — book by Ana Sampaio',
     circuloEyebrow: 'Project',
     circuloTitle: 'Women’s Circle, Raízes & Asas',

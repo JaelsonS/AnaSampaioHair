@@ -21,6 +21,7 @@ import { siteConfig } from '@/config/site'
 import { AboutSpaceGallery } from '@/components/about/AboutSpaceGallery'
 import { ProtectedMediaFrame } from '@/components/media/ProtectedMediaFrame'
 import { getWhatsAppUrl } from '@/config/site'
+import { BookAmazonLink, textWithBookAmazonLink } from '@/components/brand/BookAmazonLink'
 
 const PHILOSOPHY_ICONS = [IconHeartPulse, IconLeaf, IconShield, IconSpark] as const
 
@@ -85,7 +86,7 @@ export default async function AboutPage({
             </p>
             <ul>
               {aboutHighlights.map((h) => (
-                <li key={h}>{h}</li>
+                <li key={h}>{textWithBookAmazonLink(h)}</li>
               ))}
             </ul>
             <Button href={localizedPath(locale, 'booking')}>{dict.nav.book}</Button>
@@ -167,6 +168,29 @@ export default async function AboutPage({
             <h2 className="display-lg">{copy.trainingTitle}</h2>
             <p>{copy.trainingBody1}</p>
             <p>{copy.trainingBody2}</p>
+            <aside className="about-training-book" aria-labelledby="about-training-book-title">
+              <p id="about-training-book-title" className="about-training-book-title">
+                <BookAmazonLink className="book-amazon-link--title">
+                  {copy.bookTitle}
+                </BookAmazonLink>
+              </p>
+              <p className="about-training-book-note">
+                {textWithBookAmazonLink(copy.trainingAuthorNote)}
+              </p>
+              <div className="btn-group about-training-book-actions">
+                <a
+                  className="btn btn-primary"
+                  href={copy.bookUrl}
+                  target="_blank"
+                  rel="noopener noreferrer sponsored"
+                >
+                  {copy.bookCta}
+                </a>
+                <Button href="#raizes-e-asas" variant="secondary">
+                  {copy.trainingBookMoreCta}
+                </Button>
+              </div>
+            </aside>
             <div className="btn-group">
               <Button href={localizedPath(locale, 'treatments')}>{dict.nav.treatments}</Button>
               <Button href={localizedPath(locale, 'booking')} variant="secondary">
@@ -177,34 +201,42 @@ export default async function AboutPage({
         </div>
       </Section>
 
-      <Section className="about-book-bridge">
+      <Section id="raizes-e-asas" className="about-book-bridge">
         <div className="about-book-inner">
           <div className="about-book-copy">
             <p className="eyebrow">{copy.bookEyebrow}</p>
-            <h2 className="display-lg">{copy.bookTitle}</h2>
+            <h2 className="display-lg">
+              <BookAmazonLink className="book-amazon-link--display">
+                {copy.bookTitle}
+              </BookAmazonLink>
+            </h2>
             <p className="about-book-lead">{copy.bookLead}</p>
-            <p>{copy.bookBody}</p>
+            <p>{textWithBookAmazonLink(copy.bookBody)}</p>
             <a
               className="btn btn-primary"
               href={copy.bookUrl}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer sponsored"
             >
               {copy.bookCta}
             </a>
           </div>
           <figure className="about-book-cover">
-            <div className="about-book-cover-frame">
-              <Image
-                src={siteConfig.brand.bookRaizesAsas}
-                alt={copy.bookAlt}
-                fill
-                sizes="(max-width:768px) 55vw, 280px"
-                quality={90}
-                className="about-book-cover-img"
-              />
-            </div>
-            <figcaption className="about-book-caption">{copy.bookTitle}</figcaption>
+            <BookAmazonLink className="about-book-cover-link">
+              <div className="about-book-cover-frame">
+                <Image
+                  src={siteConfig.brand.bookRaizesAsas}
+                  alt={copy.bookAlt}
+                  fill
+                  sizes="(max-width:768px) 55vw, 280px"
+                  quality={90}
+                  className="about-book-cover-img"
+                />
+              </div>
+            </BookAmazonLink>
+            <figcaption className="about-book-caption">
+              <BookAmazonLink>{copy.bookTitle}</BookAmazonLink>
+            </figcaption>
           </figure>
         </div>
       </Section>

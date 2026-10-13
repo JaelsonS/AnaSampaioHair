@@ -30,7 +30,7 @@ export const therapySteps = [
 
 export const aboutHighlights = [
   '16 anos como cabeleireira',
-  '5 anos como terapeuta capilar integrativa',
+  '7 anos como terapeuta capilar integrativa',
   'Especialização em aromaterapia',
   'Especialização em cosmetologia',
   'Visagismo e coloração pessoal aplicado ao cabelo',

@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/Button'
 import { IconArrowRight } from '@/components/icons'
 import { getHomeContent } from '@/data/home-i18n'
 import { aboutHeroCopyByLocale } from '@/data/content-i18n'
+import { textWithBookAmazonLink } from '@/components/brand/BookAmazonLink'
 
 /** Sobre — textos à esquerda, foto original da Ana (com fundo) à direita. */
 export function AboutHero({ locale, dict }: { locale: UrlLocale; dict: Dictionary }) {
@@ -35,7 +36,7 @@ export function AboutHero({ locale, dict }: { locale: UrlLocale; dict: Dictionar
               {about.pillars.map((pillar) => (
                 <li key={pillar.title}>
                   <strong>{pillar.title}</strong>
-                  <span>{pillar.body}</span>
+                  <span>{textWithBookAmazonLink(pillar.body)}</span>
                 </li>
               ))}
             </ul>
