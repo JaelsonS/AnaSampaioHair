@@ -1,6 +1,6 @@
 /**
  * AUTO-GENERATED — npm run sync:trabalhos-hero
- * Fonte: docs/AnaImg2026/trabalhos/ (13 ficheiros)
+ * Fonte: docs/AnaImg2026/trabalhos/ (12 ficheiros)
  */
 export type TreatmentsHeroSlide = {
   id: string
@@ -10,7 +10,6 @@ export type TreatmentsHeroSlide = {
 export const treatmentsHeroWorkSlides: TreatmentsHeroSlide[] = [
   { id: 'coloracaodepois05', src: '/images/trabalhos/coloracaodepois05.webp' },
   { id: 'imganatrabalhos02', src: '/images/trabalhos/imganatrabalhos02.webp' },
-  { id: 'imganatrabalhos04', src: '/images/trabalhos/imganatrabalhos04.webp' },
   { id: 'imgcoloracaodepois00', src: '/images/trabalhos/imgcoloracaodepois00.webp' },
   { id: 'imgcoloracaodepois01', src: '/images/trabalhos/imgcoloracaodepois01.webp' },
   { id: 'imgcoloracaodepois01frente', src: '/images/trabalhos/imgcoloracaodepois01frente.webp' },

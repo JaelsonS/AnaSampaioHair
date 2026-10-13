@@ -5,9 +5,10 @@ export type AboutGalleryItem = {
   src: string
   /** Chave em resultLabels (WhatsApp + legenda) */
   label: string
-  /** Primeira imagem em destaque na grelha */
-  featured?: boolean
 }
+
+/** Sobre — grelha 6 + 6 */
+export const ABOUT_TRABALHOS_GRID_SIZE = 12
 
 function workLabel(slideId: string): AboutGalleryItem['label'] {
   if (slideId.includes('corte')) return 'corte'
@@ -20,14 +21,17 @@ function workLabel(slideId: string): AboutGalleryItem['label'] {
  * (mesma lista que o carrossel Tratamentos, sem repetir paths).
  * Novas fotos: meter em trabalhos/ → npm run sync:trabalhos-hero
  */
-export const aboutTrabalhosGallery: AboutGalleryItem[] = treatmentsHeroWorkSlides.map(
-  (slide, index) => ({
+/** Sobre — só resultados finais (nunca «antes» nem fotos de arquivo erradas). */
+const ABOUT_TRABALHO_SKIP = /imganatrabalhos04|antes/i
+
+export const aboutTrabalhosGallery: AboutGalleryItem[] = treatmentsHeroWorkSlides
+  .filter((slide) => !ABOUT_TRABALHO_SKIP.test(slide.id))
+  .slice(0, ABOUT_TRABALHOS_GRID_SIZE)
+  .map((slide) => ({
     id: `work-${slide.id}`,
     src: slide.src,
     label: workLabel(slide.id),
-    featured: index === 0,
-  }),
-)
+  }))
 
 export const aboutGalleryAll = aboutTrabalhosGallery
 

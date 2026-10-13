@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import Image from 'next/image'
-import { treatmentsHeroWorkSlides } from '@/data/treatments-hero-slides'
+import { treatmentsHeroCarouselSlides } from '@/data/treatments-hero-carousel'
 import { ProtectedMediaFrame } from '@/components/media/ProtectedMediaFrame'
 
 const INTERVAL_MS = 5200
@@ -16,7 +16,7 @@ export function TreatmentsWorksCarousel({
   prevLabel: string
   nextLabel: string
 }) {
-  const slides = treatmentsHeroWorkSlides
+  const slides = treatmentsHeroCarouselSlides
   const [index, setIndex] = useState(0)
   const [autoPaused, setAutoPaused] = useState(false)
 

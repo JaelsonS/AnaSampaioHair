@@ -1,9 +1,13 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { createPortal } from 'react-dom'
 import Image from 'next/image'
-import { aboutTrabalhosGallery, type AboutGalleryItem } from '@/data/about-gallery'
+import {
+  aboutTrabalhosGallery,
+  type AboutGalleryItem,
+  ABOUT_TRABALHOS_GRID_SIZE,
+} from '@/data/about-gallery'
 import { ProtectedMediaFrame } from '@/components/media/ProtectedMediaFrame'
 import { AnaImageRightsOverlay } from '@/components/media/AnaImageRightsOverlay'
 import { getWhatsAppUrl } from '@/config/site'
@@ -35,20 +39,18 @@ function GalleryThumb({
   item,
   index,
   copy,
-  featured,
   onOpen,
 }: {
   item: AboutGalleryItem
   index: number
   copy: GalleryCopy
-  featured?: boolean
   onOpen: (index: number) => void
 }) {
   const alt = itemTitle(item, copy)
   return (
     <button
       type="button"
-      className={`about-space-thumb${featured ? ' about-space-thumb--feature' : ''}`}
+      className="about-space-thumb"
       onClick={() => onOpen(index)}
       aria-label={alt}
     >
@@ -57,15 +59,9 @@ function GalleryThumb({
           src={item.src}
           alt={alt}
           fill
-          sizes={
-            featured
-              ? '(max-width: 899px) 100vw, min(960px, 72vw)'
-              : '(max-width:560px) 33vw, 180px'
-          }
-          quality={featured ? 85 : 72}
-          priority={featured}
-          fetchPriority={featured ? 'high' : undefined}
-          loading={featured ? undefined : 'lazy'}
+          sizes="(max-width: 520px) 46vw, (max-width: 899px) 31vw, 150px"
+          quality={80}
+          loading={index < 6 ? 'eager' : 'lazy'}
           className="about-space-thumb-img"
         />
       </ProtectedMediaFrame>
@@ -75,16 +71,21 @@ function GalleryThumb({
 
 export function AboutSpaceGallery({ copy }: { copy: GalleryCopy }) {
   const items = aboutTrabalhosGallery
+  const half = ABOUT_TRABALHOS_GRID_SIZE / 2
+  const { topRow, bottomRow } = useMemo(
+    () => ({
+      topRow: items.slice(0, half),
+      bottomRow: items.slice(half, ABOUT_TRABALHOS_GRID_SIZE),
+    }),
+    [items, half],
+  )
+
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
   const [portalReady, setPortalReady] = useState(false)
 
   useEffect(() => {
     setPortalReady(true)
   }, [])
-
-  const featuredIndex = items.findIndex((i) => i.featured)
-  const featured = featuredIndex >= 0 ? items[featuredIndex] : null
-  const gridItems = items.map((item, index) => ({ item, index })).filter(({ item }) => !item.featured)
 
   const close = useCallback(() => setLightboxIndex(null), [])
   const go = useCallback(
@@ -182,22 +183,24 @@ export function AboutSpaceGallery({ copy }: { copy: GalleryCopy }) {
     <>
       <div className="about-space-unified">
         <p className="eyebrow">{copy.spaceResultsEyebrow}</p>
-        <div className="about-space-ambiente">
-          {featured && featuredIndex >= 0 ? (
-            <GalleryThumb
-              item={featured}
-              index={featuredIndex}
-              copy={copy}
-              featured
-              onOpen={setLightboxIndex}
-            />
-          ) : null}
-          <div className="about-space-grid about-space-grid--compact">
-            {gridItems.map(({ item, index }) => (
+        <div className="about-space-rows">
+          <div className="about-space-row">
+            {topRow.map((item, rowIndex) => (
               <GalleryThumb
                 key={item.id}
                 item={item}
-                index={index}
+                index={rowIndex}
+                copy={copy}
+                onOpen={setLightboxIndex}
+              />
+            ))}
+          </div>
+          <div className="about-space-row">
+            {bottomRow.map((item, rowIndex) => (
+              <GalleryThumb
+                key={item.id}
+                item={item}
+                index={half + rowIndex}
                 copy={copy}
                 onOpen={setLightboxIndex}
               />

@@ -340,7 +340,7 @@ const BEAUTY_SHOWCASE_IDS = [
   'imgcoloracaomechasdepois02',
   'imgcoloracaomechasdepois01',
   'imganatrabalhos02',
-  'imganatrabalhos04',
+  'imgcoloracaodepois02frente',
   'imgcorte01',
   'coloracaodepois05',
 ] as const

@@ -5568,29 +5568,28 @@ p {
   gap: 0.75rem;
 }
 
-.about-space-ambiente {
+.about-space-rows {
   display: grid;
   gap: 0.75rem;
 }
 
-.about-space-thumb--feature {
-  aspect-ratio: 16 / 10;
-  width: 100%;
-  max-height: min(52vh, 440px);
-  border-radius: var(--radius-lg);
-  box-shadow:
-    0 20px 48px rgba(28, 31, 26, 0.12),
-    0 0 0 1px rgba(48, 96, 56, 0.08);
-}
-
-.about-space-thumb--feature .about-space-thumb-img {
-  object-position: center center;
-}
-
-.about-space-grid--compact {
+.about-space-row {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 0.65rem;
+}
+
+@media (max-width: 899px) {
+  .about-space-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .about-space-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+  }
 }
 
 .about-space-thumb {
@@ -5739,19 +5738,6 @@ p {
 
 .about-lightbox-nav:hover {
   background: rgba(255, 255, 255, 0.22);
-}
-
-@media (min-width: 768px) {
-  .about-space-grid--compact {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 0.75rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .about-space-grid--compact {
-    grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
-  }
 }
 
 @media (max-width: 640px) {
