@@ -4909,7 +4909,10 @@ p {
     width: 100%;
   }
 
-  .mechas-consult-cell--iris {
+  .mechas-consult-cell--iris,
+  .mechas-consult-cell--ana-01 {
+    aspect-ratio: 3 / 4;
+    min-height: min(108vw, 480px);
     max-width: min(100%, 380px);
     margin-inline: auto;
   }
@@ -4918,6 +4921,14 @@ p {
   .mechas-consult-cell--coloracao {
     aspect-ratio: 3 / 4;
     min-height: min(108vw, 480px);
+  }
+
+  .mechas-consult-protected {
+    z-index: 0;
+  }
+
+  .mechas-consult-img {
+    z-index: 0;
   }
 
   .mechas-consult-long {
