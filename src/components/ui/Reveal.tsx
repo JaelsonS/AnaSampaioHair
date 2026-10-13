@@ -6,16 +6,19 @@ import { cn } from '@/lib/utils'
 export function Reveal({
   children,
   className,
+  /** Above-the-fold blocks: show immediately (images still load with priority where set). */
+  eager = false,
 }: {
   children: React.ReactNode
   className?: string
+  eager?: boolean
 }) {
   const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const el = ref.current
     if (!el) return
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    if (eager || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
       el.classList.add('is-visible')
       return
     }
@@ -26,14 +29,14 @@ export function Reveal({
           observer.disconnect()
         }
       },
-      { threshold: 0.12 },
+      { threshold: 0.08, rootMargin: '80px 0px 80px 0px' },
     )
     observer.observe(el)
     return () => observer.disconnect()
-  }, [])
+  }, [eager])
 
   return (
-    <div ref={ref} className={cn('reveal', className)}>
+    <div ref={ref} className={cn('reveal', eager && 'is-visible', className)}>
       {children}
     </div>
   )

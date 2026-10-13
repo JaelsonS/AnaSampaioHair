@@ -4,15 +4,32 @@
   "version": "2.0.0",
   "scripts": {
     "clean": "rm -rf dist .next",
-    "dev": "next dev",
-    "dev:clean": "npm run clean && next dev",
+    "dev": "next dev -p 3000",
+    "local": "node scripts/local-dev.mjs",
+    "local:prod": "node scripts/local-dev.mjs prod",
+    "dev:clean": "npm run clean && next dev -p 3000",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p ${PORT:-3000}",
+    "start:3010": "next start -p 3010",
+    "preview": "npm run build && npm run start:3010",
     "lint": "next lint",
-    "verify": "npm run build",
+    "verify": "npm run audit:images && npm run optimize:images && npm run build && npm run smoke:prod",
     "smoke": "node scripts/smoke-routes.mjs",
-    "test:routes": "npm run build && npm run smoke:prod",
-    "smoke:prod": "node scripts/smoke-prod.mjs"
+    "test:routes": "npm run verify",
+    "smoke:prod": "node scripts/smoke-prod.mjs",
+    "sync:images-2026": "node scripts/sync-ana-img-2026.mjs && node scripts/update-blog-featured-2026.mjs && node scripts/generate-blog-image-dimensions.mjs",
+    "sync:trabalhos-hero": "node scripts/sync-trabalhos-hero.mjs",
+    "audit:images": "node scripts/audit-image-paths.mjs",
+    "audit:images-source": "node scripts/audit-ana-img-source.mjs",
+    "prune:images": "node scripts/prune-unused-public-images.mjs",
+    "prune:images:apply": "node scripts/prune-unused-public-images.mjs --apply",
+    "generate:blog-image-dimensions": "node scripts/generate-blog-image-dimensions.mjs",
+    "sync:mechas-ana": "node scripts/sync-mechas-ana-portraits.mjs",
+    "sync:coloracao-pessoal": "node scripts/sync-mechas-coloracao-pessoal.mjs",
+    "optimize:images": "node scripts/optimize-public-images.mjs",
+    "optimize:images:apply": "node scripts/optimize-public-images.mjs --apply",
+    "build:assistant-avatar": "node scripts/build-assistant-avatar.mjs",
+    "stamp:ana-rights": "node scripts/stamp-ana-image-rights.mjs"
   },
   "dependencies": {
     "@eslint/eslintrc": "^3.3.6",
@@ -27,6 +44,7 @@
     "eslint": "^9.39.0",
     "eslint-config-next": "^15.5.23",
     "eslint-plugin-react-hooks": "^7.1.1",
+    "sharp": "^0.33.5",
     "typescript": "~5.9.2"
   }
 }

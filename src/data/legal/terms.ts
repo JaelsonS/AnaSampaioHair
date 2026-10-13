@@ -86,7 +86,7 @@ export const termsByLocale: Record<UrlLocale, LegalDocument> = {
         blocks: [
           {
             type: 'p',
-            text: 'Salvo indicação em contrário, textos, fotografias, logótipo, identidade visual, artigos do blog, materiais de formação apresentados e o E-book são protegidos por direitos de propriedade intelectual. É proibida a reprodução, distribuição ou exploração comercial sem autorização prévia escrita, exceto usos permitidos por lei (por exemplo, direito de citação nos limites legais).',
+            text: 'Salvo indicação em contrário, textos, logótipo, identidade visual, artigos do blog, materiais de formação apresentados e o E-book são protegidos por direitos de propriedade intelectual. As fotografias de trabalhos reais, do instituto, da Ana Sampaio e de clientes (com autorização) exibidas no website são propriedade do titular ou licenciadas exclusivamente para este site: é proibida a reprodução, captura, download para reutilização, republicação noutros websites, redes sociais comerciais ou suportes publicitários sem autorização prévia e escrita da Ana Sampaio, exceto usos permitidos por lei (por exemplo, citação nos limites legais). A marca © visível nas imagens reforça este aviso; a ausência da marca não retira direitos.',
           },
         ],
       },

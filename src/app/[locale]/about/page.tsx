@@ -19,6 +19,7 @@ import { AnaSpeaks } from '@/components/brand/AnaSpeaks'
 import { IconHeartPulse, IconLeaf, IconShield, IconSpark } from '@/components/icons'
 import { siteConfig } from '@/config/site'
 import { AboutSpaceGallery } from '@/components/about/AboutSpaceGallery'
+import { ProtectedMediaFrame } from '@/components/media/ProtectedMediaFrame'
 import { getWhatsAppUrl } from '@/config/site'
 
 const PHILOSOPHY_ICONS = [IconHeartPulse, IconLeaf, IconShield, IconSpark] as const
@@ -56,7 +57,7 @@ export default async function AboutPage({
 
   return (
     <>
-      <AboutHero dict={dict} title="Ana Sampaio" lead={dict.sections.aboutLead} />
+      <AboutHero locale={locale} dict={dict} />
 
       <div className="container about-crumbs">
         <Breadcrumbs
@@ -90,14 +91,19 @@ export default async function AboutPage({
             <Button href={localizedPath(locale, 'booking')}>{dict.nav.book}</Button>
           </div>
           <div className="portrait-frame about-look-portrait">
-            <Image
+            <ProtectedMediaFrame
               src={siteConfig.brand.anaAboutLook}
-              alt={copy.anaAlt}
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 45vw, 42vw"
-              quality={85}
-              className="portrait-img"
-            />
+              className="about-portrait-protected"
+            >
+              <Image
+                src={siteConfig.brand.anaAboutLook}
+                alt={copy.anaAlt}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 45vw, 42vw"
+                quality={85}
+                className="portrait-img"
+              />
+            </ProtectedMediaFrame>
           </div>
         </div>
       </Section>
@@ -140,14 +146,19 @@ export default async function AboutPage({
       <Section>
         <div className="split">
           <div className="portrait-frame about-training-portrait">
-            <Image
+            <ProtectedMediaFrame
               src={siteConfig.brand.anaAboutTraining}
-              alt={copy.anaAlt}
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 45vw, 42vw"
-              quality={85}
-              className="portrait-img"
-            />
+              className="about-portrait-protected"
+            >
+              <Image
+                src={siteConfig.brand.anaAboutTraining}
+                alt={copy.anaAlt}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 45vw, 42vw"
+                quality={85}
+                className="portrait-img"
+              />
+            </ProtectedMediaFrame>
           </div>
           <div className="prose">
             <span className="icon-badge">
@@ -240,7 +251,7 @@ export default async function AboutPage({
               alt={ebook.alt}
               width={1067}
               height={1600}
-              sizes="(max-width:768px) 55vw, 280px"
+              sizes="(max-width: 899px) 92vw, (max-width: 1199px) 45vw, 540px"
               quality={90}
               className="about-ebook-portrait-img"
             />
@@ -253,12 +264,15 @@ export default async function AboutPage({
         <AboutSpaceGallery
           copy={{
             spaceAlt: copy.spaceAlt,
-            spaceAmbienteEyebrow: copy.spaceAmbienteEyebrow,
+            spaceSalonAlt: copy.spaceSalonAlt,
             spaceResultsEyebrow: copy.spaceResultsEyebrow,
             resultLabels: copy.resultLabels,
             lightboxClose: copy.lightboxClose,
             lightboxPrev: copy.lightboxPrev,
             lightboxNext: copy.lightboxNext,
+            lightboxBookCta: copy.lightboxBookCta,
+            galleryWaAmbiente: copy.galleryWaAmbiente,
+            galleryWaProcedure: copy.galleryWaProcedure,
           }}
         />
       </Section>

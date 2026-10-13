@@ -70,7 +70,7 @@ export const offers: Offer[] = [
       es: 'Lista del próximo grupo',
       en: 'Join next cohort list',
     },
-    image: '/images/brand/cursos-formacoes.png',
+    image: '/images/about/ana-formacao-especialidade.webp',
     hrefKey: 'courses',
     isPlaceholder: false,
     badge: {

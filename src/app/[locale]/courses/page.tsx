@@ -5,7 +5,7 @@ import { isUrlLocale, type UrlLocale } from '@/i18n/config'
 import { getDictionary } from '@/i18n/get-dictionary'
 import { localizedPath } from '@/i18n/routes'
 import { getCourseTopics } from '@/data/courses'
-import { PageHero } from '@/components/layout/PageHero'
+import { CoursesHero } from '@/components/courses/CoursesHero'
 import { Section, SectionHeading } from '@/components/ui/Section'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
 import { CourseLeadForm } from '@/components/courses/CourseLeadForm'
@@ -230,11 +230,10 @@ export default async function CoursesPage({
 
   return (
     <>
-      <PageHero
+      <CoursesHero
         dict={dict}
         title={dict.sections.coursesTitle}
         lead={dict.sections.coursesLead}
-        image="/images/about/ambiente-2.webp"
       />
 
       <div className="container" style={{ paddingTop: '1.25rem' }}>

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { ProtectedMediaFrame } from '@/components/media/ProtectedMediaFrame'
 
 type Props = {
   image: string
@@ -13,16 +14,17 @@ export function ServiceCardMedia({
 }: Props) {
   return (
     <div className="service-card-media media-frame">
-      <Image
-        src={image}
-        alt={alt}
-        fill
-        sizes={sizes}
-        quality={75}
-        loading="lazy"
-        style={{ objectFit: 'cover', objectPosition: 'center 38%' }}
-        className="service-card-img"
-      />
+      <ProtectedMediaFrame src={image} className="service-card-protected">
+        <Image
+          src={image}
+          alt={alt}
+          fill
+          sizes={sizes}
+          quality={72}
+          style={{ objectFit: 'cover', objectPosition: 'center 38%' }}
+          className="service-card-img"
+        />
+      </ProtectedMediaFrame>
     </div>
   )
 }

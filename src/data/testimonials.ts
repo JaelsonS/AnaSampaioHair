@@ -62,7 +62,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     serviceCategory: 'Terapia capilar',
     source: 'direct',
-    sourceImage: '/images/testimonials/renata.jpg',
+    sourceImage: '/images/brand/assistant-avatar.webp',
     locale: 'pt-PT',
   },
   {
@@ -93,7 +93,7 @@ export const testimonials: Testimonial[] = [
     rating: 5,
     serviceCategory: 'Cliente',
     source: 'direct',
-    sourceImage: '/images/testimonials/jefferson.jpg',
+    sourceImage: '/images/brand/assistant-avatar.webp',
     locale: 'pt-PT',
   },
 ]

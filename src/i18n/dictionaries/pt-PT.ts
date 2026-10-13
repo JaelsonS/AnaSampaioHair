@@ -110,6 +110,7 @@ export type Dictionary = {
     askDetails: string
     sendWhatsApp: string
     openLabel: string
+    avatarAlt: string
     closeLabel: string
     subtitle: string
     progressLabel: string
@@ -272,7 +273,8 @@ export const ptPT: Dictionary = {
     resultsTitle: 'Resultados com honestidade',
     resultsLead: 'Transformações reais, sempre com o cuidado que o fio precisa.',
     aboutTitle: 'Ana Sampaio',
-    aboutLead: 'Cabeleireira e terapeuta capilar integrativa — com escuta e rigor.',
+    aboutLead:
+      'Ana Sampaio — cabeleireira e terapeuta capilar integrativa em Marinha Grande. Experiência, formação em tricologia e visagismo, terapia integrativa e atendimento individual com plano personalizado.',
     experienceTitle: 'A experiência no instituto',
     experienceLead: 'Ambiente pensado para calma, natureza e um atendimento só para si.',
     testimonialsTitle: 'O que dizem quem confia',
@@ -321,6 +323,7 @@ export const ptPT: Dictionary = {
     askDetails: 'Para finalizar, indique o seu nome e contacto.',
     sendWhatsApp: 'Enviar pedido à Ana Sampaio',
     openLabel: 'Falar com a assistente',
+    avatarAlt: 'Assistente virtual — recepcionista digital Ana Sampaio Hair',
     closeLabel: 'Fechar assistente',
     progressLabel: 'Passo',
     summaryTitle: 'Resumo do pedido',

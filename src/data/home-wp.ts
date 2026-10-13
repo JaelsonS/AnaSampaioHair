@@ -160,7 +160,7 @@ export const homeWp = {
       { id: 'resultado', label: 'Resultado' },
     ],
     techniqueNote:
-      'Balayage, madeixas finas, papel ou outra técnica entra apenas quando a análise está concluída. Testes de mechas quando necessário e respeito pela saúde do fio.',
+      'Visagismo entra no mesmo processo — rosto e proporções orientam onde a luz deve incidir. Balayage, madeixas finas, papel ou outra técnica só depois da análise concluída, com testes de mechas quando necessário e respeito pela saúde do fio.',
     cta: 'Agendar consultoria de mechas',
     cards: [
       {
@@ -168,28 +168,21 @@ export const homeWp = {
         title: 'Análise da Íris',
         short: 'Observação das características naturais que orientam a escolha de tons.',
         long: 'A íris revela nuances e particularidades que ajudam a compreender que famílias de cor tendem a harmonizar consigo — antes de qualquer teste de mechas no cabelo.',
-        image: '/images/services/mechas-iris.webp',
+        image: '/images/mechas/ana/ana-mechas-01.webp',
       },
       {
         id: 'pele',
         title: 'Temperatura da Pele',
         short: 'Quente, fria ou neutra: a base para escolher famílias de tom com critério.',
         long: 'Avaliamos a temperatura da pele para perceber quais matizes — dourados, acinzentados, acobreados — criam maior equilíbrio com a sua aparência natural, sem depender de modas passageiras.',
-        image: '/images/services/mechas-produtos-qualidade.webp',
+        image: '/images/mechas/ana/ana-mechas-02.webp',
       },
       {
         id: 'coloracao',
         title: 'Coloração Pessoal',
         short: 'Harmonia entre pele, olhos, cabelo e a imagem que quer transmitir.',
         long: 'A coloração pessoal integra-se no processo de definição dos tons: consideramos contraste natural, profundidade e intensidade — e a presença que deseja ter.',
-        image: '/images/services/mechas-coloracao.webp',
-      },
-      {
-        id: 'visagismo',
-        title: 'Visagismo',
-        short: 'Rosto, traços e proporções orientam onde a luz deve incidir.',
-        long: 'Aplicamos princípios de visagismo para perceber como a cor e a iluminação do cabelo valorizam a estrutura facial e reforçam a identidade que quer expressar.',
-        image: '/images/services/mechas-visagismo.webp',
+        image: '/images/mechas/ana/ana-mechas-03.webp',
       },
     ],
   },

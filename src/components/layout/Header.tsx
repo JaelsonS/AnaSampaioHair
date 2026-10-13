@@ -72,7 +72,7 @@ function resolvePathKey(pathname: string, locale: UrlLocale): { pathKey: PathKey
 
 /**
  * Single global header.
- * Dropdowns: CSS hover only (bridge gap fixed). Clicking any option navigates and closes.
+ * Dropdowns: abrem ao hover; qualquer clique (rótulo ou opção) navega e fecha o menu.
  * Language switch keeps the current page key (and slug when present).
  */
 export function Header({
@@ -91,16 +91,22 @@ export function Header({
 
   const [mode, setMode] = useState<HeaderMode>('solid')
   const [tone, setTone] = useState<HeaderTone>('on-light')
+  const [woodHero, setWoodHero] = useState(false)
   const [open, setOpen] = useState(false)
+  const [desktopDropdown, setDesktopDropdown] = useState<'treatments' | 'blog' | null>(null)
+
+  const closeDesktopDropdown = () => setDesktopDropdown(null)
 
   useEffect(() => {
     const update = () => {
       const hero = findHero()
       if (!hero) {
         setMode('solid')
+        setWoodHero(false)
         return
       }
       setTone(readHeroTone(hero))
+      setWoodHero(hero.hasAttribute('data-hero-wood'))
       setMode(heroStillUnderHeader(hero) ? 'over-hero' : 'solid')
     }
     update()
@@ -110,6 +116,10 @@ export function Header({
       window.removeEventListener('scroll', update)
       window.removeEventListener('resize', update)
     }
+  }, [pathname])
+
+  useEffect(() => {
+    setDesktopDropdown(null)
   }, [pathname])
 
   useEffect(() => {
@@ -126,11 +136,13 @@ export function Header({
 
   function renderNavItem(key: PathKey) {
     if (key === 'treatments') {
+      const menuOpen = desktopDropdown === 'treatments'
       return (
         <div
           key={key}
-          className="nav-item-dropdown"
-          onMouseLeave={(e) => e.currentTarget.classList.remove('is-force-closed')}
+          className={cn('nav-item-dropdown', menuOpen && 'is-open')}
+          onMouseEnter={() => setDesktopDropdown('treatments')}
+          onMouseLeave={closeDesktopDropdown}
         >
           <Link
             href={treatmentsHref}
@@ -141,6 +153,8 @@ export function Header({
                 : undefined
             }
             aria-haspopup="true"
+            aria-expanded={menuOpen}
+            onClick={closeDesktopDropdown}
           >
             {dict.nav.treatments}
             <span className="nav-caret" aria-hidden>
@@ -155,9 +169,7 @@ export function Header({
                   href={`${treatmentsHref}${g.anchors}`}
                   role="menuitem"
                   className="nav-dropdown-link"
-                  onClick={(e) => {
-                    e.currentTarget.closest('.nav-item-dropdown')?.classList.add('is-force-closed')
-                  }}
+                  onClick={closeDesktopDropdown}
                 >
                   {g.label[locale]}
                 </Link>
@@ -166,9 +178,7 @@ export function Header({
                 href={treatmentsHref}
                 role="menuitem"
                 className="nav-dropdown-link nav-dropdown-all"
-                onClick={(e) => {
-                  e.currentTarget.closest('.nav-item-dropdown')?.classList.add('is-force-closed')
-                }}
+                onClick={closeDesktopDropdown}
               >
                 {viewAll}
               </Link>
@@ -179,17 +189,21 @@ export function Header({
     }
 
     if (key === 'blog') {
+      const menuOpen = desktopDropdown === 'blog'
       return (
         <div
           key={key}
-          className="nav-item-dropdown"
-          onMouseLeave={(e) => e.currentTarget.classList.remove('is-force-closed')}
+          className={cn('nav-item-dropdown', menuOpen && 'is-open')}
+          onMouseEnter={() => setDesktopDropdown('blog')}
+          onMouseLeave={closeDesktopDropdown}
         >
           <Link
             href={contentsHref}
             className="nav-link"
             aria-current={pathKey === 'blog' || pathKey === 'products' ? 'page' : undefined}
             aria-haspopup="true"
+            aria-expanded={menuOpen}
+            onClick={closeDesktopDropdown}
           >
             {dict.nav.blog}
             <span className="nav-caret" aria-hidden>
@@ -204,9 +218,7 @@ export function Header({
                   href={localizedPath(locale, g.key)}
                   role="menuitem"
                   className="nav-dropdown-link"
-                  onClick={(e) => {
-                    e.currentTarget.closest('.nav-item-dropdown')?.classList.add('is-force-closed')
-                  }}
+                  onClick={closeDesktopDropdown}
                 >
                   {g.label[locale]}
                 </Link>
@@ -236,6 +248,7 @@ export function Header({
           'site-header',
           mode === 'over-hero' ? 'is-over-hero' : 'is-solid',
           mode === 'over-hero' && `tone-${tone}`,
+          mode === 'over-hero' && woodHero && 'is-over-hero-wood',
         )}
       >
         <div className="container header-inner">

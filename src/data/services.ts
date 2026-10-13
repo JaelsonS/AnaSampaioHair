@@ -1,4 +1,6 @@
 import type { Service } from '@/types/domain'
+import { mechasColorPairs } from '@/data/mechas-gallery'
+import { treatmentsHeroWorkSlides } from '@/data/treatments-hero-slides'
 
 export const serviceCategories = [
   { id: 'beleza' as const, titleKey: 'beauty' },
@@ -6,8 +8,12 @@ export const serviceCategories = [
 ]
 
 const R = '/images/results'
-const G = '/images/mechas/gallery'
+const T = '/images/trabalhos'
+const S = '/images/services'
 const A = '/images/about'
+
+const coloracaoPessoalDepois =
+  mechasColorPairs[0]?.after ?? '/images/results/coloracao-depois.webp'
 
 /**
  * Full service catalogue aligned with Ana Sampaio institute offering.
@@ -23,7 +29,7 @@ export const services: Service[] = [
       'Descubra os tons que harmonizam com a temperatura da sua pele, os seus olhos e a imagem que deseja transmitir.',
     description:
       'A partir da análise da íris, temperatura de pele, coloração pessoal e visagismo, criamos uma proposta de mechas personalizada para iluminar o rosto, valorizar os traços naturais e respeitar a identidade. A sua cor não precisa seguir tendências — precisa combinar consigo.',
-    image: `${G}/coloracao-mechas01-depois.webp`,
+    image: coloracaoPessoalDepois,
     imageAlt: 'Mechas personalizadas — resultado real no instituto',
     ctaType: 'whatsapp',
     ctaLabel: 'Agendar consultoria de mechas',
@@ -36,7 +42,7 @@ export const services: Service[] = [
     shortDescription: 'Acabamento que faz o cabelo cair bem e o dia fluir melhor.',
     description:
       'Brushing pensado para o seu tipo de fio e para a rotina que tem. Sai com movimento, brilho e a sensação de “está feito”.',
-    image: `${R}/brushing-resultado.webp`,
+    image: `${A}/ambiente-trabalho-03.webp`,
     imageAlt: 'Brushing profissional — cabelo com acabamento natural',
     ctaType: 'booking',
     ctaLabel: 'Pedir brushing',
@@ -62,7 +68,7 @@ export const services: Service[] = [
     shortDescription: 'Cor com intenção: a sua história capilar conta tanto quanto o tom desejado.',
     description:
       'Antes de colorir, olhamos para o histórico dos fios. Assim evitamos surpresas e construímos uma cor que fica bem — e que o cabelo consegue acompanhar.',
-    image: `${G}/coloracao-02-depois.webp`,
+    image: coloracaoPessoalDepois,
     imageAlt: 'Coloração capilar — resultado real',
     ctaType: 'whatsapp',
     ctaLabel: 'Quero saber sobre cor',
@@ -75,7 +81,7 @@ export const services: Service[] = [
     shortDescription: 'Alisar sim — mas só depois de perceber se o cabelo está preparado.',
     description:
       'O alisamento começa com avaliação. Se for o caminho certo para si, avançamos com cuidado. Se não for, dizemos-lhe com honestidade e propomos outra solução.',
-    image: `${R}/alisamento-resultado.webp`,
+    image: `${T}/imganatrabalhos02.webp`,
     imageAlt: 'Alisamento — cabelo liso e saudável',
     ctaType: 'booking',
     ctaLabel: 'Pedir avaliação',
@@ -88,7 +94,7 @@ export const services: Service[] = [
     shortDescription: 'Leveza e movimento, fio a fio, sem perder o comprimento que quer.',
     description:
       'Ideal quando quer o cabelo mais leve, com queda natural, sem um corte “seco”. É detalhe, paciência e olhar para o que o fio precisa.',
-    image: `${G}/coloracao-lado01-depois.webp`,
+    image: `${R}/corte-bordado.webp`,
     imageAlt: 'Corte bordado — movimento e brilho no cabelo',
     ctaType: 'booking',
     ctaLabel: 'Pedir corte bordado',
@@ -101,8 +107,8 @@ export const services: Service[] = [
     shortDescription: 'Avaliação com tricoscopia e plano personalizado para a causa da queda.',
     description:
       'A queda é multifatorial. Identificamos causas com avaliação detalhada (tricoscopia e biorressonância quando indicado) e desenhamos um protocolo à sua medida.',
-    image: `${R}/reconstrucao-depois.webp`,
-    imageAlt: 'Tratamento capilar — fios recuperados no instituto',
+    image: `${R}/queda-tratamento.webp`,
+    imageAlt: 'Tratamento de queda capilar no instituto Ana Sampaio',
     ctaType: 'booking',
     ctaLabel: 'Avaliar queda',
   },
@@ -114,8 +120,8 @@ export const services: Service[] = [
     shortDescription: 'Diagnóstico e detox do couro com blends e calmia.',
     description:
       'Tratamos caspa com abordagem personalizada: detox do couro, sessões de calmia e blends de óleos naturais para restaurar o equilíbrio.',
-    image: `${R}/blend-resultado.webp`,
-    imageAlt: 'Tratamento capilar com blends naturais no instituto',
+    image: `${R}/caspa-tratamento.webp`,
+    imageAlt: 'Tratamento para caspa no instituto Ana Sampaio',
     ctaType: 'whatsapp',
     ctaLabel: 'Falar sobre caspa',
   },
@@ -127,8 +133,8 @@ export const services: Service[] = [
     shortDescription: 'Regular o sebo e devolver conforto ao couro cabeludo.',
     description:
       'Protocolos com óleos naturais e produtos fitoterápicos para ajudar a regular a produção de sebo e promover a saúde dos fios.',
-    image: `${R}/escova-resultado.webp`,
-    imageAlt: 'Cabelo equilibrado — resultado de terapia capilar',
+    image: `${R}/oleosidade-tratamento.webp`,
+    imageAlt: 'Tratamento para oleosidade excessiva no instituto',
     ctaType: 'whatsapp',
     ctaLabel: 'Quero equilibrar o couro',
   },
@@ -140,8 +146,8 @@ export const services: Service[] = [
     shortDescription: 'Calmia e cuidado para reduzir inflamação e desconforto.',
     description:
       'Abordagem que inclui sessões de calmia para acalmar e restaurar a saúde do couro, reduzindo sintomas associados.',
-    image: `${A}/terapia-env.webp`,
-    imageAlt: 'Sessão de terapia capilar no instituto Ana Sampaio',
+    image: `${R}/dermatite-tratamento.webp`,
+    imageAlt: 'Tratamento para dermatite seborreica no instituto',
     ctaType: 'booking',
     ctaLabel: 'Pedir avaliação',
   },
@@ -153,8 +159,8 @@ export const services: Service[] = [
     shortDescription: 'Microagulhamento e activos de crescimento quando indicado.',
     description:
       'Para alopecia androgenética e áreas rarefeitas, podemos integrar microagulhamento e activos de crescimento após avaliação individual.',
-    image: `${R}/terapia-tecnica.webp`,
-    imageAlt: 'Tratamento técnico capilar no instituto',
+    image: `${R}/calvicie-tratamento.webp`,
+    imageAlt: 'Tratamento para calvície no instituto Ana Sampaio',
     ctaType: 'booking',
     ctaLabel: 'Quero avaliar',
   },
@@ -166,8 +172,8 @@ export const services: Service[] = [
     shortDescription: 'Abordagem anti-inflamatória e acompanhamento próximo.',
     description:
       'Condição autoimune frequentemente ligada a factores emocionais. Tratamos com protocolo cuidando do couro e do bem-estar global.',
-    image: `${A}/tratamento-env.webp`,
-    imageAlt: 'Ambiente de cuidado capilar no instituto Ana Sampaio',
+    image: `${R}/alopecia-tratamento.webp`,
+    imageAlt: 'Acompanhamento capilar para alopecia areata',
     ctaType: 'whatsapp',
     ctaLabel: 'Falar com a Ana Sampaio',
   },
@@ -218,8 +224,8 @@ export const services: Service[] = [
     shortDescription: 'Para quem sente o couro “pesado”, irritado ou desequilibrado.',
     description:
       'Cuidamos do conforto do couro cabeludo com uma abordagem personalizada. O objectivo é bem-estar e equilíbrio.',
-    image: `${R}/massagem-ambiente.webp`,
-    imageAlt: 'Ritual de cuidado capilar no instituto',
+    image: `${R}/detox-tratamento.webp`,
+    imageAlt: 'Detox do couro cabeludo no instituto Ana Sampaio',
     ctaType: 'whatsapp',
     ctaLabel: 'Falar sobre o couro cabeludo',
   },
@@ -244,8 +250,8 @@ export const services: Service[] = [
     shortDescription: 'Relaxamento, circulação e nutrição do couro e dos fios.',
     description:
       'Massagem combinada com óleos essenciais específicos para promover relaxamento, estimular a circulação e nutrir o couro cabeludo.',
-    image: `${R}/massagem-ambiente.webp`,
-    imageAlt: 'Ambiente de massagem capilar no instituto',
+    image: `${R}/massagem-tratamento.webp`,
+    imageAlt: 'Massagem capilar com óleos terapêuticos',
     ctaType: 'booking',
     ctaLabel: 'Agendar massagem',
   },
@@ -257,8 +263,8 @@ export const services: Service[] = [
     shortDescription: 'Natureza a favor da calmia e do bem-estar.',
     description:
       'Uma forma de utilizar a natureza a nosso favor para promover calmia e bem-estar no ritual de cuidado.',
-    image: `${A}/ambiente-espaco.webp`,
-    imageAlt: 'Chaterapia capilar — ambiente acolhedor',
+    image: `${R}/chaterapia-tratamento.webp`,
+    imageAlt: 'Chá terapia capilar no instituto Ana Sampaio',
     ctaType: 'whatsapp',
     ctaLabel: 'Saber mais',
   },
@@ -283,7 +289,7 @@ export const services: Service[] = [
     shortDescription: 'Combinação única seleccionada para as suas necessidades.',
     description:
       'Óleos naturais seleccionados de acordo com as necessidades específicas da cliente para saúde do couro e dos fios.',
-    image: `${R}/blend-resultado.webp`,
+    image: `${S}/blend.webp`,
     imageAlt: 'Blend de óleos naturais — cuidado capilar',
     ctaType: 'whatsapp',
     ctaLabel: 'Pedir blend',
@@ -296,7 +302,7 @@ export const services: Service[] = [
     shortDescription: 'Estimular circulação e oxigenação do couro cabeludo.',
     description:
       'Corrente de alta frequência para estimular a circulação, promover oxigenação e auxiliar na absorção de nutrientes.',
-    image: `${R}/terapia-tecnica.webp`,
+    image: `${R}/alta-frequencia.webp`,
     imageAlt: 'Tratamento de alta frequência no instituto',
     ctaType: 'booking',
     ctaLabel: 'Incluir no plano',
@@ -309,7 +315,7 @@ export const services: Service[] = [
     shortDescription: 'Luz de baixa intensidade para regeneração celular.',
     description:
       'Terapia de luz vermelha de baixa intensidade que estimula o metabolismo celular e auxilia na saúde do couro e dos fios.',
-    image: `${R}/terapia-tecnica.webp`,
+    image: `${R}/led-vermelho.webp`,
     imageAlt: 'Terapia com LED vermelho',
     ctaType: 'booking',
     ctaLabel: 'Incluir no plano',
@@ -322,22 +328,36 @@ export const services: Service[] = [
     shortDescription: 'Estimular colagénio e absorção de activos no couro.',
     description:
       'Microperfurações controladas no couro para estimular colagénio e facilitar a absorção de nutrientes, quando clinicamente indicado.',
-    image: `${R}/terapia-tecnica.webp`,
-    imageAlt: 'Microagulhamento capilar — equipamento no instituto',
+    image: `${R}/microagulhamento-tratamento.webp`,
+    imageAlt: 'Microagulhamento capilar no instituto Ana Sampaio',
     ctaType: 'booking',
     ctaLabel: 'Pedir avaliação',
   },
 ]
 
-/** Extra resultado photos for the beauty section showcase grid */
-export const beautyShowcaseImages = [
-  { src: `${G}/coloracao-00-depois.webp`, alt: 'Coloração capilar — resultado real' },
-  { src: `${G}/coloracao-03-depois.webp`, alt: 'Coloração capilar — resultado real' },
-  { src: `${R}/mechas-depois.webp`, alt: 'Mechas personalizadas — resultado real' },
-  { src: `${G}/coloracao-01-frente-depois.webp`, alt: 'Coloração capilar — resultado real' },
-  { src: `${G}/coloracao-mechas02-depois.webp`, alt: 'Mechas personalizadas — resultado real' },
-  { src: `${R}/coloracao-depois.webp`, alt: 'Coloração capilar — resultado real' },
-]
+/** Tratamentos — grelha «Mais resultados reais» (ficheiros únicos em /images/trabalhos/) */
+const BEAUTY_SHOWCASE_IDS = [
+  'imgcoloracaomechasdepois02',
+  'imgcoloracaomechasdepois01',
+  'imganatrabalhos02',
+  'imganatrabalhos04',
+  'imgcorte01',
+  'coloracaodepois05',
+] as const
+
+function beautyShowcaseAlt(slideId: string): string {
+  if (slideId.includes('corte')) return 'Corte capilar — resultado real no instituto Ana Sampaio'
+  if (slideId.includes('mechas')) return 'Mechas personalizadas — resultado real'
+  return 'Coloração capilar — resultado real'
+}
+
+const slideById = new Map(treatmentsHeroWorkSlides.map((s) => [s.id, s]))
+
+export const beautyShowcaseImages = BEAUTY_SHOWCASE_IDS.flatMap((id) => {
+  const slide = slideById.get(id)
+  if (!slide) return []
+  return [{ src: slide.src, alt: beautyShowcaseAlt(slide.id) }]
+})
 
 export function getServices() {
   return services

@@ -171,10 +171,12 @@ export function SiteChrome({ locale, dict }: { locale: UrlLocale; dict: Dictiona
       >
         <Image
           src={siteConfig.brand.assistantAvatar}
-          alt=""
+          alt={dict.assistant.avatarAlt}
           width={56}
           height={56}
           className="float-assistant-photo"
+          sizes="56px"
+          quality={85}
         />
         <span className="float-assistant-online" aria-hidden />
       </button>
@@ -191,10 +193,11 @@ export function SiteChrome({ locale, dict }: { locale: UrlLocale; dict: Dictiona
               <div className="assistant-avatar">
                 <Image
                   src={siteConfig.brand.assistantAvatar}
-                  alt=""
+                  alt={dict.assistant.avatarAlt}
                   fill
                   sizes="44px"
-                  style={{ objectFit: 'cover', objectPosition: 'center 18%' }}
+                  quality={85}
+                  style={{ objectFit: 'cover', objectPosition: 'center 22%' }}
                 />
               </div>
               <div>

@@ -21,7 +21,7 @@ export function MechasHoverGrid({ locale = 'pt' }: { locale?: UrlLocale }) {
             fill
             sizes="(max-width: 900px) 100vw, 50vw"
             quality={85}
-            className="mechas-card-img"
+            className={`mechas-card-img mechas-card-img--${card.id}`}
           />
           <div className="mechas-card-overlay">
             <h3>{card.title}</h3>

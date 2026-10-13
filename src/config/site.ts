@@ -82,18 +82,19 @@ export const siteConfig = {
     logo: '/images/brand/logo.png',
     /** Official salon interior — primary homepage hero */
     heroSalon: '/images/hero/salon-interior.jpg',
-    heroSalonPortrait: '/images/hero/salon-portrait.jpg',
+    heroSalonPortrait: '/images/hero/salon-interior.jpg',
     /** Cinematic hair result (landscape) — secondary / results */
-    heroResults: '/images/hero/results-wide.jpg',
-    heroMechas: '/images/hero/mechas-hero.jpg',
+    heroResults: '/images/trabalhos/coloracaodepois05.webp',
+    heroMechas: '/images/mechas/ana/ana-mechas-03.webp',
     /** Homepage mechas — Ana com painel Art Visage (destaque) */
-    mechasFeatured: '/images/services/mechas-visagismo.webp',
-    anaCutout: '/images/about/ana-cutout.png',
-    anaStudio: '/images/about/ana-studio.jpg',
+    mechasFeatured: '/images/mechas/ana/ana-mechas-03.webp',
+    anaStudio: '/images/about/ana-about-home.webp',
     /** E-book “Guia Meu Cabelo dos Sonhos” — resultado / instituto */
     ebookGuia: '/images/ebook/guia-meu-cabelo-dos-sonhos.webp',
-    /** Homepage & About hero — Ana portrait cutout (transparent) */
-    anaHeroHome: '/images/hero/ana-home-destaque-hero.webp',
+    /** Fonte: docs/AnaImg2026/ana-HeroDestaques.jpeg → sync hero destaque */
+    anaHeroHome: '/images/hero/ana-home-destaque.webp',
+    /** Hero esquerda — ripas verticais (sem retrato) */
+    heroWoodPanelsLeft: '/images/hero/hero-wood-panels-left.webp',
     /** Homepage “Quem sou?” — Ana full-body at the institute */
     anaAboutHome: '/images/about/ana-about-home.webp',
     /** About page — “Um olhar que une…” (Ana com tablet) */
@@ -102,22 +103,19 @@ export const siteConfig = {
     anaAboutTraining: '/images/about/ana-formacao-especialidade.webp',
     /** About page — livro Raízes e Asas (capa) */
     bookRaizesAsas: '/images/about/livro-raizes-e-asas.webp',
-    /** Transparent full-body cutout — secondary use */
-    anaHero: '/images/about/ana-hero.png',
+    /** Retrato corpo inteiro — instituto */
+    anaHero: '/images/about/ana-about-home.webp',
     /** Studio portrait (instituto) — quotes / Ana fala */
-    anaHeroPortrait: '/images/about/ana-studio.jpg',
-    /** Transparent cutout alternate */
-    anaHeroCutout: '/images/about/ana-cutout.png',
-    /** Virtual assistant face (not Ana) */
-    assistantAvatar: '/images/brand/assistant-avatar.jpg',
+    anaHeroPortrait: '/images/about/ana-formacao-especialidade.webp',
+    /** Virtual assistant face (not Ana) — Unsplash, ver docs/assistant/LICENSE.md */
+    assistantAvatar: '/images/brand/assistant-avatar.webp',
     /** Full-body real Ana (fundo preto) */
-    anaFull: '/images/about/ana-full.jpg',
-    anaPortrait: '/images/about/ana-studio.jpg',
+    anaFull: '/images/about/ana-about-home.webp',
+    anaPortrait: '/images/about/ana-formacao-especialidade.webp',
     /** Clear studio portrait for “Escrito por” / author / legal identity */
-    anaAuthor: '/images/about/ana-studio.jpg',
+    anaAuthor: '/images/about/ana-formacao-especialidade.webp',
     /** About page — O espaço (instituto + trabalhos reais) */
     ambiente: [
-      '/images/about/ambiente-espaco.webp',
       '/images/about/ambiente-trabalho-01.webp',
       '/images/about/ambiente-trabalho-02.webp',
       '/images/about/ambiente-trabalho-03.webp',

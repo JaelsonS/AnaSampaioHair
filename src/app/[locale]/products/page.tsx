@@ -22,17 +22,17 @@ const CARE = {
       {
         title: 'Óleos e blends',
         lead: 'Cuidado com óleos naturais personalizados no instituto — peça orientação no atendimento.',
-        image: '/images/products/oleo.jpg',
+        image: '/images/services/blend.webp',
       },
       {
         title: 'Hidratação em casa',
         lead: 'Rotinas de hidratação alinhadas ao protocolo definido na avaliação.',
-        image: '/images/products/mascara.jpg',
+        image: '/images/services/reconstrucao.webp',
       },
       {
         title: 'Couro cabeludo',
         lead: 'Cuidados de detox e conforto do couro — sempre com indicação personalizada.',
-        image: '/images/products/serum.jpg',
+        image: '/images/services/queda.webp',
       },
     ],
   },
@@ -44,17 +44,17 @@ const CARE = {
       {
         title: 'Aceites y blends',
         lead: 'Cuidado con aceites naturales personalizados en el instituto — pida orientación en la cita.',
-        image: '/images/products/oleo.jpg',
+        image: '/images/services/blend.webp',
       },
       {
         title: 'Hidratación en casa',
         lead: 'Rutinas de hidratación alineadas al protocolo definido en la valoración.',
-        image: '/images/products/mascara.jpg',
+        image: '/images/services/reconstrucao.webp',
       },
       {
         title: 'Cuero cabelludo',
         lead: 'Cuidados de detox y confort del cuero — siempre con indicación personalizada.',
-        image: '/images/products/serum.jpg',
+        image: '/images/services/queda.webp',
       },
     ],
   },
@@ -66,17 +66,17 @@ const CARE = {
       {
         title: 'Oils and blends',
         lead: 'Personalised natural oils at the institute — ask for guidance during your appointment.',
-        image: '/images/products/oleo.jpg',
+        image: '/images/services/blend.webp',
       },
       {
         title: 'Hydration at home',
         lead: 'Hydration routines aligned with the protocol defined in your assessment.',
-        image: '/images/products/mascara.jpg',
+        image: '/images/services/reconstrucao.webp',
       },
       {
         title: 'Scalp care',
         lead: 'Detox and scalp comfort — always with personalised guidance.',
-        image: '/images/products/serum.jpg',
+        image: '/images/services/queda.webp',
       },
     ],
   },
@@ -116,7 +116,7 @@ export default async function ProductsPage({
         dict={dict}
         title={dict.nav.products}
         lead={dict.sections.productsLead}
-        image="/images/nutricao.jpg"
+        image="/images/blog/reposicao-hidrica-no-cabelo.webp"
       />
 
       <Section>

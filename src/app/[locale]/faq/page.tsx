@@ -26,7 +26,7 @@ export default async function FaqPage({ params }: { params: Promise<{ locale: st
 
   return (
     <>
-      <PageHero dict={dict} title={dict.nav.faq} lead={dict.sections.faqLead} image="/images/avaliar.jpg" />
+      <PageHero dict={dict} title={dict.nav.faq} lead={dict.sections.faqLead} image="/images/about/ana-formacao-especialidade.webp" />
       <Section>
         <SectionHeading title={dict.sections.faqTitle} lead={dict.sections.faqLead} />
         {faqs.map((item) => (

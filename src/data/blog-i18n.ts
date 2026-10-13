@@ -1,6 +1,7 @@
 import type { AppLocale } from '@/i18n/config'
+import { blogPtPtCopy, localizeBlogBody } from '@/data/blog-pt-pt'
 
-/** UI translations for WP posts (titles/excerpts/categories). Bodies stay PT until full editorial translation. */
+/** UI translations for WP posts (titles/excerpts/categories). PT-PT editorial in blog-pt-pt.ts. */
 export type BlogUiLocale = Exclude<AppLocale, 'pt-PT'>
 
 type BlogUiCopy = { title: string; excerpt: string; category?: string }
@@ -131,11 +132,35 @@ export function localizeBlogCategory(category: string, locale: AppLocale): strin
   return blogCategoryI18n[category]?.[key] ?? category
 }
 
-export function localizeBlogPostFields<T extends { id: string; title: Partial<Record<AppLocale, string>>; excerpt: Partial<Record<AppLocale, string>>; categories: string[] }>(
-  post: T,
-  locale: AppLocale,
-): T {
-  if (locale === 'pt-PT') return post
+type LocalizableBlogPost = {
+  id: string
+  title: Partial<Record<AppLocale, string>>
+  excerpt: Partial<Record<AppLocale, string>>
+  seoTitle?: Partial<Record<AppLocale, string>>
+  seoDescription?: Partial<Record<AppLocale, string>>
+  body?: Partial<Record<AppLocale, string>>
+  categories: string[]
+}
+
+export function localizeBlogPostFields<T extends LocalizableBlogPost>(post: T, locale: AppLocale): T {
+  if (locale === 'pt-PT') {
+    const pt = blogPtPtCopy[post.id]
+    const rawBody = post.body?.['pt-PT']
+    const localizedBody = rawBody ? localizeBlogBody(rawBody, post.id) : undefined
+    if (!pt && !localizedBody) return post
+    return {
+      ...post,
+      ...(pt
+        ? {
+            title: { ...post.title, 'pt-PT': pt.title },
+            excerpt: { ...post.excerpt, 'pt-PT': pt.excerpt },
+            seoTitle: { ...(post.seoTitle ?? {}), 'pt-PT': pt.seoTitle },
+            seoDescription: { ...(post.seoDescription ?? {}), 'pt-PT': pt.seoDescription },
+          }
+        : {}),
+      ...(localizedBody ? { body: { ...(post.body ?? {}), 'pt-PT': localizedBody } } : {}),
+    }
+  }
   const key = locale === 'es' ? 'es' : 'en'
   const copy = blogPostI18n[post.id]?.[key]
   if (!copy) return post

@@ -10,7 +10,6 @@ export type AnaPhotoId =
   | 'ana-hero-portrait'
   | 'ana-full'
   | 'ana-studio'
-  | 'ana-cutout'
 
 export type AnaPhotoAsset = {
   id: AnaPhotoId
@@ -29,14 +28,14 @@ export type AnaPhotoAsset = {
 export const anaPhotoInventory: AnaPhotoAsset[] = [
   {
     id: 'ana-hero-home',
-    src: '/images/hero/ana-home-destaque-cutout.webp',
-    width: 408,
-    height: 612,
+    src: '/images/hero/ana-home-destaque.webp',
+    width: 1067,
+    height: 1600,
     orientation: 'portrait',
-    mode: 'RGBA',
-    recommendedUse: 'Hero home — cutout sobre atmosfera do salão',
+    mode: 'RGB',
+    recommendedUse: 'Hero home e Sobre — fundo madeira contínuo + Ana à direita',
     context: 'Primeira impressão / página inicial',
-    cropHint: 'Corpo completo; object-position center bottom',
+    cropHint: 'site-hero-wood-bg-img object-position 58% 18% (desktop)',
     alt: 'Ana Sampaio, cabeleireira e terapeuta capilar integrativa',
     avoid: 'Não repetir na mesma página abaixo do hero',
   },
@@ -51,26 +50,26 @@ export const anaPhotoInventory: AnaPhotoAsset[] = [
     context: 'Instituto / credibilidade / botão Saber mais',
     cropHint: 'Corpo completo no instituto; object-position center 12–14%',
     alt: 'Ana Sampaio no Instituto de Beleza e Saúde Capilar',
-    avoid: 'Não usar como cutout no hero',
+    avoid: 'Não duplicar no hero da mesma página',
   },
   {
     id: 'ana-hero',
-    src: '/images/about/ana-hero.png',
-    width: 413,
-    height: 957,
-    orientation: 'portrait',
-    mode: 'RGBA',
-    recommendedUse: 'Hero home (cutout sobre atmosfera do salão)',
+    src: '/images/about/ana-about-home.webp',
+    width: 1800,
+    height: 2700,
+    orientation: 'square',
+    mode: 'RGB',
+    recommendedUse: 'Apresentação institucional / corpo inteiro',
     context: 'Apresentação institucional / primeiro contacto',
-    cropHint: 'Manter corpo completo; object-position center bottom',
+    cropHint: 'Contain ou cover suave',
     alt: 'Ana Sampaio, cabeleireira e terapeuta capilar integrativa',
     avoid: 'Não repetir na mesma página abaixo do hero',
   },
   {
     id: 'ana-hero-portrait',
-    src: '/images/about/ana-studio.jpg',
-    width: 680,
-    height: 1024,
+    src: '/images/about/ana-formacao-especialidade.webp',
+    width: 1800,
+    height: 2700,
     orientation: 'portrait',
     mode: 'RGB',
     recommendedUse: 'Ana fala · manifesto · citações',
@@ -81,9 +80,9 @@ export const anaPhotoInventory: AnaPhotoAsset[] = [
   },
   {
     id: 'ana-full',
-    src: '/images/about/ana-full.jpg',
-    width: 1024,
-    height: 1024,
+    src: '/images/about/ana-about-home.webp',
+    width: 1800,
+    height: 2700,
     orientation: 'square',
     mode: 'RGB',
     recommendedUse: 'Sobre · e-book · corpo inteiro',
@@ -94,9 +93,9 @@ export const anaPhotoInventory: AnaPhotoAsset[] = [
   },
   {
     id: 'ana-studio',
-    src: '/images/about/ana-studio.jpg',
-    width: 680,
-    height: 1024,
+    src: '/images/about/ana-formacao-especialidade.webp',
+    width: 1800,
+    height: 2700,
     orientation: 'portrait',
     mode: 'RGB',
     recommendedUse: 'Sobre · blog autor · políticas · Ana fala',
@@ -105,19 +104,6 @@ export const anaPhotoInventory: AnaPhotoAsset[] = [
     alt: 'Ana Sampaio no espaço do instituto',
     avoid: 'Não confundir com fotos só de ambiente',
   },
-  {
-    id: 'ana-cutout',
-    src: '/images/about/ana-cutout.png',
-    width: 413,
-    height: 957,
-    orientation: 'portrait',
-    mode: 'RGBA',
-    recommendedUse: 'Cutout · CTAs pessoais',
-    context: 'Citação em primeira pessoa',
-    cropHint: 'Contain; fundo transparente',
-    alt: 'Ana Sampaio — retrato com fundo transparente',
-    avoid: 'Evitar halo em fundos escuros',
-  },
 ]
 
 export function getAnaPhoto(id: AnaPhotoId) {
@@ -125,12 +111,6 @@ export function getAnaPhoto(id: AnaPhotoId) {
 }
 
 export const anaPhotoLegacy = [
-  '/images/about/ana.jpg',
-  '/images/about/ana.png',
-  '/images/about/ana-cutout.jpg',
-  '/images/about/ana-hero-light.png',
-  '/images/about/ana-hero-studio.jpg',
-  '/images/about/ana-hero-portrait.jpg',
-  '/images/about/ana-studio.png',
-  '/images/about/ana-full.png',
+  '/images/about/ana-about-home.webp',
+  '/images/about/ana-formacao-especialidade.webp',
 ] as const

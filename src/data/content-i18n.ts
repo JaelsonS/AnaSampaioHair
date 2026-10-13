@@ -102,6 +102,31 @@ export const aboutHighlightsByLocale: Record<UrlLocale, string[]> = {
   ],
 }
 
+/** Hero da página Sobre — argumento de venda acima da dobra */
+export const aboutHeroCopyByLocale: Record<
+  UrlLocale,
+  { tagline: string; body: string; ctaPrimary: string }
+> = {
+  pt: {
+    tagline: 'Instituto de Beleza e Saúde Capilar · Marinha Grande',
+    body:
+      'Da avaliação capilar à coloração com visagismo: técnica de salão, tricologia e terapia integrativa no mesmo lugar — com honestidade sobre o que o seu cabelo precisa agora (e o que pode esperar).',
+    ctaPrimary: 'Marcar avaliação',
+  },
+  es: {
+    tagline: 'Instituto de Belleza y Salud Capilar · Marinha Grande',
+    body:
+      'Desde la valoración capilar hasta el color con visagismo: técnica de salón, tricología y terapia integrativa en un mismo espacio — con honestidad sobre lo que su cabello necesita ahora (y lo que puede esperar).',
+    ctaPrimary: 'Reservar valoración',
+  },
+  en: {
+    tagline: 'Hair Beauty & Scalp Institute · Marinha Grande',
+    body:
+      'From scalp assessment to colour with visagism: salon craft, trichology and integrative therapy under one roof — with honesty about what your hair needs now (and what can wait).',
+    ctaPrimary: 'Book an assessment',
+  },
+}
+
 export const experiencePointsByLocale: Record<
   UrlLocale,
   { title: string; description: string }[]
@@ -177,6 +202,8 @@ export const treatmentsHubCopy: Record<
     intentFibreTitle: string
     intentFibreBody: string
     quote: string
+    anaRole: string
+    worksCarouselAria: string
     methodEyebrow: string
     methodTitle: string
     methodLead: string
@@ -206,6 +233,8 @@ export const treatmentsHubCopy: Record<
     intentFibreBody: 'Reconstrução, hidratação, nutrição e corte bordado.',
     quote:
       'Para mim, cada atendimento começa por ouvir o cabelo — e a pessoa. Só depois escolhemos o caminho.',
+    anaRole: 'Cabeleireira e terapeuta capilar integrativa',
+    worksCarouselAria: 'Trabalhos realizados no instituto',
     methodEyebrow: 'Metodologia',
     methodTitle: 'Como funciona o acompanhamento',
     methodLead: 'Passos reais do instituto — sem inventar durações ou resultados.',
@@ -234,6 +263,8 @@ export const treatmentsHubCopy: Record<
     intentFibreBody: 'Reconstrucción, hidratación, nutrición y corte bordado.',
     quote:
       'Para mí, cada cita empieza por escuchar el cabello — y a la persona. Solo después elegimos el camino.',
+    anaRole: 'Peluquera y terapeuta capilar integrativa',
+    worksCarouselAria: 'Trabajos realizados en el instituto',
     methodEyebrow: 'Metodología',
     methodTitle: 'Cómo funciona el acompañamiento',
     methodLead: 'Pasos reales del instituto — sin inventar duraciones o resultados.',
@@ -262,6 +293,8 @@ export const treatmentsHubCopy: Record<
     intentFibreBody: 'Reconstruction, hydration, nourishment and point-cutting.',
     quote:
       'For me, every appointment starts by listening to the hair — and the person. Only then do we choose the path.',
+    anaRole: 'Hairdresser and integrative hair therapist',
+    worksCarouselAria: 'Work done at the institute',
     methodEyebrow: 'Method',
     methodTitle: 'How follow-up works',
     methodLead: 'Real institute steps — without inventing durations or results.',
@@ -310,12 +343,16 @@ export const aboutPageCopy: Record<
     trainingBody1: string
     trainingBody2: string
     spaceAlt: string
+    spaceSalonAlt: string
     spaceAmbienteEyebrow: string
     spaceResultsEyebrow: string
     resultLabels: Record<string, string>
     lightboxClose: string
     lightboxPrev: string
     lightboxNext: string
+    lightboxBookCta: string
+    galleryWaAmbiente: string
+    galleryWaProcedure: string
     anaAlt: string
   }
 > = {
@@ -339,6 +376,7 @@ export const aboutPageCopy: Record<
     spaceTitle: 'O espaço',
     spaceLead: 'Um ambiente pensado para calma, natureza e atenção individual.',
     spaceAlt: 'Ambiente e trabalho no instituto Ana Sampaio',
+    spaceSalonAlt: 'Interior do salão — Instituto Ana Sampaio',
     ebookBridgeTitle: 'O guia da Ana Sampaio',
     ebookBridgeLead: 'Para cuidar em casa com critério — o e-book Guia Meu Cabelo dos Sonhos.',
     bookEyebrow: 'Livro da Ana Sampaio',
@@ -386,6 +424,11 @@ export const aboutPageCopy: Record<
     lightboxClose: 'Fechar',
     lightboxPrev: 'Imagem anterior',
     lightboxNext: 'Imagem seguinte',
+    lightboxBookCta: 'Quero agendar este procedimento',
+    galleryWaAmbiente:
+      'Olá Ana Sampaio, vi as fotos do instituto no site e gostaria de agendar uma visita ou avaliação.',
+    galleryWaProcedure:
+      'Olá Ana Sampaio, vi no site o trabalho de {procedure} e gostaria de agendar uma avaliação.',
     anaAlt: 'Ana Sampaio no instituto',
   },
   es: {
@@ -408,6 +451,7 @@ export const aboutPageCopy: Record<
     spaceTitle: 'El espacio',
     spaceLead: 'Un ambiente pensado para la calma, la naturaleza y la atención individual.',
     spaceAlt: 'Ambiente y trabajo en el instituto Ana Sampaio',
+    spaceSalonAlt: 'Interior del salón — Instituto Ana Sampaio',
     ebookBridgeTitle: 'La guía de Ana Sampaio',
     ebookBridgeLead: 'Para cuidar en casa con criterio — el e-book Guía Mi Cabello de Ensueño.',
     bookEyebrow: 'Libro de Ana Sampaio',
@@ -455,6 +499,11 @@ export const aboutPageCopy: Record<
     lightboxClose: 'Cerrar',
     lightboxPrev: 'Imagen anterior',
     lightboxNext: 'Imagen siguiente',
+    lightboxBookCta: 'Quiero reservar este procedimiento',
+    galleryWaAmbiente:
+      'Hola Ana Sampaio, vi las fotos del instituto en la web y me gustaría reservar una visita o valoración.',
+    galleryWaProcedure:
+      'Hola Ana Sampaio, vi en la web el trabajo de {procedure} y me gustaría reservar una valoración.',
     anaAlt: 'Ana Sampaio en el instituto',
   },
   en: {
@@ -477,6 +526,7 @@ export const aboutPageCopy: Record<
     spaceTitle: 'The space',
     spaceLead: 'An environment designed for calm, nature and individual attention.',
     spaceAlt: 'Atmosphere and work at the Ana Sampaio institute',
+    spaceSalonAlt: 'Salon interior — Ana Sampaio Institute',
     ebookBridgeTitle: 'Ana Sampaio’s guide',
     ebookBridgeLead: 'For at-home care with criteria — the My Dream Hair Guide e-book.',
     bookEyebrow: 'Ana Sampaio’s book',
@@ -524,6 +574,11 @@ export const aboutPageCopy: Record<
     lightboxClose: 'Close',
     lightboxPrev: 'Previous image',
     lightboxNext: 'Next image',
+    lightboxBookCta: 'I want to book this service',
+    galleryWaAmbiente:
+      'Hello Ana Sampaio, I saw the institute photos on your website and would like to book a visit or assessment.',
+    galleryWaProcedure:
+      'Hello Ana Sampaio, I saw the {procedure} work on your website and would like to book an assessment.',
     anaAlt: 'Ana Sampaio at the institute',
   },
 }

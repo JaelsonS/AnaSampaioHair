@@ -92,7 +92,8 @@ export const en: Dictionary = {
     resultsTitle: 'Results with honesty',
     resultsLead: 'Real transformations, always with the care your hair needs.',
     aboutTitle: 'Ana Sampaio',
-    aboutLead: 'Hairdresser and integrative hair therapist — with listening and rigour.',
+    aboutLead:
+      'Ana Sampaio — hairdresser and integrative scalp therapist in Marinha Grande. Experience, trichology and visagism training, integrative therapy and one-to-one care with a personalised plan.',
     experienceTitle: 'The institute experience',
     experienceLead: 'A space designed for calm, nature and care that is entirely yours.',
     testimonialsTitle: 'What clients say',
@@ -140,6 +141,7 @@ export const en: Dictionary = {
     askDetails: 'To finish, please share your name and contact details.',
     sendWhatsApp: 'Send request to Ana Sampaio',
     openLabel: 'Talk to the assistant',
+    avatarAlt: 'Virtual assistant — Ana Sampaio Hair digital reception',
     closeLabel: 'Close assistant',
     progressLabel: 'Step',
     summaryTitle: 'Request summary',

@@ -92,7 +92,8 @@ export const es: Dictionary = {
     resultsTitle: 'Resultados con honestidad',
     resultsLead: 'Transformaciones reales, siempre con el cuidado que el cabello necesita.',
     aboutTitle: 'Ana Sampaio',
-    aboutLead: 'Peluquera y terapeuta capilar integrativa — con escucha y rigor.',
+    aboutLead:
+      'Ana Sampaio — peluquera y terapeuta capilar integrativa en Marinha Grande. Experiencia, formación en tricología y visagismo, terapia integrativa y atención individual con plan personalizado.',
     experienceTitle: 'La experiencia en el instituto',
     experienceLead: 'Un espacio pensado para la calma, la naturaleza y una atención solo para ti.',
     testimonialsTitle: 'Lo que dicen quienes confían',
@@ -140,6 +141,7 @@ export const es: Dictionary = {
     askDetails: 'Para finalizar, indíqueme su nombre y contacto.',
     sendWhatsApp: 'Enviar solicitud a Ana Sampaio',
     openLabel: 'Hablar con la asistente',
+    avatarAlt: 'Asistente virtual — recepción digital Ana Sampaio Hair',
     closeLabel: 'Cerrar asistente',
     progressLabel: 'Paso',
     summaryTitle: 'Resumen de la solicitud',

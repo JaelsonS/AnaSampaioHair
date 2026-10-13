@@ -9,6 +9,7 @@ export function PageHero({
   imageAlt = '',
   objectPosition = 'center center',
   fit = 'cover',
+  className = '',
 }: {
   dict: Dictionary
   title: string
@@ -17,10 +18,19 @@ export function PageHero({
   imageAlt?: string
   objectPosition?: string
   fit?: 'cover' | 'contain'
+  className?: string
 }) {
+  const sectionClass = [
+    'page-hero',
+    fit === 'contain' ? 'page-hero-contain' : '',
+    className,
+  ]
+    .filter(Boolean)
+    .join(' ')
+
   return (
     <section
-      className={`page-hero ${fit === 'contain' ? 'page-hero-contain' : ''}`}
+      className={sectionClass}
       id="page-hero"
       data-site-hero
       data-header-tone="on-dark"

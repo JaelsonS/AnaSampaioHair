@@ -23,6 +23,7 @@ import {
 } from '@/components/icons'
 import { getTestimonials } from '@/data/testimonials'
 import { getBlogPosts } from '@/data/blog'
+import { BlogCoverImage } from '@/components/blog/BlogCoverImage'
 import { getHomeContent } from '@/data/home-i18n'
 import { siteConfig } from '@/config/site'
 import { toAppLocale } from '@/i18n/config'
@@ -63,13 +64,16 @@ export function HomePage({ locale, dict }: { locale: UrlLocale; dict: Dictionary
 
       <Section>
         <div className="split ambient-split">
-          <Reveal>
+          <Reveal eager>
             <div className="media-frame ambient-photo">
               <Image
                 src={siteConfig.brand.heroSalon}
                 alt={wp.alts.salon}
                 fill
+                priority
+                fetchPriority="high"
                 sizes="(max-width:768px) 100vw, 50vw"
+                quality={80}
                 style={{ objectFit: 'cover', objectPosition: 'center' }}
               />
             </div>
@@ -237,30 +241,20 @@ export function HomePage({ locale, dict }: { locale: UrlLocale; dict: Dictionary
             if (!slug || !title) return null
             return (
               <article key={post.id} className="blog-card-premium">
-                <Link href={localizedPath(locale, 'blog', slug)}>
-                  <div
-                    className="blog-card-image media-frame"
-                    data-focus={
-                      slug === 'como-escolher-um-terapeuta-capilar'
-                        ? 'portrait-top'
-                        : slug === 'terapia-capilar-para-cabelos-oleosos'
-                          ? 'hair'
-                          : undefined
-                    }
-                  >
+                <Link href={localizedPath(locale, 'blog', slug)} className="blog-card-link">
+                  <div className="blog-card-image">
                     {post.featuredImage ? (
-                      <Image
+                      <BlogCoverImage
                         src={post.featuredImage}
                         alt={post.featuredImageAlt ?? title}
-                        fill
                         sizes="(max-width: 900px) 100vw, 33vw"
-                        className="blog-card-img"
+                        variant="tile"
                       />
                     ) : null}
                   </div>
-                  <h3 className="display-md" style={{ fontSize: '1.3rem', marginTop: '0.75rem' }}>
-                    {title}
-                  </h3>
+                  <div className="blog-card-body">
+                    <h3 className="display-md blog-card-title">{title}</h3>
+                  </div>
                 </Link>
               </article>
             )

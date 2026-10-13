@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import Link from 'next/link'
+import { BlogCoverImage } from '@/components/blog/BlogCoverImage'
 import { isUrlLocale, toAppLocale, type UrlLocale } from '@/i18n/config'
 import { getDictionary } from '@/i18n/get-dictionary'
 import { localizedPath } from '@/i18n/routes'
@@ -136,14 +137,13 @@ export default async function BlogPostPage({
 
         {post.featuredImage ? (
           <div className="blog-article-hero-media">
-            <Image
+            <BlogCoverImage
               src={post.featuredImage}
               alt={post.featuredImageAlt ?? title}
-              fill
               priority
-              sizes="(max-width:900px) 100vw, 760px"
+              sizes="(max-width:900px) 100vw, 720px"
               quality={85}
-              style={{ objectFit: 'cover' }}
+              variant="full"
             />
           </div>
         ) : null}
@@ -194,22 +194,23 @@ export default async function BlogPostPage({
               const t = r.title[app]
               if (!s || !t) return null
               return (
-                <Link key={r.id} href={localizedPath(locale, 'blog', s)} className="blog-card-premium">
-                  <div className="blog-card-image media-frame">
-                    {r.featuredImage ? (
-                      <Image
-                        src={r.featuredImage}
-                        alt={r.featuredImageAlt ?? t}
-                        fill
-                        sizes="33vw"
-                        style={{ objectFit: 'cover' }}
-                      />
-                    ) : null}
-                  </div>
-                  <h3 className="display-md" style={{ fontSize: '1.25rem', marginTop: '0.75rem' }}>
-                    {titleCasePt(t)}
-                  </h3>
-                </Link>
+                <article key={r.id} className="blog-card-premium">
+                  <Link href={localizedPath(locale, 'blog', s)} className="blog-card-link">
+                    <div className="blog-card-image">
+                      {r.featuredImage ? (
+                        <BlogCoverImage
+                          src={r.featuredImage}
+                          alt={r.featuredImageAlt ?? t}
+                          sizes="(max-width:900px) 100vw, 33vw"
+                          variant="tile"
+                        />
+                      ) : null}
+                    </div>
+                    <div className="blog-card-body">
+                      <h3 className="display-md blog-card-title">{titleCasePt(t)}</h3>
+                    </div>
+                  </Link>
+                </article>
               )
             })}
           </div>

@@ -5,11 +5,10 @@ import { isUrlLocale, type UrlLocale } from '@/i18n/config'
 import { getDictionary } from '@/i18n/get-dictionary'
 import { localizedPath } from '@/i18n/routes'
 import { beautyShowcaseImages, getServicesByCategory } from '@/data/services'
-import { PageHero } from '@/components/layout/PageHero'
+import { TreatmentsHero } from '@/components/treatments/TreatmentsHero'
 import { Section, SectionHeading } from '@/components/ui/Section'
 import { Breadcrumbs } from '@/components/ui/Breadcrumbs'
 import { Button } from '@/components/ui/Button'
-import { AnaSpeaks } from '@/components/brand/AnaSpeaks'
 import { ServiceCardCta } from '@/components/services/ServiceCardCta'
 import { ServiceCardMedia } from '@/components/services/ServiceCardMedia'
 import { MechasSpotlight } from '@/components/treatments/MechasSpotlight'
@@ -21,12 +20,14 @@ import { getLocalizedServiceName, getLocalizedServiceShort } from '@/data/servic
 function ServiceGrid({
   locale,
   services,
+  gridClassName,
 }: {
   locale: UrlLocale
   services: ReturnType<typeof getServicesByCategory>
+  gridClassName?: string
 }) {
   return (
-    <div className="treatments-service-grid">
+    <div className={['treatments-service-grid', gridClassName].filter(Boolean).join(' ')}>
       {services.map((s) => (
         <article key={s.id} className="service-card">
           <ServiceCardMedia
@@ -90,13 +91,7 @@ export default async function TreatmentsHubPage({
 
   return (
     <>
-      <PageHero
-        dict={dict}
-        title={dict.nav.treatments}
-        lead={copy.heroLead}
-        image="/images/mechas/gallery/coloracao-02-depois.webp"
-        objectPosition="center 35%"
-      />
+      <TreatmentsHero locale={locale} dict={dict} title={dict.nav.treatments} />
 
       <div className="container" style={{ paddingTop: '1.25rem' }}>
         <Breadcrumbs
@@ -144,10 +139,6 @@ export default async function TreatmentsHubPage({
         </div>
       </Section>
 
-      <Section>
-        <AnaSpeaks quote={copy.quote} />
-      </Section>
-
       <Section id="como-funciona">
         <SectionHeading
           eyebrow={copy.methodEyebrow}
@@ -176,7 +167,11 @@ export default async function TreatmentsHubPage({
 
       <Section id="beleza">
         <SectionHeading title={copy.beautyTitle} lead={copy.beautyLead} />
-        <ServiceGrid locale={locale} services={beauty} />
+        <ServiceGrid
+          locale={locale}
+          services={beauty}
+          gridClassName="treatments-service-grid--inline-4"
+        />
         <p className="eyebrow" style={{ marginTop: '2.5rem', marginBottom: '1rem' }}>
           {copy.beautyShowcaseEyebrow}
         </p>

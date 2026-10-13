@@ -8,7 +8,7 @@ export const products: Product[] = [
     name: 'Óleo capilar (placeholder)',
     description:
       'Exemplo de produto para estrutura de catálogo. Será substituído pelo produto oficial da Ana Sampaio.',
-    image: '/images/services/lipidica.jpg',
+    image: '/images/services/lipidica.webp',
     category: 'Cuidados',
     price: null,
     stock: null,
@@ -20,7 +20,7 @@ export const products: Product[] = [
     name: 'Máscara de tratamento (placeholder)',
     description:
       'Espaço reservado no catálogo. Sem preço nem claims — apenas estrutura para o futuro e-commerce.',
-    image: '/images/services/hidrica.jpg',
+    image: '/images/services/hidrica.webp',
     category: 'Tratamento',
     price: null,
     stock: null,
@@ -32,7 +32,7 @@ export const products: Product[] = [
     name: 'Sérum couro cabeludo (placeholder)',
     description:
       'Produto ilustrativo para a arquitectura de loja. Substituir por referência real quando disponível.',
-    image: '/images/services/detox.jpg',
+    image: '/images/services/detox.webp',
     category: 'Couro cabeludo',
     price: null,
     stock: null,

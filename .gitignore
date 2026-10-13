@@ -36,3 +36,7 @@ yarn-error.log*
 next-env.d.ts
 *.tsbuildinfo
 .tmp-shots/
+
+# scripts
+scripts/
+scripts/*.mjs

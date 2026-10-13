@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import Image from 'next/image'
 import Link from 'next/link'
+import { BlogCoverImage } from '@/components/blog/BlogCoverImage'
 import { isUrlLocale, toAppLocale, type UrlLocale } from '@/i18n/config'
 import { getDictionary } from '@/i18n/get-dictionary'
 import { localizedPath } from '@/i18n/routes'
@@ -79,7 +79,7 @@ export default async function BlogIndexPage({
         </Reveal>
 
         {featured ? (
-          <Reveal>
+          <Reveal eager>
             <article className="blog-featured">
               <Link
                 href={localizedPath(locale, 'blog', postSlug(featured)!)}
@@ -87,14 +87,13 @@ export default async function BlogIndexPage({
               >
                 <div className="blog-featured-media">
                   {featured.featuredImage ? (
-                    <Image
+                    <BlogCoverImage
                       src={featured.featuredImage}
                       alt={featured.featuredImageAlt ?? postTitle(featured)!}
-                      fill
                       priority
-                      sizes="(max-width:900px) 100vw, 70vw"
+                      sizes="(max-width:900px) 100vw, 55vw"
                       quality={85}
-                      style={{ objectFit: 'cover' }}
+                      variant="tile"
                     />
                   ) : null}
                 </div>
@@ -136,32 +135,31 @@ export default async function BlogIndexPage({
                     className="blog-card blog-card-premium reveal-in"
                     style={{ animationDelay: `${Math.min(index, 8) * 40}ms` }}
                   >
-                    <Link href={localizedPath(locale, 'blog', slug)}>
-                      <div className="blog-card-image media-frame">
+                    <Link href={localizedPath(locale, 'blog', slug)} className="blog-card-link">
+                      <div className="blog-card-image">
                         {post.featuredImage ? (
-                          <Image
+                          <BlogCoverImage
                             src={post.featuredImage}
                             alt={post.featuredImageAlt ?? title}
-                            fill
                             sizes="(max-width:768px) 100vw, 33vw"
                             quality={80}
-                            style={{ objectFit: 'cover' }}
+                            variant="tile"
                           />
                         ) : null}
                       </div>
-                      <p className="eyebrow" style={{ marginTop: '0.85rem' }}>
-                        {post.categories[0]}
-                      </p>
-                      <h3 className="display-md" style={{ fontSize: '1.35rem' }}>
-                        {titleCasePt(title)}
-                      </h3>
-                      <p className="blog-card-excerpt">{postExcerpt(post)}</p>
-                      <p className="blog-meta">
-                        {post.publishedAt}
-                        {post.readingMinutes
-                          ? ` · ${post.readingMinutes} ${dict.common.minutesRead}`
-                          : ''}
-                      </p>
+                      <div className="blog-card-body">
+                        <p className="eyebrow">{post.categories[0]}</p>
+                        <h3 className="display-md blog-card-title">
+                          {titleCasePt(title)}
+                        </h3>
+                        <p className="blog-card-excerpt">{postExcerpt(post)}</p>
+                        <p className="blog-meta">
+                          {post.publishedAt}
+                          {post.readingMinutes
+                            ? ` · ${post.readingMinutes} ${dict.common.minutesRead}`
+                            : ''}
+                        </p>
+                      </div>
                     </Link>
                   </article>
                 )
