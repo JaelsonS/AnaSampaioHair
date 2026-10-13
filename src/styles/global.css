@@ -5514,33 +5514,6 @@ p {
   }
 }
 
-.about-training-book {
-  margin: 1.35rem 0 1.5rem;
-  padding: 1.15rem 1.2rem;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--line);
-  background: var(--brand-mint-soft);
-}
-
-.about-training-book-title {
-  margin: 0 0 0.45rem;
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 500;
-  color: var(--brand-forest-deep);
-}
-
-.about-training-book-note {
-  margin: 0 0 1rem;
-  font-size: 0.98rem;
-  line-height: 1.55;
-  color: var(--ink-soft);
-}
-
-.about-training-book-actions {
-  margin: 0;
-}
-
 .book-amazon-link {
   color: inherit;
   text-decoration: underline;

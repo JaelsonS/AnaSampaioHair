@@ -168,29 +168,6 @@ export default async function AboutPage({
             <h2 className="display-lg">{copy.trainingTitle}</h2>
             <p>{copy.trainingBody1}</p>
             <p>{copy.trainingBody2}</p>
-            <aside className="about-training-book" aria-labelledby="about-training-book-title">
-              <p id="about-training-book-title" className="about-training-book-title">
-                <BookAmazonLink className="book-amazon-link--title">
-                  {copy.bookTitle}
-                </BookAmazonLink>
-              </p>
-              <p className="about-training-book-note">
-                {textWithBookAmazonLink(copy.trainingAuthorNote)}
-              </p>
-              <div className="btn-group about-training-book-actions">
-                <a
-                  className="btn btn-primary"
-                  href={copy.bookUrl}
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
-                >
-                  {copy.bookCta}
-                </a>
-                <Button href="#raizes-e-asas" variant="secondary">
-                  {copy.trainingBookMoreCta}
-                </Button>
-              </div>
-            </aside>
             <div className="btn-group">
               <Button href={localizedPath(locale, 'treatments')}>{dict.nav.treatments}</Button>
               <Button href={localizedPath(locale, 'booking')} variant="secondary">
