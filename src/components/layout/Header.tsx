@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
@@ -19,6 +18,7 @@ import { siteConfig } from '@/config/site'
 import { Button } from '@/components/ui/Button'
 import { IconClose, IconFlagEs, IconFlagGb, IconFlagPt, IconMenu } from '@/components/icons'
 import { cn } from '@/lib/utils'
+import { BrandLogo } from '@/components/brand/BrandLogo'
 
 const localeLabels: Record<UrlLocale, string> = {
   pt: 'PT',
@@ -263,14 +263,7 @@ export function Header({
             className="brand-link"
             aria-label={siteConfig.name}
           >
-            <Image
-              src={siteConfig.brand.logo}
-              alt={siteConfig.legalName}
-              width={160}
-              height={56}
-              priority
-              className="brand-logo"
-            />
+            <BrandLogo variant="header" priority showTagline={false} />
           </Link>
 
           <nav className="nav-desktop" aria-label="Principal">
@@ -338,7 +331,7 @@ export function Header({
       <div id="mobile-menu" className={cn('mobile-drawer', open && 'is-open')} hidden={!open}>
         <div className="mobile-panel" role="dialog" aria-modal="true" aria-label={dict.nav.menu}>
           <div className="mobile-panel-top">
-            <Image src={siteConfig.brand.logo} alt="" width={120} height={42} className="brand-logo" />
+            <BrandLogo variant="drawer" />
             <button type="button" className="menu-toggle" onClick={close} aria-label={dict.nav.close}>
               <IconClose width={20} height={20} />
             </button>

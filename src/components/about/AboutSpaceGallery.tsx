@@ -6,7 +6,7 @@ import Image from 'next/image'
 import {
   aboutTrabalhosGallery,
   type AboutGalleryItem,
-  ABOUT_TRABALHOS_GRID_SIZE,
+  ABOUT_TRABALHOS_ROW_SIZE,
 } from '@/data/about-gallery'
 import { ProtectedMediaFrame } from '@/components/media/ProtectedMediaFrame'
 import { AnaImageRightsOverlay } from '@/components/media/AnaImageRightsOverlay'
@@ -71,14 +71,13 @@ function GalleryThumb({
 
 export function AboutSpaceGallery({ copy }: { copy: GalleryCopy }) {
   const items = aboutTrabalhosGallery
-  const half = ABOUT_TRABALHOS_GRID_SIZE / 2
-  const { topRow, bottomRow } = useMemo(
-    () => ({
-      topRow: items.slice(0, half),
-      bottomRow: items.slice(half, ABOUT_TRABALHOS_GRID_SIZE),
-    }),
-    [items, half],
-  )
+  const rows = useMemo(() => {
+    const out: AboutGalleryItem[][] = []
+    for (let i = 0; i < items.length; i += ABOUT_TRABALHOS_ROW_SIZE) {
+      out.push(items.slice(i, i + ABOUT_TRABALHOS_ROW_SIZE))
+    }
+    return out
+  }, [items])
 
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
   const [portalReady, setPortalReady] = useState(false)
@@ -184,28 +183,19 @@ export function AboutSpaceGallery({ copy }: { copy: GalleryCopy }) {
       <div className="about-space-unified">
         <p className="eyebrow">{copy.spaceResultsEyebrow}</p>
         <div className="about-space-rows">
-          <div className="about-space-row">
-            {topRow.map((item, rowIndex) => (
-              <GalleryThumb
-                key={item.id}
-                item={item}
-                index={rowIndex}
-                copy={copy}
-                onOpen={setLightboxIndex}
-              />
-            ))}
-          </div>
-          <div className="about-space-row">
-            {bottomRow.map((item, rowIndex) => (
-              <GalleryThumb
-                key={item.id}
-                item={item}
-                index={half + rowIndex}
-                copy={copy}
-                onOpen={setLightboxIndex}
-              />
-            ))}
-          </div>
+          {rows.map((row, rowIdx) => (
+            <div key={`trabalhos-row-${rowIdx}`} className="about-space-row">
+              {row.map((item, colIdx) => (
+                <GalleryThumb
+                  key={item.id}
+                  item={item}
+                  index={rowIdx * ABOUT_TRABALHOS_ROW_SIZE + colIdx}
+                  copy={copy}
+                  onOpen={setLightboxIndex}
+                />
+              ))}
+            </div>
+          ))}
         </div>
       </div>
 

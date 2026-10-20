@@ -87,6 +87,13 @@ export const siteConfig = {
   },
 
   brand: {
+    /** Ícone (gota + folhas) — fundo transparente */
+    logoMark: '/images/brand/logo-mark.webp',
+    logoMarkFallback: '/images/brand/logo-mark.png',
+    /** Nome e linha do logótipo oficial (tipografia em CSS) */
+    logoName: 'Ana Sampaio',
+    logoTagline: 'INSTITUTO DE BELEZA E SAÚDE CAPILAR',
+    /** Legado / partilhas — imagem completa antiga */
     logo: '/images/brand/logo.png',
     /** Official salon interior — primary homepage hero */
     heroSalon: '/images/hero/salon-interior.jpg',

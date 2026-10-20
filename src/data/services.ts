@@ -95,7 +95,7 @@ export const services: Service[] = [
     description:
       'Ideal quando quer o cabelo mais leve, com queda natural, sem um corte “seco”. É detalhe, paciência e olhar para o que o fio precisa.',
     image: `${R}/corte-bordado.webp`,
-    imageAlt: 'Corte bordado — movimento e brilho no cabelo',
+    imageAlt: 'Corte bordado — técnica fio a fio no instituto',
     ctaType: 'booking',
     ctaLabel: 'Pedir corte bordado',
   },
@@ -121,7 +121,7 @@ export const services: Service[] = [
     description:
       'Tratamos caspa com abordagem personalizada: detox do couro, sessões de calmia e blends de óleos naturais para restaurar o equilíbrio.',
     image: `${R}/caspa-tratamento.webp`,
-    imageAlt: 'Tratamento para caspa no instituto Ana Sampaio',
+    imageAlt: 'Caspa — couro cabeludo em avaliação terapêutica',
     ctaType: 'whatsapp',
     ctaLabel: 'Falar sobre caspa',
   },
@@ -238,7 +238,7 @@ export const services: Service[] = [
     description:
       'A escova terapêutica entra no acompanhamento quando faz sentido para o seu cabelo e para o seu conforto.',
     image: `${R}/escova-resultado.webp`,
-    imageAlt: 'Escova terapêutica — resultado no instituto',
+    imageAlt: 'Escova terapêutica — brushing e secador durante o tratamento',
     ctaType: 'whatsapp',
     ctaLabel: 'Quero saber mais',
   },
@@ -316,7 +316,7 @@ export const services: Service[] = [
     description:
       'Terapia de luz vermelha de baixa intensidade que estimula o metabolismo celular e auxilia na saúde do couro e dos fios.',
     image: `${R}/led-vermelho.webp`,
-    imageAlt: 'Terapia com LED vermelho',
+    imageAlt: 'Ledterapia — luz vermelha no couro cabeludo no instituto',
     ctaType: 'booking',
     ctaLabel: 'Incluir no plano',
   },
@@ -329,7 +329,7 @@ export const services: Service[] = [
     description:
       'Microperfurações controladas no couro para estimular colagénio e facilitar a absorção de nutrientes, quando clinicamente indicado.',
     image: `${R}/microagulhamento-tratamento.webp`,
-    imageAlt: 'Microagulhamento capilar no instituto Ana Sampaio',
+    imageAlt: 'Microagulhamento — dermapen aplicado no couro cabeludo',
     ctaType: 'booking',
     ctaLabel: 'Pedir avaliação',
   },

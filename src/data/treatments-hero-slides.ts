@@ -1,6 +1,6 @@
 /**
  * AUTO-GENERATED — npm run sync:trabalhos-hero
- * Fonte: docs/AnaImg2026/trabalhos/ (12 ficheiros)
+ * Fonte: docs/AnaImg2026/trabalhos/ (21 ficheiros)
  */
 export type TreatmentsHeroSlide = {
   id: string
@@ -20,6 +20,15 @@ export const treatmentsHeroWorkSlides: TreatmentsHeroSlide[] = [
   { id: 'imgcoloracaomechasdepois01', src: '/images/trabalhos/imgcoloracaomechasdepois01.webp' },
   { id: 'imgcoloracaomechasdepois02', src: '/images/trabalhos/imgcoloracaomechasdepois02.webp' },
   { id: 'imgcorte01', src: '/images/trabalhos/imgcorte01.webp' },
+  { id: 'imgtrabalhosreal2026-01', src: '/images/trabalhos/imgtrabalhosreal2026-01.webp' },
+  { id: 'imgtrabalhosreal2026-02', src: '/images/trabalhos/imgtrabalhosreal2026-02.webp' },
+  { id: 'imgtrabalhosreal2026-03', src: '/images/trabalhos/imgtrabalhosreal2026-03.webp' },
+  { id: 'imgtrabalhosreal2026-04', src: '/images/trabalhos/imgtrabalhosreal2026-04.webp' },
+  { id: 'imgtrabalhosreal2026-05', src: '/images/trabalhos/imgtrabalhosreal2026-05.webp' },
+  { id: 'imgtrabalhosreal2026-06', src: '/images/trabalhos/imgtrabalhosreal2026-06.webp' },
+  { id: 'imgtrabalhosreal2026-07', src: '/images/trabalhos/imgtrabalhosreal2026-07.webp' },
+  { id: 'imgtrabalhosreal2026-08', src: '/images/trabalhos/imgtrabalhosreal2026-08.webp' },
+  { id: 'imgtrabalhosreal2026-09', src: '/images/trabalhos/imgtrabalhosreal2026-09.webp' },
 ]
 
 export const treatmentsHeroSlideAlt =

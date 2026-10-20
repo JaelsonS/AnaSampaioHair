@@ -7,8 +7,8 @@ export type AboutGalleryItem = {
   label: string
 }
 
-/** Sobre — grelha 6 + 6 */
-export const ABOUT_TRABALHOS_GRID_SIZE = 12
+/** Colunas por fila na grelha Sobre (CSS `.about-space-row`). */
+export const ABOUT_TRABALHOS_ROW_SIZE = 6
 
 function workLabel(slideId: string): AboutGalleryItem['label'] {
   if (slideId.includes('corte')) return 'corte'
@@ -33,7 +33,6 @@ const ABOUT_GALLERY_REPLACE: Record<string, string> = {
 
 export const aboutTrabalhosGallery: AboutGalleryItem[] = treatmentsHeroWorkSlides
   .filter((slide) => !ABOUT_TRABALHO_SKIP.test(slide.id))
-  .slice(0, ABOUT_TRABALHOS_GRID_SIZE)
   .map((slide, index) => {
     const replaceId = ABOUT_GALLERY_REPLACE[slide.id]
     const resolved = replaceId ? slideById.get(replaceId) ?? slide : slide

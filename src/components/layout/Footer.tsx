@@ -12,6 +12,7 @@ import {
   IconWhatsApp,
 } from '@/components/icons'
 import { Button } from '@/components/ui/Button'
+import { BrandLogo } from '@/components/brand/BrandLogo'
 
 export function Footer({ locale, dict }: { locale: UrlLocale; dict: Dictionary }) {
   const year = formatYear()
@@ -21,9 +22,8 @@ export function Footer({ locale, dict }: { locale: UrlLocale; dict: Dictionary }
     <footer className="footer footer-premium">
       <div className="container footer-premium-inner">
         <div className="footer-cta-band">
-          <div>
-            <p className="footer-brand-name">{siteConfig.name}</p>
-            <p className="footer-brand-line">{dict.footer.tagline}</p>
+          <div className="footer-brand-lockup">
+            <BrandLogo variant="stacked" className="brand-logo-on-footer" />
           </div>
           <Button href={localizedPath(locale, 'booking')} variant="on-dark">
             {dict.nav.book}
