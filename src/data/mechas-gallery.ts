@@ -1,9 +1,8 @@
 import type { UrlLocale } from '@/i18n/config'
 
 const G = '/images/mechas/gallery'
-/** Força recarregar webp após troca de fonte (evita cache do browser / `/_next/image`). */
-const GALLERY_V = '20261013-9202'
-const g = (name: string) => `${G}/${name}?v=${GALLERY_V}`
+/** Sem query string — `/_next/image` rejeita `?v=` se não estiver em localPatterns. */
+const g = (name: string) => `${G}/${name}`
 const A = '/images/mechas/ana'
 
 /** Três retratos da Ana — consultoria de mechas (sem duplicados) */
