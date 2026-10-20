@@ -24,6 +24,7 @@
     "sync:images-2026": "node scripts/sync-ana-img-2026.mjs && node scripts/update-blog-featured-2026.mjs && node scripts/generate-blog-image-dimensions.mjs",
     "sync:trabalhos-hero": "node scripts/sync-trabalhos-hero.mjs",
     "build:brand-lockup": "node scripts/build-brand-lockup.mjs",
+    "build:favicons": "node scripts/build-favicons.mjs",
     "audit:images": "node scripts/audit-image-paths.mjs",
     "audit:images-source": "node scripts/audit-ana-img-source.mjs",
     "prune:images": "node scripts/prune-unused-public-images.mjs",

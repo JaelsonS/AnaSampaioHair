@@ -683,6 +683,7 @@ p {
   display: block;
   width: auto;
   height: auto;
+  max-width: 100%;
   object-fit: contain;
 }
 
@@ -697,8 +698,15 @@ p {
 }
 
 .brand-logo__img--stacked {
-  width: min(72vw, 200px);
-  height: auto;
+  height: clamp(56px, 12vw, 72px);
+  width: auto;
+  max-width: min(72vw, 200px);
+}
+
+.brand-logo__img--footer {
+  height: clamp(44px, 10vw, 52px);
+  width: auto;
+  max-width: min(46vw, 136px);
 }
 
 .nav-desktop {
@@ -1114,7 +1122,7 @@ p {
 }
 
 .header-actions {
-  display: flex;
+    display: flex;
   align-items: center;
   gap: 0.5rem;
 }
@@ -1141,8 +1149,8 @@ p {
 }
 
 .lang-switch summary::-webkit-details-marker {
-  display: none;
-}
+    display: none;
+  }
 
 .lang-switch[open] .lang-menu,
 .lang-menu {
@@ -1498,7 +1506,7 @@ p {
 
   .hero-stage--wood .hero-stage-pane--copy,
   .about-hero--wood .about-hero-pane--copy {
-    z-index: 2;
+  z-index: 2;
     background: linear-gradient(
       102deg,
       rgba(250, 248, 244, 0.97) 0%,
@@ -2504,7 +2512,7 @@ p {
   .courses-card-grid,
   .courses-split,
   .courses-lead-layout {
-    grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
   }
 }
 
@@ -2795,7 +2803,7 @@ p {
 
   .mechas-color-highlight-aside {
     grid-area: aside;
-    display: flex;
+  display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1.35rem;
@@ -3373,7 +3381,7 @@ p {
 
   .hero-typewriter-rotator {
     min-height: calc(2 * 1.15 * clamp(1.35rem, 6.5vw, 1.85rem));
-    width: 100%;
+  width: 100%;
   }
 
   .hero-typewriter-line {
@@ -3386,7 +3394,7 @@ p {
   }
 
   .hero-location {
-    width: 100%;
+  width: 100%;
     max-width: 100%;
     border-radius: 14px;
     align-items: flex-start;
@@ -3395,7 +3403,7 @@ p {
 
   .hero-stage .btn-group {
     width: 100%;
-    display: grid;
+  display: grid;
     gap: 0.65rem;
   }
 
@@ -5981,7 +5989,7 @@ p {
 
 .about-book-cover {
   width: min(100%, 280px);
-}
+  }
 
 .about-ebook-portrait {
   width: min(100%, 420px);
@@ -6129,11 +6137,24 @@ p {
 .footer-cta-band {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 1.25rem 2rem;
   padding-bottom: 1.75rem;
   border-bottom: 1px solid rgba(200, 224, 192, 0.22);
+}
+
+.footer-brand-link {
+  display: inline-flex;
+  flex-shrink: 0;
+  line-height: 0;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.footer-brand-link:focus-visible {
+  outline: 2px solid var(--brand-mint);
+  outline-offset: 4px;
 }
 
 .footer-brand-name {
@@ -6147,10 +6168,6 @@ p {
   margin: 0;
   color: rgba(200, 224, 192, 0.92);
   font-size: 0.98rem;
-}
-
-.footer-brand-lockup .brand-logo__img--stacked {
-  width: min(78vw, 220px);
 }
 
 .footer-premium-grid {
@@ -6380,7 +6397,7 @@ p {
 .legal-ana-card {
   display: flex;
   align-items: center;
-  gap: 1rem;
+    gap: 1rem;
   padding: 1.15rem 1.2rem;
   border: 1px solid var(--line);
   background: var(--surface-elevated, #fffefb);

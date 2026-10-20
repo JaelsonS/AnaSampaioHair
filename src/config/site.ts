@@ -93,9 +93,11 @@ export const siteConfig = {
     /** Tagline clara para footer e header sobre hero escuro */
     logoLockupOnDark: '/images/brand/logo-lockup-on-dark.webp',
     logoLockupOnDarkFallback: '/images/brand/logo-lockup-on-dark.png',
-    /** Ícone só gota (legado / favicon) */
+    /** Ícone só gota — favicon, Google, partilhas compactas */
     logoMark: '/images/brand/logo-mark.webp',
     logoMarkFallback: '/images/brand/logo-mark.png',
+    /** Quadrado 512×512 (gota centrada) — schema.org / Google */
+    logoIcon: '/images/brand/icon-512.png',
     logoName: 'Ana Sampaio',
     logoTagline: 'INSTITUTO DE BELEZA E SAÚDE CAPILAR',
     /** Fonte master + partilhas sociais (OG) */

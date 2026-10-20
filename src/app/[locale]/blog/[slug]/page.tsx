@@ -232,7 +232,12 @@ export default async function BlogPostPage({
           publisher: {
             '@type': 'Organization',
             name: siteConfig.legalName,
-            logo: `${siteConfig.url}${siteConfig.brand.logo}`,
+            logo: {
+              '@type': 'ImageObject',
+              url: `${siteConfig.url}${siteConfig.brand.logoIcon}`,
+              width: 512,
+              height: 512,
+            },
           },
           image: post.featuredImage
             ? post.featuredImage.startsWith('http')

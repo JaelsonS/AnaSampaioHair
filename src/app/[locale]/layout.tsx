@@ -76,7 +76,13 @@ export default async function LocaleLayout({
           '@type': 'BeautySalon',
           name: siteConfig.legalName,
           url: siteConfig.url,
-          image: `${siteConfig.url}${siteConfig.brand.logo}`,
+          image: `${siteConfig.url}${siteConfig.brand.logoIcon}`,
+          logo: {
+            '@type': 'ImageObject',
+            url: `${siteConfig.url}${siteConfig.brand.logoIcon}`,
+            width: 512,
+            height: 512,
+          },
           telephone: siteConfig.contact.phoneDisplay,
           email: siteConfig.contact.email,
           address: {
