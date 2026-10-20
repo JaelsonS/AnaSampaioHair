@@ -43,27 +43,20 @@ export function BrandLogo({
       ? siteConfig.brand.logoLockupOnDark
       : siteConfig.brand.logoLockup
 
-  const displayH = displayHeightPx[variant]
+  const displayH = displayHeightPx[variant] ?? LOCKUP_HEIGHT
+  const displayW = Math.round(displayH * (LOCKUP_WIDTH / LOCKUP_HEIGHT))
 
   return (
     <span className={cn('brand-logo', `brand-logo--${variant}`, className)}>
       <Image
         src={src}
         alt={siteConfig.legalName}
-        width={LOCKUP_WIDTH}
-        height={LOCKUP_HEIGHT}
+        width={displayW}
+        height={displayH}
         priority={priority}
-        sizes={displayH ? `${Math.round(displayH * (LOCKUP_WIDTH / LOCKUP_HEIGHT))}px` : undefined}
+        sizes={`${displayW}px`}
         className={cn('brand-logo__img', variantClass[variant])}
-        style={
-          displayH
-            ? {
-                height: displayH,
-                width: 'auto',
-                maxWidth: variant === 'footer' ? 136 : variant === 'header' ? 220 : 240,
-              }
-            : undefined
-        }
+        style={{ width: 'auto', height: displayH, maxWidth: displayW }}
       />
     </span>
   )

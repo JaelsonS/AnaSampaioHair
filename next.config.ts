@@ -1,8 +1,6 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  // Production (Vercel) → dist. Dev → .next so build never corrupts the dev server.
-  distDir: process.env.NODE_ENV === 'production' ? 'dist' : '.next',
   eslint: {
     // Lint runs separately; missing optional plugin must not block production builds
     ignoreDuringBuilds: true,

@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import type { Dictionary } from '@/i18n/get-dictionary'
 import type { UrlLocale } from '@/i18n/config'
@@ -22,10 +21,10 @@ export function Footer({ locale, dict }: { locale: UrlLocale; dict: Dictionary }
     <footer className="footer footer-premium">
       <div className="container footer-premium-inner">
         <div className="footer-cta-band">
-          <Link href={localizedPath(locale, 'home')} className="footer-brand-link">
-            <BrandLogo variant="footer" appearance="on-dark" />
+          <Link href={localizedPath(locale, 'home')} className="brand-link footer-brand-link">
+            <BrandLogo variant="header" appearance="default" />
           </Link>
-          <Button href={localizedPath(locale, 'booking')} variant="on-dark">
+          <Button href={localizedPath(locale, 'booking')} variant="primary">
             {dict.nav.book}
           </Button>
         </div>

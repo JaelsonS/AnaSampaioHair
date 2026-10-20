@@ -2,10 +2,18 @@ import type { SVGProps } from 'react'
 
 type IconProps = SVGProps<SVGSVGElement> & { title?: string }
 
-function IconBase({ title, children, ...props }: IconProps & { children: React.ReactNode }) {
+function IconBase({
+  title,
+  children,
+  width = 24,
+  height = 24,
+  ...props
+}: IconProps & { children: React.ReactNode }) {
   return (
     <svg
       viewBox="0 0 24 24"
+      width={width}
+      height={height}
       fill="none"
       stroke="currentColor"
       strokeWidth={1.5}
