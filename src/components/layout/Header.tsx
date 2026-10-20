@@ -114,6 +114,10 @@ export function Header({
       }
       setTone(readHeroTone(hero))
       setWoodHero(hero.hasAttribute('data-hero-wood'))
+      if (hero.hasAttribute('data-header-solid')) {
+        setMode('solid')
+        return
+      }
       setMode(heroStillUnderHeader(hero) ? 'over-hero' : 'solid')
     }
     update()

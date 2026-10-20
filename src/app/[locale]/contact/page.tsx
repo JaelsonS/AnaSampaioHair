@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import { isUrlLocale, type UrlLocale } from '@/i18n/config'
 import { getDictionary } from '@/i18n/get-dictionary'
 import { localizedPath } from '@/i18n/routes'
-import { PageHero } from '@/components/layout/PageHero'
+import { ContactHero } from '@/components/contact/ContactHero'
 import { Section, SectionHeading } from '@/components/ui/Section'
 import { Button } from '@/components/ui/Button'
 import { IconMail, IconMapPin, IconPhone } from '@/components/icons'
@@ -28,17 +28,10 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
   return (
     <>
-      <PageHero
-        dict={dict}
-        title={dict.nav.contact}
-        lead={dict.sections.contactLead}
-        image={siteConfig.brand.heroSalon}
-        headerTone="on-light"
-        objectPosition="center 35%"
-      />
-      <Section>
-        <div className="grid-2">
-          <div className="prose">
+      <ContactHero dict={dict} title={dict.nav.contact} lead={dict.sections.contactLead} />
+      <Section className="contact-section">
+        <div className="grid-2 contact-grid">
+          <div className="prose contact-details-card">
             <SectionHeading title={dict.sections.locationTitle} />
             <p><IconMapPin width={18} height={18} /> {siteConfig.contact.address.full}</p>
             <p><IconPhone width={18} height={18} /> {siteConfig.contact.phoneDisplay}</p>
@@ -53,7 +46,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               <Button href={siteConfig.contact.address.mapsUrl} variant="ghost">{dict.common.openMaps}</Button>
             </div>
           </div>
-          <div className="media-frame" style={{ minHeight: 360 }}>
+          <div className="media-frame contact-map-frame" style={{ minHeight: 360 }}>
             <iframe
               title={dict.sections.locationTitle}
               src={siteConfig.contact.address.mapsEmbed}
