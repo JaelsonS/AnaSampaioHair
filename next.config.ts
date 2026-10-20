@@ -1,6 +1,8 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  /** Vercel + preview local — produção em `dist/`; dev continua em `.next/` */
+  distDir: process.env.NODE_ENV === 'production' ? 'dist' : '.next',
   eslint: {
     // Lint runs separately; missing optional plugin must not block production builds
     ignoreDuringBuilds: true,
