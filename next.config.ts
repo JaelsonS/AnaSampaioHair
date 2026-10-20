@@ -23,6 +23,10 @@ const nextConfig: NextConfig = {
         pathname: '/wp-content/**',
       },
     ],
+    localPatterns: [
+      { pathname: '/images/**', search: '' },
+      { pathname: '/images/**', search: '?v=*' },
+    ],
   },
   async redirects() {
     return [
