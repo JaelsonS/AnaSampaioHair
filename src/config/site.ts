@@ -87,13 +87,18 @@ export const siteConfig = {
   },
 
   brand: {
-    /** Ícone (gota + folhas) — fundo transparente */
+    /** Logótipo oficial completo (gota + Ana Sampaio + tagline), fundo transparente */
+    logoLockup: '/images/brand/logo-lockup.webp',
+    logoLockupFallback: '/images/brand/logo-lockup.png',
+    /** Tagline clara para footer e header sobre hero escuro */
+    logoLockupOnDark: '/images/brand/logo-lockup-on-dark.webp',
+    logoLockupOnDarkFallback: '/images/brand/logo-lockup-on-dark.png',
+    /** Ícone só gota (legado / favicon) */
     logoMark: '/images/brand/logo-mark.webp',
     logoMarkFallback: '/images/brand/logo-mark.png',
-    /** Nome e linha do logótipo oficial (tipografia em CSS) */
     logoName: 'Ana Sampaio',
     logoTagline: 'INSTITUTO DE BELEZA E SAÚDE CAPILAR',
-    /** Legado / partilhas — imagem completa antiga */
+    /** Fonte master + partilhas sociais (OG) */
     logo: '/images/brand/logo.png',
     /** Official salon interior — primary homepage hero */
     heroSalon: '/images/hero/salon-interior.jpg',

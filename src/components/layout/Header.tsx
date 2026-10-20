@@ -268,7 +268,11 @@ export function Header({
             className="brand-link"
             aria-label={siteConfig.name}
           >
-            <BrandLogo variant="header" priority />
+            <BrandLogo
+              variant="header"
+              priority
+              appearance={mode === 'over-hero' && tone === 'on-dark' ? 'on-dark' : 'default'}
+            />
           </Link>
 
           <nav className="nav-desktop" aria-label="Principal">
@@ -336,7 +340,7 @@ export function Header({
       <div id="mobile-menu" className={cn('mobile-drawer', open && 'is-open')} hidden={!open}>
         <div className="mobile-panel" role="dialog" aria-modal="true" aria-label={dict.nav.menu}>
           <div className="mobile-panel-top">
-            <BrandLogo variant="drawer" />
+            <BrandLogo variant="drawer" appearance="default" />
             <button type="button" className="menu-toggle" onClick={close} aria-label={dict.nav.close}>
               <IconClose width={20} height={20} />
             </button>

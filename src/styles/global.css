@@ -596,7 +596,7 @@ p {
 }
 
 /* Hero painel madeira — nav legível sobre foto clara */
-.site-header.is-over-hero.is-over-hero-wood.tone-on-light .brand-logo__mark {
+.site-header.is-over-hero.is-over-hero-wood.tone-on-light .brand-logo__img {
   filter: none;
 }
 
@@ -620,16 +620,8 @@ p {
   box-shadow: none;
 }
 
-.site-header.is-over-hero.tone-on-dark .brand-logo__mark {
-  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.35));
-}
-
-.site-header.is-over-hero.tone-on-dark .brand-logo__name {
-  color: #f6f4ef;
-}
-
-.site-header.is-over-hero.tone-on-dark .brand-logo__tagline {
-  color: rgba(200, 224, 192, 0.98);
+.site-header.is-over-hero.tone-on-dark .brand-logo__img {
+  filter: drop-shadow(0 2px 12px rgba(0, 0, 0, 0.4));
 }
 
 .site-header.is-over-hero.tone-on-dark .lang-switch summary,
@@ -649,8 +641,8 @@ p {
   color: var(--ink);
 }
 
-.site-header.is-solid .brand-logo--header .brand-logo__mark--header {
-  width: 92px;
+.site-header.is-solid .brand-logo__img--header {
+  height: 52px;
 }
 
 .header-inner {
@@ -674,101 +666,39 @@ p {
   outline: none;
 }
 
-.brand-link:focus-visible .brand-logo__lockup {
+.brand-link:focus-visible .brand-logo {
   outline: 2px solid var(--brand-forest);
-  outline-offset: 3px;
-  border-radius: 6px;
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
-/* Logótipo — gota + tipografia sobreposta (referência oficial) */
+/* Logótipo oficial — imagem única (gota + texto) */
 .brand-logo {
   display: inline-block;
   vertical-align: middle;
   line-height: 0;
 }
 
-.brand-logo__lockup {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.15rem;
-  text-align: center;
-}
-
-.brand-logo__mark {
+.brand-logo__img {
+  display: block;
   width: auto;
   height: auto;
-  display: block;
   object-fit: contain;
-  position: relative;
-  z-index: 0;
 }
 
-.brand-logo__mark--header {
-  width: 98px;
-  max-height: none;
+.brand-logo__img--header {
+  height: 58px;
+  max-width: min(42vw, 220px);
 }
 
-.brand-logo__mark--drawer {
-  width: 92px;
+.brand-logo__img--drawer {
+  height: 64px;
+  max-width: 240px;
 }
 
-.brand-logo__mark--stacked {
-  width: 112px;
-}
-
-.brand-logo__text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 1.12;
-  pointer-events: none;
-  max-width: 11rem;
-}
-
-.brand-logo--stacked .brand-logo__text {
-  max-width: 14rem;
-}
-
-.brand-logo__name {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 1.02rem;
-  letter-spacing: 0.04em;
-  color: var(--brand-forest-deep);
-  white-space: nowrap;
-}
-
-.brand-logo--stacked .brand-logo__name {
-  font-size: clamp(1.25rem, 3.5vw, 1.55rem);
-}
-
-.brand-logo__tagline {
-  margin-top: 0.16rem;
-  font-family: var(--font-body);
-  font-size: 0.36rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink);
-  line-height: 1.3;
-  max-width: 100%;
-}
-
-.brand-logo--stacked .brand-logo__tagline {
-  font-size: 0.42rem;
-  letter-spacing: 0.1em;
-}
-
-@media (min-width: 720px) {
-  .brand-logo--header .brand-logo__text {
-    max-width: 10.5rem;
-  }
-
-  .brand-logo--header .brand-logo__name {
-    font-size: 1rem;
-  }
+.brand-logo__img--stacked {
+  width: min(72vw, 200px);
+  height: auto;
 }
 
 .nav-desktop {
@@ -5339,16 +5269,9 @@ p {
     display: none;
   }
 
-  .brand-logo__mark--header {
-    width: 86px;
-  }
-
-  .brand-logo--header .brand-logo__name {
-    font-size: 0.9rem;
-  }
-
-  .brand-logo--header .brand-logo__text {
-    max-width: 8.5rem;
+  .brand-logo__img--header {
+    height: 50px;
+    max-width: min(46vw, 180px);
   }
 
   .lang-switch summary span {
@@ -6226,12 +6149,8 @@ p {
   font-size: 0.98rem;
 }
 
-.footer-brand-lockup .brand-logo__name {
-  color: #f6f4ef;
-}
-
-.footer-brand-lockup .brand-logo__tagline {
-  color: rgba(200, 224, 192, 0.92);
+.footer-brand-lockup .brand-logo__img--stacked {
+  width: min(78vw, 220px);
 }
 
 .footer-premium-grid {

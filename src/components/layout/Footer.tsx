@@ -23,7 +23,7 @@ export function Footer({ locale, dict }: { locale: UrlLocale; dict: Dictionary }
       <div className="container footer-premium-inner">
         <div className="footer-cta-band">
           <div className="footer-brand-lockup">
-            <BrandLogo variant="stacked" className="brand-logo-on-footer" />
+            <BrandLogo variant="stacked" appearance="on-dark" />
           </div>
           <Button href={localizedPath(locale, 'booking')} variant="on-dark">
             {dict.nav.book}
