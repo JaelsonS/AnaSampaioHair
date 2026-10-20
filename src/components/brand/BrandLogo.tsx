@@ -7,55 +7,41 @@ export type BrandLogoVariant = 'header' | 'drawer' | 'stacked'
 type BrandLogoProps = {
   variant?: BrandLogoVariant
   className?: string
-  /** Shown on header from `md` up; always on drawer / stacked */
+  /** Ocultar tagline (só header em ecrãs muito estreitos) */
   showTagline?: boolean
   priority?: boolean
 }
 
-const markSizes: Record<
-  BrandLogoVariant,
-  { width: number; height: number; className: string }
-> = {
-  header: { width: 52, height: 46, className: 'brand-logo__mark--header' },
-  drawer: { width: 72, height: 64, className: 'brand-logo__mark--drawer' },
-  stacked: { width: 88, height: 78, className: 'brand-logo__mark--stacked' },
+const markSizes: Record<BrandLogoVariant, { width: number; height: number; className: string }> = {
+  header: { width: 88, height: 78, className: 'brand-logo__mark--header' },
+  drawer: { width: 96, height: 86, className: 'brand-logo__mark--drawer' },
+  stacked: { width: 120, height: 108, className: 'brand-logo__mark--stacked' },
 }
 
 export function BrandLogo({
   variant = 'header',
   className,
-  showTagline,
+  showTagline = true,
   priority = false,
 }: BrandLogoProps) {
-  const stacked = variant === 'stacked'
-  const taglineVisible = showTagline ?? (variant === 'stacked' || variant === 'drawer')
   const { width, height, className: markSizeClass } = markSizes[variant]
 
   return (
-    <span
-      className={cn(
-        'brand-logo',
-        stacked ? 'brand-logo--stacked' : 'brand-logo--header',
-        className,
-      )}
-    >
-      <Image
-        src={siteConfig.brand.logoMark}
-        alt=""
-        width={width}
-        height={height}
-        priority={priority}
-        className={cn('brand-logo__mark', markSizeClass)}
-      />
-      <span className="brand-logo__text">
-        <span className="brand-logo__name">{siteConfig.brand.logoName}</span>
-        <span
-          className={cn(
-            'brand-logo__tagline',
-            !taglineVisible && 'brand-logo__tagline--from-md',
-          )}
-        >
-          {siteConfig.brand.logoTagline}
+    <span className={cn('brand-logo', `brand-logo--${variant}`, className)}>
+      <span className="brand-logo__lockup">
+        <Image
+          src={siteConfig.brand.logoMark}
+          alt=""
+          width={width}
+          height={height}
+          priority={priority}
+          className={cn('brand-logo__mark', markSizeClass)}
+        />
+        <span className="brand-logo__text">
+          <span className="brand-logo__name">{siteConfig.brand.logoName}</span>
+          {showTagline ? (
+            <span className="brand-logo__tagline">{siteConfig.brand.logoTagline}</span>
+          ) : null}
         </span>
       </span>
     </span>

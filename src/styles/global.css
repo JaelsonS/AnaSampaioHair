@@ -609,6 +609,15 @@ p {
 
 .site-header.is-over-hero.tone-on-dark {
   color: rgba(255, 252, 248, 0.94);
+  background: linear-gradient(
+    180deg,
+    rgba(28, 31, 26, 0.52) 0%,
+    rgba(28, 31, 26, 0.28) 70%,
+    transparent 100%
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: none;
 }
 
 .site-header.is-over-hero.tone-on-dark .brand-logo__mark {
@@ -616,12 +625,13 @@ p {
 }
 
 .site-header.is-over-hero.tone-on-dark .brand-logo__name {
-  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.55);
+  color: #f6f4ef;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
 }
 
 .site-header.is-over-hero.tone-on-dark .brand-logo__tagline {
-  color: rgba(255, 252, 248, 0.88);
-  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+  color: rgba(200, 224, 192, 0.95);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
 }
 
 .site-header.is-over-hero.tone-on-dark .lang-switch summary,
@@ -641,9 +651,8 @@ p {
   color: var(--ink);
 }
 
-.site-header.is-solid .brand-logo__mark--header {
-  width: 44px;
-  height: auto;
+.site-header.is-solid .brand-logo--header .brand-logo__mark--header {
+  width: 76px;
 }
 
 .header-inner {
@@ -661,100 +670,105 @@ p {
   min-width: 0;
 }
 
+/* Logótipo — gota + tipografia sobreposta (referência oficial) */
 .brand-logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  min-width: 0;
-  max-width: min(320px, 58vw);
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 0;
 }
 
-.brand-logo--stacked {
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 0.35rem;
-  max-width: none;
+.brand-logo__lockup {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .brand-logo__mark {
   width: auto;
   height: auto;
-  flex-shrink: 0;
+  display: block;
   object-fit: contain;
 }
 
 .brand-logo__mark--header {
-  width: 48px;
-  max-height: 52px;
+  width: 84px;
+  max-height: none;
 }
 
 .brand-logo__mark--drawer {
-  width: 64px;
-  max-height: 58px;
+  width: 92px;
 }
 
 .brand-logo__mark--stacked {
-  width: 80px;
-  max-height: 72px;
+  width: 112px;
 }
 
 .brand-logo__text {
+  position: absolute;
+  left: 50%;
+  bottom: 6%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  min-width: 0;
-  line-height: 1.15;
+  align-items: center;
+  text-align: center;
+  width: max-content;
+  max-width: 9.5rem;
+  line-height: 1.1;
+  pointer-events: none;
 }
 
 .brand-logo--stacked .brand-logo__text {
-  align-items: center;
+  max-width: 13rem;
+  bottom: 5%;
 }
 
 .brand-logo__name {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: clamp(1.05rem, 2.4vw, 1.35rem);
-  letter-spacing: 0.02em;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
   color: var(--brand-forest-deep);
   white-space: nowrap;
 }
 
 .brand-logo--stacked .brand-logo__name {
-  font-size: clamp(1.35rem, 4vw, 1.65rem);
+  font-size: clamp(1.25rem, 3.5vw, 1.55rem);
 }
 
 .brand-logo__tagline {
-  margin-top: 0.12rem;
+  margin-top: 0.14rem;
   font-family: var(--font-body);
-  font-size: 0.48rem;
-  font-weight: 500;
-  letter-spacing: 0.14em;
+  font-size: 0.34rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
   color: var(--ink);
-  white-space: nowrap;
+  line-height: 1.25;
   max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .brand-logo--stacked .brand-logo__tagline {
-  font-size: 0.52rem;
-  letter-spacing: 0.12em;
-  white-space: normal;
-  text-align: center;
-  max-width: 16rem;
-  overflow: visible;
-  text-overflow: unset;
+  font-size: 0.42rem;
+  letter-spacing: 0.1em;
 }
 
-.brand-logo__tagline--from-md {
+.brand-logo--header .brand-logo__tagline {
   display: none;
 }
 
-@media (min-width: 900px) {
-  .brand-logo__tagline--from-md {
+@media (min-width: 720px) {
+  .brand-logo--header .brand-logo__tagline {
     display: block;
+  }
+
+  .brand-logo--header .brand-logo__text {
+    max-width: 10.5rem;
+  }
+
+  .brand-logo--header .brand-logo__name {
+    font-size: 1rem;
   }
 }
 
@@ -5252,12 +5266,15 @@ p {
   }
 
   .brand-logo__mark--header {
-    width: 40px;
-    max-height: 44px;
+    width: 72px;
   }
 
-  .brand-logo__name {
-    font-size: 1rem;
+  .brand-logo--header .brand-logo__name {
+    font-size: 0.82rem;
+  }
+
+  .brand-logo--header .brand-logo__text {
+    max-width: 8.5rem;
   }
 
   .lang-switch summary span {

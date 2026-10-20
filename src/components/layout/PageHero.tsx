@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import type { Dictionary } from '@/i18n/get-dictionary'
+import type { HeaderTone } from '@/components/layout/header-tone'
 
 export function PageHero({
   dict,
@@ -10,6 +11,7 @@ export function PageHero({
   objectPosition = 'center center',
   fit = 'cover',
   className = '',
+  headerTone = 'on-dark',
 }: {
   dict: Dictionary
   title: string
@@ -19,6 +21,8 @@ export function PageHero({
   objectPosition?: string
   fit?: 'cover' | 'contain'
   className?: string
+  /** Tom do header enquanto flutua sobre o hero (foto clara → on-light). */
+  headerTone?: HeaderTone
 }) {
   const sectionClass = [
     'page-hero',
@@ -33,7 +37,7 @@ export function PageHero({
       className={sectionClass}
       id="page-hero"
       data-site-hero
-      data-header-tone="on-dark"
+      data-header-tone={headerTone}
     >
       <div className="hero-media" aria-hidden={!imageAlt}>
         <Image

@@ -38,8 +38,9 @@ const localeFlags: Record<UrlLocale, typeof IconFlagPt> = {
   en: IconFlagGb,
 }
 
-/** Text tone while floating over a hero image. */
-export type HeaderTone = 'on-light' | 'on-dark'
+import type { HeaderTone } from '@/components/layout/header-tone'
+
+export type { HeaderTone } from '@/components/layout/header-tone'
 
 type HeaderMode = 'over-hero' | 'solid'
 
@@ -263,7 +264,7 @@ export function Header({
             className="brand-link"
             aria-label={siteConfig.name}
           >
-            <BrandLogo variant="header" priority showTagline={false} />
+            <BrandLogo variant="header" priority />
           </Link>
 
           <nav className="nav-desktop" aria-label="Principal">

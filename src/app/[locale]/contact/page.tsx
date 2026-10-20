@@ -28,7 +28,14 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
   return (
     <>
-      <PageHero dict={dict} title={dict.nav.contact} lead={dict.sections.contactLead} image={siteConfig.brand.heroSalon} />
+      <PageHero
+        dict={dict}
+        title={dict.nav.contact}
+        lead={dict.sections.contactLead}
+        image={siteConfig.brand.heroSalon}
+        headerTone="on-light"
+        objectPosition="center 35%"
+      />
       <Section>
         <div className="grid-2">
           <div className="prose">
