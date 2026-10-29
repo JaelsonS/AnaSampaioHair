@@ -13,19 +13,19 @@ const COPY: Record<string, Record<UrlLocale, ServiceCopy>> = {
   mechas: {
     pt: {
       name: 'Consultoria de Cor e Visagismo para Mechas Personalizadas',
-      heroLines: ['Consultoria de Cor e Visagismo', 'para Mechas Personalizadas'],
+      heroLines: ['Consultoria de Cor', 'e Visagismo para Mechas'],
       short: 'Descubra os tons que harmonizam com a temperatura da sua pele, os seus olhos e a imagem que deseja transmitir.',
       cta: 'Agendar consultoria de mechas',
     },
     es: {
       name: 'Consultoría de Color y Visagismo para Mechas Personalizadas',
-      heroLines: ['Consultoría de Color y Visagismo', 'para Mechas Personalizadas'],
+      heroLines: ['Consultoría de Color', 'y Visagismo para Mechas'],
       short: 'Descubra los tonos que armonizan con la temperatura de su piel, sus ojos y la imagen que desea transmitir.',
       cta: 'Reservar consultoría de mechas',
     },
     en: {
       name: 'Colour & Visagism Consultation for Personalised Highlights',
-      heroLines: ['Colour & Visagism Consultation', 'for Personalised Highlights'],
+      heroLines: ['Colour & Visagism', 'for Personalised Highlights'],
       short: 'Discover tones that harmonise with your skin undertone, your eyes and the image you want to convey.',
       cta: 'Book a highlights consultation',
     },
@@ -66,14 +66,44 @@ const COPY: Record<string, Record<UrlLocale, ServiceCopy>> = {
     en: { name: 'Dandruff', short: 'Diagnosis and care to rebalance the scalp with criteria.', cta: 'Talk about dandruff' },
   },
   oleosidade: {
-    pt: { name: 'Oleosidade Excessiva', short: 'Regular o sebo e restaurar o equilíbrio do couro cabeludo.', cta: 'Quero equilibrar o couro' },
-    es: { name: 'Oleosidad excesiva', short: 'Regular el sebo y restaurar el equilibrio del cuero cabelludo.', cta: 'Quiero equilibrar el cuero' },
-    en: { name: 'Excess oiliness', short: 'Rebalance sebum and restore scalp comfort.', cta: 'Rebalance my scalp' },
+    pt: {
+      name: 'Oleosidade Excessiva',
+      heroLines: ['Oleosidade', 'Excessiva'],
+      short: 'Regular o sebo e restaurar o equilíbrio do couro cabeludo.',
+      cta: 'Quero equilibrar o couro',
+    },
+    es: {
+      name: 'Oleosidad excesiva',
+      heroLines: ['Oleosidad', 'excesiva'],
+      short: 'Regular el sebo y restaurar el equilibrio del cuero cabelludo.',
+      cta: 'Quiero equilibrar el cuero',
+    },
+    en: {
+      name: 'Excess oiliness',
+      heroLines: ['Excess', 'oiliness'],
+      short: 'Rebalance sebum and restore scalp comfort.',
+      cta: 'Rebalance my scalp',
+    },
   },
   dermatite: {
-    pt: { name: 'Dermatite Seborreica', short: 'Acalmar a inflamação e restaurar o conforto do couro.', cta: 'Pedir avaliação' },
-    es: { name: 'Dermatitis seborreica', short: 'Calmar la inflamación y restaurar el confort del cuero.', cta: 'Pedir valoración' },
-    en: { name: 'Seborrhoeic dermatitis', short: 'Soothe inflammation and restore scalp comfort.', cta: 'Request an assessment' },
+    pt: {
+      name: 'Dermatite Seborreica',
+      heroLines: ['Dermatite', 'Seborreica'],
+      short: 'Acalmar a inflamação e restaurar o conforto do couro.',
+      cta: 'Pedir avaliação',
+    },
+    es: {
+      name: 'Dermatitis seborreica',
+      heroLines: ['Dermatitis', 'seborreica'],
+      short: 'Calmar la inflamación y restaurar el confort del cuero.',
+      cta: 'Pedir valoración',
+    },
+    en: {
+      name: 'Seborrhoeic dermatitis',
+      heroLines: ['Seborrhoeic', 'dermatitis'],
+      short: 'Soothe inflammation and restore scalp comfort.',
+      cta: 'Request an assessment',
+    },
   },
   calvicie: {
     pt: { name: 'Calvície', short: 'Abordagem personalizada para padrões de rarefação e alopecia.', cta: 'Quero avaliar' },
@@ -101,9 +131,24 @@ const COPY: Record<string, Record<UrlLocale, ServiceCopy>> = {
     en: { name: 'Lipid refill', short: 'For dull hair with frizz and without healthy shine.', cta: 'I want to nourish my hair' },
   },
   detox: {
-    pt: { name: 'Detox do couro cabeludo', short: 'Para quem sente o couro “pesado”, irritado ou desequilibrado.', cta: 'Falar sobre o couro' },
-    es: { name: 'Detox del cuero cabelludo', short: 'Para quien siente el cuero “pesado”, irritado o desequilibrado.', cta: 'Hablar sobre el cuero' },
-    en: { name: 'Scalp detox', short: 'For a scalp that feels heavy, irritated or out of balance.', cta: 'Talk about my scalp' },
+    pt: {
+      name: 'Detox do couro cabeludo',
+      heroLines: ['Detox do', 'couro cabeludo'],
+      short: 'Para quem sente o couro “pesado”, irritado ou desequilibrado.',
+      cta: 'Falar sobre o couro',
+    },
+    es: {
+      name: 'Detox del cuero cabelludo',
+      heroLines: ['Detox del', 'cuero cabelludo'],
+      short: 'Para quien siente el cuero “pesado”, irritado o desequilibrado.',
+      cta: 'Hablar sobre el cuero',
+    },
+    en: {
+      name: 'Scalp detox',
+      heroLines: ['Scalp', 'detox'],
+      short: 'For a scalp that feels heavy, irritated or out of balance.',
+      cta: 'Talk about my scalp',
+    },
   },
   'escova-terapeutica': {
     pt: { name: 'Escova terapêutica', short: 'Mais do que alisar: um momento de cuidado integrado ao seu plano.', cta: 'Quero saber mais' },
@@ -111,9 +156,24 @@ const COPY: Record<string, Record<UrlLocale, ServiceCopy>> = {
     en: { name: 'Therapeutic brush-out', short: 'More than smoothing: care integrated into your plan.', cta: 'Learn more' },
   },
   massagem: {
-    pt: { name: 'Massagens com óleos terapêuticos', short: 'Relaxamento, circulação e nutrição do couro e dos fios.', cta: 'Agendar massagem' },
-    es: { name: 'Masajes con aceites terapéuticos', short: 'Relajación, circulación y nutrición del cuero y los hilos.', cta: 'Reservar masaje' },
-    en: { name: 'Therapeutic oil massages', short: 'Relaxation, circulation and nourishment for scalp and hair.', cta: 'Book a massage' },
+    pt: {
+      name: 'Massagens com óleos terapêuticos',
+      heroLines: ['Massagens com', 'óleos terapêuticos'],
+      short: 'Relaxamento, circulação e nutrição do couro e dos fios.',
+      cta: 'Agendar massagem',
+    },
+    es: {
+      name: 'Masajes con aceites terapéuticos',
+      heroLines: ['Masajes con', 'aceites terapéuticos'],
+      short: 'Relajación, circulación y nutrición del cuero y los hilos.',
+      cta: 'Reservar masaje',
+    },
+    en: {
+      name: 'Therapeutic oil massages',
+      heroLines: ['Therapeutic oil', 'massages'],
+      short: 'Relaxation, circulation and nourishment for scalp and hair.',
+      cta: 'Book a massage',
+    },
   },
   chaterapia: {
     pt: { name: 'Chaterapia', short: 'Natureza a favor da calmia e do bem-estar.', cta: 'Saber mais' },
@@ -126,9 +186,24 @@ const COPY: Record<string, Record<UrlLocale, ServiceCopy>> = {
     en: { name: 'Music therapy', short: 'Music as a tool for relaxation and support.', cta: 'Learn more' },
   },
   blend: {
-    pt: { name: 'Blend de óleos naturais', short: 'Combinação única seleccionada para as suas necessidades.', cta: 'Pedir blend' },
-    es: { name: 'Blend de aceites naturales', short: 'Combinación única seleccionada para sus necesidades.', cta: 'Pedir blend' },
-    en: { name: 'Natural oil blends', short: 'A unique mix selected for your needs.', cta: 'Request a blend' },
+    pt: {
+      name: 'Blend de óleos naturais',
+      heroLines: ['Blend de', 'óleos naturais'],
+      short: 'Combinação única seleccionada para as suas necessidades.',
+      cta: 'Pedir blend',
+    },
+    es: {
+      name: 'Blend de aceites naturales',
+      heroLines: ['Blend de', 'aceites naturales'],
+      short: 'Combinación única seleccionada para sus necesidades.',
+      cta: 'Pedir blend',
+    },
+    en: {
+      name: 'Natural oil blends',
+      heroLines: ['Natural oil', 'blends'],
+      short: 'A unique mix selected for your needs.',
+      cta: 'Request a blend',
+    },
   },
   'alta-freq': {
     pt: { name: 'Alta frequência', short: 'Estimular circulação e oxigenação do couro cabeludo.', cta: 'Incluir no plano' },

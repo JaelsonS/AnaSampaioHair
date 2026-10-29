@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { cn } from '@/lib/utils'
 
 export type HeroServicePhrase = {
   lines: [string] | [string, string]
@@ -10,7 +9,7 @@ export type HeroServicePhrase = {
 const ROTATE_MS = 5200
 
 /**
- * Rotação de serviços no hero — texto completo, altura fixa (sem efeito máquina de escrever / CLS).
+ * Rotação de serviços no hero — uma frase de cada vez (sem sobreposição de sublinhados).
  */
 export function HeroTypewriter({
   phrases,
@@ -45,18 +44,14 @@ export function HeroTypewriter({
     <div className="hero-typewriter" aria-live="polite">
       <p className="hero-typewriter-prefix">{prefix}</p>
       <div className="hero-typewriter-rotator">
-        {phrases.map((phrase, i) => (
-          <div
-            key={`${i}-${phrase.lines[0]}`}
-            className={cn('hero-typewriter-phrase', i === index && 'is-active')}
-            aria-hidden={i !== index}
-          >
-            <span className="hero-typewriter-line">
-              <span className="hero-typewriter-text-line">{phrase.lines[0]}</span>
-              <span className="hero-typewriter-text-line">{phrase.lines[1] ?? ''}</span>
-            </span>
-          </div>
-        ))}
+        <div className="hero-typewriter-phrase is-active">
+          <span className="hero-typewriter-line">
+            <span className="hero-typewriter-text-line">{active.lines[0]}</span>
+            {active.lines[1] ? (
+              <span className="hero-typewriter-text-line">{active.lines[1]}</span>
+            ) : null}
+          </span>
+        </div>
       </div>
       <span className="sr-only">{active.lines.filter(Boolean).join(' ')}</span>
     </div>
