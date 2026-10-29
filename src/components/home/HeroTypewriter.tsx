@@ -27,7 +27,9 @@ export function HeroTypewriter({
     const reduced =
       typeof window !== 'undefined' &&
       window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (reduced) return
+    const coarse =
+      typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches
+    if (reduced || coarse) return
 
     const id = window.setInterval(() => {
       setIndex((i) => (i + 1) % phrases.length)

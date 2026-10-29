@@ -68,6 +68,16 @@ export const siteConfig = {
     },
   },
 
+  /** Identificação legal da prestadora (uso em políticas e termos — não substituir a marca comercial). */
+  legalIdentification: {
+    providerFullName: 'Ana Sampaio Bárbara Nazario',
+    taxId: '302057641',
+  },
+
+  infrastructure: {
+    hostingProvider: 'Vercel Inc.',
+  },
+
   legal: {
     complaintsBookUrl: 'https://www.livroreclamacoes.pt/Inicio/',
     complimentsBookUrl: 'https://www.livroreclamacoes.pt/Pedido/ElogioSugestao',

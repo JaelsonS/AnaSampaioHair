@@ -21,6 +21,9 @@ export function TestimonialsCarousel({
 
   useEffect(() => {
     if (total <= 1 || paused) return
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const coarse = window.matchMedia('(pointer: coarse)').matches
+    if (reduced || coarse) return
     const id = window.setInterval(() => {
       setIndex((i) => (i + 1) % total)
     }, AUTO_MS)

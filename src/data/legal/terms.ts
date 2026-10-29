@@ -1,6 +1,12 @@
 import type { UrlLocale } from '@/i18n/config'
 import { siteConfig } from '@/config/site'
 import type { LegalDocument } from './types'
+import {
+  LEGAL_PROVIDER_NAME,
+  LEGAL_REVIEW_NOTICE_PT,
+  LEGAL_TAX_ID,
+  legalIdentificationLine,
+} from './constants'
 
 const UPDATED = '20 de agosto de 2026'
 const EMAIL = siteConfig.contact.email
@@ -20,8 +26,7 @@ export const termsByLocale: Record<UrlLocale, LegalDocument> = {
     updatedLabel: 'Última atualização',
     tocLabel: 'Nesta página',
     relatedLabel: 'Documentos relacionados',
-    reviewNotice:
-      'Estes Termos refletem o funcionamento atual do website. Devem ser validados pelo responsável e, idealmente, por um profissional de direito antes da publicação definitiva. Não constituem aconselhamento jurídico.',
+    reviewNotice: LEGAL_REVIEW_NOTICE_PT,
     sections: [
       {
         id: 'identificacao',
@@ -29,14 +34,7 @@ export const termsByLocale: Record<UrlLocale, LegalDocument> = {
         blocks: [
           {
             type: 'p',
-            text: `Website operado no âmbito de ${LEGAL_NAME}, marca ${BRAND}. Morada: ${ADDRESS}. Contactos: ${EMAIL}; ${PHONE}.`,
-          },
-          {
-            type: 'pending',
-            items: [
-              'Nome legal completo e forma jurídica — [INFORMAÇÃO A CONFIRMAR]',
-              'NIF — [INFORMAÇÃO A CONFIRMAR]',
-            ],
+            text: `Website operado no âmbito de ${LEGAL_NAME}, marca ${BRAND}. Morada: ${ADDRESS}. Contactos: ${EMAIL}; ${PHONE}. Titular: ${LEGAL_PROVIDER_NAME}. NIF: ${LEGAL_TAX_ID}.`,
           },
         ],
       },
@@ -130,17 +128,11 @@ export const termsByLocale: Record<UrlLocale, LegalDocument> = {
         blocks: [
           {
             type: 'p',
-            text: 'Neste website não está publicada uma política detalhada de cancelamento/remarcação com prazos e consequências.',
-          },
-          {
-            type: 'pending',
-            items: [
-              'Regras de cancelamento e remarcação a definir pela Ana Sampaio — [INFORMAÇÃO A CONFIRMAR]',
-            ],
+            text: 'Neste website não está publicada uma política detalhada de cancelamento ou remarcação com prazos e consequências específicas.',
           },
           {
             type: 'p',
-            text: 'Até essa definição, o cancelamento ou remarcação deve ser combinado diretamente consigo através dos contactos do instituto.',
+            text: 'O cancelamento ou remarcação deve ser combinado diretamente consigo através dos contactos do instituto (telefone, WhatsApp ou correio eletrónico indicados no site).',
           },
         ],
       },
@@ -379,7 +371,7 @@ export const termsByLocale: Record<UrlLocale, LegalDocument> = {
     tocLabel: 'En esta página',
     relatedLabel: 'Documentos relacionados',
     reviewNotice:
-      'Reflejan el funcionamiento actual del sitio. Deben validarse antes de la publicación definitiva. La versión completa de referencia está en portugués.',
+      'Documento alineado con el funcionamiento actual del sitio. La versión de referencia completa está en portugués europeo.',
     sections: [
       {
         id: 'id',
@@ -387,7 +379,7 @@ export const termsByLocale: Record<UrlLocale, LegalDocument> = {
         blocks: [
           {
             type: 'p',
-            text: `${LEGAL_NAME} / ${BRAND}. ${ADDRESS}. ${EMAIL}. ${PHONE}. NIF y forma jurídica: [INFORMACIÓN A CONFIRMAR].`,
+            text: legalIdentificationLine('es'),
           },
         ],
       },
@@ -422,7 +414,7 @@ export const termsByLocale: Record<UrlLocale, LegalDocument> = {
     tocLabel: 'On this page',
     relatedLabel: 'Related documents',
     reviewNotice:
-      'These Terms reflect the current website. They should be reviewed before final publication. The full authoritative version is in European Portuguese.',
+      'This document reflects the current operation of the website. The full authoritative version is in European Portuguese.',
     sections: [
       {
         id: 'id',
@@ -430,7 +422,7 @@ export const termsByLocale: Record<UrlLocale, LegalDocument> = {
         blocks: [
           {
             type: 'p',
-            text: `${LEGAL_NAME} / ${BRAND}. ${ADDRESS}. ${EMAIL}. ${PHONE}. Tax ID and legal form: [TO BE CONFIRMED].`,
+            text: legalIdentificationLine('en'),
           },
         ],
       },

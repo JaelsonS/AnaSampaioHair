@@ -1,17 +1,17 @@
 # Informações necessárias antes da publicação definitiva das políticas jurídicas
 
-Com base na auditoria ao código (agosto 2026). Não inventar — confirmar com a Ana / assessoria jurídica.
+Com base na auditoria ao código e aos dados fornecidos para o website. Não inventar — confirmar com a Ana / assessoria jurídica quando aplicável.
 
 ## Identidade do responsável
-- [ ] Nome legal completo (pessoa singular vs sociedade)
-- [ ] NIF
+- [x] Nome legal completo (fornecido para o site): Ana Sampaio Bárbara Nazario
+- [x] NIF (fornecido para identificação legal nas políticas): ver `siteConfig.legalIdentification`
 - [ ] Confirmar se o `legalName` atual («Instituto de Beleza e Saúde Capilar Ana Sampaio») é a designação oficial a usar em todos os documentos
-- [ ] Confirmar se existe (ou não) Encarregado de Proteção de Dados (DPO)
+- [x] DPO: não designado (declarado nas políticas)
 
 ## Conservação e processos internos
-- [ ] Prazo concreto de conservação de conversas WhatsApp / pedidos de clientes
-- [ ] Identidade do prestador de alojamento do website (e política de logs)
-- [ ] Regras de cancelamento / remarcação de marcações (se existirem)
+- [ ] Prazo concreto de conservação de conversas WhatsApp / pedidos de clientes (política descreve critério geral, não prazo fixo)
+- [x] Prestador de alojamento do website: Vercel Inc. (config + políticas)
+- [ ] Regras de cancelamento / remarcação de marcações (se existirem prazos escritos internos)
 
 ## Produtos digitais e formações
 - [ ] Condições comerciais concretas das formações (quando existirem datas/valores)

@@ -54,10 +54,8 @@ export const en: Dictionary = {
     share: 'Share',
     related: 'You may also like',
     minutesRead: 'min read',
-    draftNotice:
-      'Draft content — pending legal review. This does not constitute legal advice.',
-    placeholderProduct:
-      'Illustrative product — will be replaced by the official catalogue.',
+    draftNotice: '',
+    placeholderProduct: '',
     requestOnlyNotice:
       'This is a time request. Confirmation only happens after Ana Sampaio checks availability.',
   },

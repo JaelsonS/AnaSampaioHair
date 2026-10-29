@@ -54,10 +54,8 @@ export const es: Dictionary = {
     share: 'Compartir',
     related: 'También puede interesarle',
     minutesRead: 'min de lectura',
-    draftNotice:
-      'Contenido en borrador — pendiente de validación jurídica. No constituye asesoramiento legal.',
-    placeholderProduct:
-      'Producto ilustrativo — se sustituirá por el catálogo oficial.',
+    draftNotice: '',
+    placeholderProduct: '',
     requestOnlyNotice:
       'Esto es una solicitud de horario. La confirmación solo ocurre cuando Ana Sampaio verifica la disponibilidad.',
   },

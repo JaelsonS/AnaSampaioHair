@@ -1592,7 +1592,8 @@ p {
 }
 
 .hero-typewriter-phrase.is-active {
-  position: relative;
+  position: absolute;
+  inset: 0;
   opacity: 1;
   pointer-events: auto;
 }
@@ -5297,6 +5298,22 @@ p {
   .brand-logo__img--header {
     height: 50px;
     max-width: min(46vw, 180px);
+  }
+
+  .site-header {
+    transition:
+      background 0.3s var(--ease),
+      box-shadow 0.3s var(--ease),
+      backdrop-filter 0.3s var(--ease),
+      color 0.3s var(--ease);
+  }
+
+  .site-header.is-solid {
+    height: var(--header-h);
+  }
+
+  .site-header.is-solid .brand-logo__img--header {
+    height: 50px;
   }
 
   .lang-switch summary span {

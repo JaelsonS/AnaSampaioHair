@@ -235,10 +235,8 @@ export const ptPT: Dictionary = {
     share: 'Partilhar',
     related: 'Também pode interessar',
     minutesRead: 'min de leitura',
-    draftNotice:
-      'Conteúdo em rascunho — sujeito a validação jurídica. Não constitui aconselhamento legal.',
-    placeholderProduct:
-      'Produto ilustrativo — será substituído pelo catálogo oficial.',
+    draftNotice: '',
+    placeholderProduct: '',
     requestOnlyNotice:
       'Isto é um pedido de horário. A confirmação só acontece depois de a Ana Sampaio verificar a disponibilidade.',
   },

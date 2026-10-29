@@ -1,6 +1,7 @@
 import type { UrlLocale } from '@/i18n/config'
 import { siteConfig } from '@/config/site'
 import type { LegalDocument } from './types'
+import { HOSTING_PROVIDER, LEGAL_REVIEW_NOTICE_PT } from './constants'
 
 const UPDATED = '20 de agosto de 2026'
 const EMAIL = siteConfig.contact.email
@@ -17,8 +18,7 @@ export const cookiesByLocale: Record<UrlLocale, LegalDocument> = {
     updatedLabel: 'Última atualização',
     tocLabel: 'Nesta página',
     relatedLabel: 'Documentos relacionados',
-    reviewNotice:
-      'Este documento baseia-se na auditoria ao código do website. Se forem adicionados cookies de estatística ou marketing no futuro, esta Política e o inventário serão atualizados.',
+    reviewNotice: LEGAL_REVIEW_NOTICE_PT,
     sections: [
       {
         id: 'o-que-sao',
@@ -36,7 +36,7 @@ export const cookiesByLocale: Record<UrlLocale, LegalDocument> = {
         blocks: [
           {
             type: 'p',
-            text: 'Neste website, a utilização identificada na auditoria é essencialmente: (i) funcionamento técnico do site; e (ii) memorização da sua escolha no banner de cookies.',
+            text: 'Neste website, a utilização atual é essencialmente: (i) funcionamento técnico do site; e (ii) memorização da sua escolha no banner de cookies.',
           },
         ],
       },
@@ -66,7 +66,7 @@ export const cookiesByLocale: Record<UrlLocale, LegalDocument> = {
         blocks: [
           {
             type: 'p',
-            text: 'Não foram encontrados, no código do website, cookies ou scripts de Google Analytics, Tag Manager, Hotjar, Clarity ou equivalentes. A categoria «Estatísticas» no banner está preparada para uso futuro, mas atualmente não ativa medições.',
+            text: 'Não utilizamos, neste website, cookies ou scripts de Google Analytics, Tag Manager, Hotjar, Clarity ou equivalentes. A categoria «Estatísticas» no banner existe para eventual utilização futura, mas atualmente não ativa medições.',
           },
         ],
       },
@@ -149,11 +149,11 @@ export const cookiesByLocale: Record<UrlLocale, LegalDocument> = {
       },
       {
         id: 'inventario',
-        title: '12. Inventário real (auditoria de código)',
+        title: '12. Inventário de cookies e armazenamento local',
         blocks: [
           {
             type: 'callout',
-            text: 'Só listamos o que foi confirmado no código do projeto. Não inventámos cookies de analytics.',
+            text: 'Listamos apenas cookies e armazenamento local identificados na implementação atual deste website.',
           },
           {
             type: 'table',
@@ -171,7 +171,7 @@ export const cookiesByLocale: Record<UrlLocale, LegalDocument> = {
                 'Necessário',
                 'Entrega segura das páginas e proteção da infraestrutura',
                 'Conforme prestador de alojamento',
-                'Prestador de alojamento — [INFORMAÇÃO A CONFIRMAR]',
+                HOSTING_PROVIDER,
               ],
               [
                 'Cookies Google Maps (iframe Contacto)',

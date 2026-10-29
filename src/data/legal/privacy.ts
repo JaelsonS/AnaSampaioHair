@@ -1,6 +1,13 @@
 import type { UrlLocale } from '@/i18n/config'
 import { siteConfig } from '@/config/site'
 import type { LegalDocument } from './types'
+import {
+  HOSTING_PROVIDER,
+  LEGAL_IDENTITY_BULLETS_EN,
+  LEGAL_IDENTITY_BULLETS_ES,
+  LEGAL_IDENTITY_BULLETS_PT,
+  LEGAL_REVIEW_NOTICE_PT,
+} from './constants'
 
 const UPDATED = '20 de agosto de 2026'
 const EMAIL = siteConfig.contact.email
@@ -9,8 +16,7 @@ const ADDRESS = siteConfig.contact.address.full
 const LEGAL_NAME = siteConfig.legalName
 const BRAND = siteConfig.name
 
-const reviewNoticePt =
-  'Este documento descreve o tratamento de dados com base na implementação atual do website. Não constitui aconselhamento jurídico nem garante conformidade absoluta. Deve ser revisto pelo responsável e, idealmente, por um profissional de direito antes da publicação definitiva.'
+const reviewNoticePt = LEGAL_REVIEW_NOTICE_PT
 
 export const privacyByLocale: Record<UrlLocale, LegalDocument> = {
   pt: {
@@ -38,12 +44,8 @@ export const privacyByLocale: Record<UrlLocale, LegalDocument> = {
             text: `Contactos para questões de privacidade e exercício de direitos: correio eletrónico ${EMAIL}; telefone/WhatsApp ${PHONE}.`,
           },
           {
-            type: 'pending',
-            items: [
-              'Nome legal completo do responsável (pessoa singular ou sociedade) — [INFORMAÇÃO A CONFIRMAR]',
-              'NIF — [INFORMAÇÃO A CONFIRMAR]',
-              'Existência (ou não) de Encarregado de Proteção de Dados (DPO) — [INFORMAÇÃO A CONFIRMAR]',
-            ],
+            type: 'ul',
+            items: [...LEGAL_IDENTITY_BULLETS_PT],
           },
         ],
       },
@@ -281,7 +283,7 @@ export const privacyByLocale: Record<UrlLocale, LegalDocument> = {
         blocks: [
           {
             type: 'p',
-            text: 'Na auditoria ao código deste website (agosto de 2026), não foram encontrados scripts de Google Analytics, Google Tag Manager, Meta Pixel, TikTok Pixel, Hotjar, Microsoft Clarity ou ferramentas semelhantes ativas.',
+            text: 'Na implementação atual deste website, não utilizamos scripts de Google Analytics, Google Tag Manager, Meta Pixel, TikTok Pixel, Hotjar, Microsoft Clarity ou ferramentas semelhantes.',
           },
           {
             type: 'p',
@@ -313,7 +315,7 @@ export const privacyByLocale: Record<UrlLocale, LegalDocument> = {
               'WhatsApp / Meta — quando inicia ou continua a conversa nessa plataforma.',
               'Hotmart — quando acede à página de compra do E-book.',
               'Google Maps — quando visualiza o mapa incorporado na página de Contacto (pode implicar tratamento técnico pela Google).',
-              'Prestador de alojamento do website — para disponibilizar o site e logs técnicos de segurança (identidade do prestador: [INFORMAÇÃO A CONFIRMAR]).',
+              `Prestador de alojamento do website (${HOSTING_PROVIDER}) — para disponibilizar o site e logs técnicos de segurança.`,
               'Autoridades — quando a lei o exigir.',
             ],
           },
@@ -325,7 +327,7 @@ export const privacyByLocale: Record<UrlLocale, LegalDocument> = {
         blocks: [
           {
             type: 'p',
-            text: 'Podem atuar como subcontratantes ou destinatários independentes os prestadores acima referidos, na medida em que processem dados por conta ou em consequência da utilização dos respetivos serviços. A lista concreta de subcontratantes de alojamento e ferramentas internas será atualizada quando confirmada.',
+            text: `Podem atuar como subcontratantes ou destinatários independentes os prestadores acima referidos, incluindo ${HOSTING_PROVIDER} (alojamento), Meta/WhatsApp, Hotmart e Google (Maps), na medida em que processem dados por conta ou em consequência da utilização dos respetivos serviços.`,
           },
         ],
       },
@@ -370,13 +372,8 @@ export const privacyByLocale: Record<UrlLocale, LegalDocument> = {
             items: [
               'Pedidos de agendamento / formação via WhatsApp: enquanto necessários para responder, confirmar e gerir a relação decorrente do pedido, e pelo período adicional exigido por obrigações legais ou defesa de direitos (quando aplicável).',
               'Preferência de cookies (localStorage): até apagar os dados do site no navegador ou alterar a preferência.',
-              'Logs técnicos do alojamento: conforme política do prestador de alojamento — [INFORMAÇÃO A CONFIRMAR].',
-            ],
-          },
-          {
-            type: 'pending',
-            items: [
-              'Prazo interno concreto (em meses/anos) para arquivo de conversas WhatsApp relacionadas com clientes — [INFORMAÇÃO A CONFIRMAR]',
+              `Logs técnicos do alojamento (${HOSTING_PROVIDER}): conforme a política de retenção desse prestador.`,
+              'Conversas WhatsApp iniciadas a partir do site: conservadas enquanto forem necessárias para responder ao pedido, gerir marcações ou a relação com o cliente, e durante o período exigido por obrigações legais aplicáveis, quando existirem.',
             ],
           },
         ],
@@ -492,7 +489,7 @@ export const privacyByLocale: Record<UrlLocale, LegalDocument> = {
     tocLabel: 'En esta página',
     relatedLabel: 'Documentos relacionados',
     reviewNotice:
-      'Este documento describe el tratamiento según la implementación actual del sitio. No es asesoramiento jurídico ni garantiza conformidad absoluta. Debe revisarse antes de la publicación definitiva.',
+      'Documento alineado con el funcionamiento actual del sitio. No sustituye asesoramiento jurídico personalizado.',
     sections: [
       {
         id: 'quien',
@@ -503,12 +500,8 @@ export const privacyByLocale: Record<UrlLocale, LegalDocument> = {
             text: `El responsable del tratamiento a través de este sitio es la titularidad profesional asociada a ${LEGAL_NAME}, marca ${BRAND}, en ${ADDRESS}. Contacto: ${EMAIL} / ${PHONE}.`,
           },
           {
-            type: 'pending',
-            items: [
-              'Nombre legal completo — [INFORMACIÓN A CONFIRMAR]',
-              'NIF — [INFORMACIÓN A CONFIRMAR]',
-              'DPO (si existe) — [INFORMACIÓN A CONFIRMAR]',
-            ],
+            type: 'ul',
+            items: [...LEGAL_IDENTITY_BULLETS_ES],
           },
         ],
       },
@@ -579,7 +572,7 @@ export const privacyByLocale: Record<UrlLocale, LegalDocument> = {
     tocLabel: 'On this page',
     relatedLabel: 'Related documents',
     reviewNotice:
-      'This document describes processing based on the current website implementation. It is not legal advice and does not guarantee absolute compliance. It should be reviewed before final publication.',
+      'This document reflects the current operation of the website. It does not replace personalised legal advice.',
     sections: [
       {
         id: 'who',
@@ -590,12 +583,8 @@ export const privacyByLocale: Record<UrlLocale, LegalDocument> = {
             text: `The controller for processing via this website is the professional activity associated with ${LEGAL_NAME}, brand ${BRAND}, at ${ADDRESS}. Contact: ${EMAIL} / ${PHONE}.`,
           },
           {
-            type: 'pending',
-            items: [
-              'Full legal name — [TO BE CONFIRMED]',
-              'Tax ID (NIF) — [TO BE CONFIRMED]',
-              'DPO (if any) — [TO BE CONFIRMED]',
-            ],
+            type: 'ul',
+            items: [...LEGAL_IDENTITY_BULLETS_EN],
           },
         ],
       },

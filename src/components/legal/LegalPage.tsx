@@ -38,14 +38,11 @@ function renderBlock(block: LegalBlock, key: string) {
       )
     case 'pending':
       return (
-        <aside key={key} className="legal-pending" aria-label="Pendências">
-          <p className="legal-pending-title">Informação a confirmar</p>
-          <ul>
-            {block.items.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </aside>
+        <ul key={key} className="legal-list">
+          {block.items.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
       )
     case 'table':
       return (
